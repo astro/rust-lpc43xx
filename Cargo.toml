@@ -1,17 +1,17 @@
 [package]
-name = "rad1o-rust"
-version = "0.1.0"
+name = "lpc43xx"
+description = "Register definitions for the NXP LPC43xx microcontroller platform, generated through svd2rust"
+keywords = ["arm", "register", "peripheral"]
+version = "0.0.0"
 authors = ["Astro <astro@spaceboyz.net>"]
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/lpc43xx"
+homepage = "https://github.com/astro/rust-lpc43xx"
+include = ["Cargo.toml", "**/*.rs"]
 
 [dependencies]
 volatile-register = "0.1.2"
-#rust-libcore = "0.0.3"
-#r0 = "0.1.0"
-#cortex-m = "0.1.5"
-#rlibc = "1.0.0"
 
 [profile.release]
 lto = true
 panic = 'abort'
-
-[target.thumbv7em-none-eabihf.dependencies]
