@@ -177,9 +177,9 @@ impl DPR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IDPUR {
     #[doc = "Pull-up off. The ID bit will not be sampled."]
-    PULL_UP_OFF_THE_ID_,
+    PULL_UP_OFF_THE_ID,
     #[doc = "Pull-up on."]
-    PULL_UP_ON_,
+    PULL_UP_ON,
 }
 impl IDPUR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -196,8 +196,8 @@ impl IDPUR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            IDPUR::PULL_UP_OFF_THE_ID_ => false,
-            IDPUR::PULL_UP_ON_ => true,
+            IDPUR::PULL_UP_OFF_THE_ID => false,
+            IDPUR::PULL_UP_ON => true,
         }
     }
     #[allow(missing_docs)]
@@ -205,19 +205,19 @@ impl IDPUR {
     #[inline]
     pub fn _from(value: bool) -> IDPUR {
         match value {
-            false => IDPUR::PULL_UP_OFF_THE_ID_,
-            true => IDPUR::PULL_UP_ON_,
+            false => IDPUR::PULL_UP_OFF_THE_ID,
+            true => IDPUR::PULL_UP_ON,
         }
     }
-    #[doc = "Checks if the value of the field is `PULL_UP_OFF_THE_ID_`"]
+    #[doc = "Checks if the value of the field is `PULL_UP_OFF_THE_ID`"]
     #[inline]
-    pub fn is_pull_up_off_the_id_(&self) -> bool {
-        *self == IDPUR::PULL_UP_OFF_THE_ID_
+    pub fn is_pull_up_off_the_id(&self) -> bool {
+        *self == IDPUR::PULL_UP_OFF_THE_ID
     }
-    #[doc = "Checks if the value of the field is `PULL_UP_ON_`"]
+    #[doc = "Checks if the value of the field is `PULL_UP_ON`"]
     #[inline]
-    pub fn is_pull_up_on_(&self) -> bool {
-        *self == IDPUR::PULL_UP_ON_
+    pub fn is_pull_up_on(&self) -> bool {
+        *self == IDPUR::PULL_UP_ON
     }
 }
 #[doc = r" Value of the field"]
@@ -245,7 +245,7 @@ impl HADPR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HABAR {
     #[doc = "Disabled."]
-    DISABLED_,
+    DISABLED,
     #[doc = "Enable automatic B-disconnect to A-connect sequence."]
     ENABLE_AUTOMATIC_B_D,
 }
@@ -264,7 +264,7 @@ impl HABAR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            HABAR::DISABLED_ => false,
+            HABAR::DISABLED => false,
             HABAR::ENABLE_AUTOMATIC_B_D => true,
         }
     }
@@ -273,14 +273,14 @@ impl HABAR {
     #[inline]
     pub fn _from(value: bool) -> HABAR {
         match value {
-            false => HABAR::DISABLED_,
+            false => HABAR::DISABLED,
             true => HABAR::ENABLE_AUTOMATIC_B_D,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED_`"]
+    #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline]
-    pub fn is_disabled_(&self) -> bool {
-        *self == HABAR::DISABLED_
+    pub fn is_disabled(&self) -> bool {
+        *self == HABAR::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLE_AUTOMATIC_B_D`"]
     #[inline]
@@ -908,9 +908,9 @@ impl<'a> _DPW<'a> {
 #[doc = "Values that can be written to the field `IDPU`"]
 pub enum IDPUW {
     #[doc = "Pull-up off. The ID bit will not be sampled."]
-    PULL_UP_OFF_THE_ID_,
+    PULL_UP_OFF_THE_ID,
     #[doc = "Pull-up on."]
-    PULL_UP_ON_,
+    PULL_UP_ON,
 }
 impl IDPUW {
     #[allow(missing_docs)]
@@ -918,8 +918,8 @@ impl IDPUW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            IDPUW::PULL_UP_OFF_THE_ID_ => false,
-            IDPUW::PULL_UP_ON_ => true,
+            IDPUW::PULL_UP_OFF_THE_ID => false,
+            IDPUW::PULL_UP_ON => true,
         }
     }
 }
@@ -937,13 +937,13 @@ impl<'a> _IDPUW<'a> {
     }
     #[doc = "Pull-up off. The ID bit will not be sampled."]
     #[inline]
-    pub fn pull_up_off_the_id_(self) -> &'a mut W {
-        self.variant(IDPUW::PULL_UP_OFF_THE_ID_)
+    pub fn pull_up_off_the_id(self) -> &'a mut W {
+        self.variant(IDPUW::PULL_UP_OFF_THE_ID)
     }
     #[doc = "Pull-up on."]
     #[inline]
-    pub fn pull_up_on_(self) -> &'a mut W {
-        self.variant(IDPUW::PULL_UP_ON_)
+    pub fn pull_up_on(self) -> &'a mut W {
+        self.variant(IDPUW::PULL_UP_ON)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -989,7 +989,7 @@ impl<'a> _HADPW<'a> {
 #[doc = "Values that can be written to the field `HABA`"]
 pub enum HABAW {
     #[doc = "Disabled."]
-    DISABLED_,
+    DISABLED,
     #[doc = "Enable automatic B-disconnect to A-connect sequence."]
     ENABLE_AUTOMATIC_B_D,
 }
@@ -999,7 +999,7 @@ impl HABAW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            HABAW::DISABLED_ => false,
+            HABAW::DISABLED => false,
             HABAW::ENABLE_AUTOMATIC_B_D => true,
         }
     }
@@ -1018,8 +1018,8 @@ impl<'a> _HABAW<'a> {
     }
     #[doc = "Disabled."]
     #[inline]
-    pub fn disabled_(self) -> &'a mut W {
-        self.variant(HABAW::DISABLED_)
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(HABAW::DISABLED)
     }
     #[doc = "Enable automatic B-disconnect to A-connect sequence."]
     #[inline]

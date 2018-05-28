@@ -46,7 +46,7 @@ impl super::IF_CMDMSK_W {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DATA_BR {
     #[doc = "Transfer data bytes 4-7 to message object."]
-    TRANSFER_DATA_BYTES_,
+    TRANSFER_DATA_BYTES,
     #[doc = "data bytes 4-7 unchanged."]
     DATA_BYTES_4_7_UNCHA,
 }
@@ -65,7 +65,7 @@ impl DATA_BR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            DATA_BR::TRANSFER_DATA_BYTES_ => true,
+            DATA_BR::TRANSFER_DATA_BYTES => true,
             DATA_BR::DATA_BYTES_4_7_UNCHA => false,
         }
     }
@@ -74,14 +74,14 @@ impl DATA_BR {
     #[inline]
     pub fn _from(value: bool) -> DATA_BR {
         match value {
-            true => DATA_BR::TRANSFER_DATA_BYTES_,
+            true => DATA_BR::TRANSFER_DATA_BYTES,
             false => DATA_BR::DATA_BYTES_4_7_UNCHA,
         }
     }
-    #[doc = "Checks if the value of the field is `TRANSFER_DATA_BYTES_`"]
+    #[doc = "Checks if the value of the field is `TRANSFER_DATA_BYTES`"]
     #[inline]
-    pub fn is_transfer_data_bytes_(&self) -> bool {
-        *self == DATA_BR::TRANSFER_DATA_BYTES_
+    pub fn is_transfer_data_bytes(&self) -> bool {
+        *self == DATA_BR::TRANSFER_DATA_BYTES
     }
     #[doc = "Checks if the value of the field is `DATA_BYTES_4_7_UNCHA`"]
     #[inline]
@@ -93,7 +93,7 @@ impl DATA_BR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DATA_AR {
     #[doc = "Transfer data bytes 0-3 to message object."]
-    TRANSFER_DATA_BYTES_,
+    TRANSFER_DATA_BYTES,
     #[doc = "data bytes 0-3 unchanged."]
     DATA_BYTES_0_3_UNCHA,
 }
@@ -112,7 +112,7 @@ impl DATA_AR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            DATA_AR::TRANSFER_DATA_BYTES_ => true,
+            DATA_AR::TRANSFER_DATA_BYTES => true,
             DATA_AR::DATA_BYTES_0_3_UNCHA => false,
         }
     }
@@ -121,14 +121,14 @@ impl DATA_AR {
     #[inline]
     pub fn _from(value: bool) -> DATA_AR {
         match value {
-            true => DATA_AR::TRANSFER_DATA_BYTES_,
+            true => DATA_AR::TRANSFER_DATA_BYTES,
             false => DATA_AR::DATA_BYTES_0_3_UNCHA,
         }
     }
-    #[doc = "Checks if the value of the field is `TRANSFER_DATA_BYTES_`"]
+    #[doc = "Checks if the value of the field is `TRANSFER_DATA_BYTES`"]
     #[inline]
-    pub fn is_transfer_data_bytes_(&self) -> bool {
-        *self == DATA_AR::TRANSFER_DATA_BYTES_
+    pub fn is_transfer_data_bytes(&self) -> bool {
+        *self == DATA_AR::TRANSFER_DATA_BYTES
     }
     #[doc = "Checks if the value of the field is `DATA_BYTES_0_3_UNCHA`"]
     #[inline]
@@ -302,9 +302,9 @@ impl ARBR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MASKR {
     #[doc = "Transfer Identifier MASK + MDIR + MXTD to message object."]
-    TRANSFER_IDENTIFIER_,
+    TRANSFER_IDENTIFIER,
     #[doc = "Mask bits unchanged."]
-    MASK_BITS_UNCHANGED_,
+    MASK_BITS_UNCHANGED,
 }
 impl MASKR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -321,8 +321,8 @@ impl MASKR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            MASKR::TRANSFER_IDENTIFIER_ => true,
-            MASKR::MASK_BITS_UNCHANGED_ => false,
+            MASKR::TRANSFER_IDENTIFIER => true,
+            MASKR::MASK_BITS_UNCHANGED => false,
         }
     }
     #[allow(missing_docs)]
@@ -330,19 +330,19 @@ impl MASKR {
     #[inline]
     pub fn _from(value: bool) -> MASKR {
         match value {
-            true => MASKR::TRANSFER_IDENTIFIER_,
-            false => MASKR::MASK_BITS_UNCHANGED_,
+            true => MASKR::TRANSFER_IDENTIFIER,
+            false => MASKR::MASK_BITS_UNCHANGED,
         }
     }
-    #[doc = "Checks if the value of the field is `TRANSFER_IDENTIFIER_`"]
+    #[doc = "Checks if the value of the field is `TRANSFER_IDENTIFIER`"]
     #[inline]
-    pub fn is_transfer_identifier_(&self) -> bool {
-        *self == MASKR::TRANSFER_IDENTIFIER_
+    pub fn is_transfer_identifier(&self) -> bool {
+        *self == MASKR::TRANSFER_IDENTIFIER
     }
-    #[doc = "Checks if the value of the field is `MASK_BITS_UNCHANGED_`"]
+    #[doc = "Checks if the value of the field is `MASK_BITS_UNCHANGED`"]
     #[inline]
-    pub fn is_mask_bits_unchanged_(&self) -> bool {
-        *self == MASKR::MASK_BITS_UNCHANGED_
+    pub fn is_mask_bits_unchanged(&self) -> bool {
+        *self == MASKR::MASK_BITS_UNCHANGED
     }
 }
 #[doc = r" Value of the field"]
@@ -369,7 +369,7 @@ impl WR_RDR {
 #[doc = "Values that can be written to the field `DATA_B`"]
 pub enum DATA_BW {
     #[doc = "Transfer data bytes 4-7 to message object."]
-    TRANSFER_DATA_BYTES_,
+    TRANSFER_DATA_BYTES,
     #[doc = "data bytes 4-7 unchanged."]
     DATA_BYTES_4_7_UNCHA,
 }
@@ -379,7 +379,7 @@ impl DATA_BW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            DATA_BW::TRANSFER_DATA_BYTES_ => true,
+            DATA_BW::TRANSFER_DATA_BYTES => true,
             DATA_BW::DATA_BYTES_4_7_UNCHA => false,
         }
     }
@@ -398,8 +398,8 @@ impl<'a> _DATA_BW<'a> {
     }
     #[doc = "Transfer data bytes 4-7 to message object."]
     #[inline]
-    pub fn transfer_data_bytes_(self) -> &'a mut W {
-        self.variant(DATA_BW::TRANSFER_DATA_BYTES_)
+    pub fn transfer_data_bytes(self) -> &'a mut W {
+        self.variant(DATA_BW::TRANSFER_DATA_BYTES)
     }
     #[doc = "data bytes 4-7 unchanged."]
     #[inline]
@@ -427,7 +427,7 @@ impl<'a> _DATA_BW<'a> {
 #[doc = "Values that can be written to the field `DATA_A`"]
 pub enum DATA_AW {
     #[doc = "Transfer data bytes 0-3 to message object."]
-    TRANSFER_DATA_BYTES_,
+    TRANSFER_DATA_BYTES,
     #[doc = "data bytes 0-3 unchanged."]
     DATA_BYTES_0_3_UNCHA,
 }
@@ -437,7 +437,7 @@ impl DATA_AW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            DATA_AW::TRANSFER_DATA_BYTES_ => true,
+            DATA_AW::TRANSFER_DATA_BYTES => true,
             DATA_AW::DATA_BYTES_0_3_UNCHA => false,
         }
     }
@@ -456,8 +456,8 @@ impl<'a> _DATA_AW<'a> {
     }
     #[doc = "Transfer data bytes 0-3 to message object."]
     #[inline]
-    pub fn transfer_data_bytes_(self) -> &'a mut W {
-        self.variant(DATA_AW::TRANSFER_DATA_BYTES_)
+    pub fn transfer_data_bytes(self) -> &'a mut W {
+        self.variant(DATA_AW::TRANSFER_DATA_BYTES)
     }
     #[doc = "data bytes 0-3 unchanged."]
     #[inline]
@@ -682,9 +682,9 @@ impl<'a> _ARBW<'a> {
 #[doc = "Values that can be written to the field `MASK`"]
 pub enum MASKW {
     #[doc = "Transfer Identifier MASK + MDIR + MXTD to message object."]
-    TRANSFER_IDENTIFIER_,
+    TRANSFER_IDENTIFIER,
     #[doc = "Mask bits unchanged."]
-    MASK_BITS_UNCHANGED_,
+    MASK_BITS_UNCHANGED,
 }
 impl MASKW {
     #[allow(missing_docs)]
@@ -692,8 +692,8 @@ impl MASKW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            MASKW::TRANSFER_IDENTIFIER_ => true,
-            MASKW::MASK_BITS_UNCHANGED_ => false,
+            MASKW::TRANSFER_IDENTIFIER => true,
+            MASKW::MASK_BITS_UNCHANGED => false,
         }
     }
 }
@@ -711,13 +711,13 @@ impl<'a> _MASKW<'a> {
     }
     #[doc = "Transfer Identifier MASK + MDIR + MXTD to message object."]
     #[inline]
-    pub fn transfer_identifier_(self) -> &'a mut W {
-        self.variant(MASKW::TRANSFER_IDENTIFIER_)
+    pub fn transfer_identifier(self) -> &'a mut W {
+        self.variant(MASKW::TRANSFER_IDENTIFIER)
     }
     #[doc = "Mask bits unchanged."]
     #[inline]
-    pub fn mask_bits_unchanged_(self) -> &'a mut W {
-        self.variant(MASKW::MASK_BITS_UNCHANGED_)
+    pub fn mask_bits_unchanged(self) -> &'a mut W {
+        self.variant(MASKW::MASK_BITS_UNCHANGED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

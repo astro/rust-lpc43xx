@@ -192,7 +192,7 @@ pub enum FRFR {
     #[doc = "Microwire"]
     MICROWIRE,
     #[doc = "This combination is not supported and should not be used."]
-    THIS_COMBINATION_IS_,
+    THIS_COMBINATION_IS,
 }
 impl FRFR {
     #[doc = r" Value of the field as raw bits"]
@@ -202,7 +202,7 @@ impl FRFR {
             FRFR::SPI => 0,
             FRFR::TI => 1,
             FRFR::MICROWIRE => 2,
-            FRFR::THIS_COMBINATION_IS_ => 3,
+            FRFR::THIS_COMBINATION_IS => 3,
         }
     }
     #[allow(missing_docs)]
@@ -213,7 +213,7 @@ impl FRFR {
             0 => FRFR::SPI,
             1 => FRFR::TI,
             2 => FRFR::MICROWIRE,
-            3 => FRFR::THIS_COMBINATION_IS_,
+            3 => FRFR::THIS_COMBINATION_IS,
             _ => unreachable!(),
         }
     }
@@ -232,10 +232,10 @@ impl FRFR {
     pub fn is_microwire(&self) -> bool {
         *self == FRFR::MICROWIRE
     }
-    #[doc = "Checks if the value of the field is `THIS_COMBINATION_IS_`"]
+    #[doc = "Checks if the value of the field is `THIS_COMBINATION_IS`"]
     #[inline]
-    pub fn is_this_combination_is_(&self) -> bool {
-        *self == FRFR::THIS_COMBINATION_IS_
+    pub fn is_this_combination_is(&self) -> bool {
+        *self == FRFR::THIS_COMBINATION_IS
     }
 }
 #[doc = "Possible values of the field `CPOL`"]
@@ -488,7 +488,7 @@ pub enum FRFW {
     #[doc = "Microwire"]
     MICROWIRE,
     #[doc = "This combination is not supported and should not be used."]
-    THIS_COMBINATION_IS_,
+    THIS_COMBINATION_IS,
 }
 impl FRFW {
     #[allow(missing_docs)]
@@ -499,7 +499,7 @@ impl FRFW {
             FRFW::SPI => 0,
             FRFW::TI => 1,
             FRFW::MICROWIRE => 2,
-            FRFW::THIS_COMBINATION_IS_ => 3,
+            FRFW::THIS_COMBINATION_IS => 3,
         }
     }
 }
@@ -532,8 +532,8 @@ impl<'a> _FRFW<'a> {
     }
     #[doc = "This combination is not supported and should not be used."]
     #[inline]
-    pub fn this_combination_is_(self) -> &'a mut W {
-        self.variant(FRFW::THIS_COMBINATION_IS_)
+    pub fn this_combination_is(self) -> &'a mut W {
+        self.variant(FRFW::THIS_COMBINATION_IS)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]

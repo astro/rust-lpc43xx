@@ -482,9 +482,9 @@ impl SIR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DIR {
     #[doc = "The destination address is not incremented after each transfer."]
-    THE_DESTINATION_ADDR,
+    THE_DESTINATION_ADDR_1,
     #[doc = "The destination address is incremented after each transfer."]
-    THE_DESTINATION_ADDR,
+    THE_DESTINATION_ADDR_2,
 }
 impl DIR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -501,8 +501,8 @@ impl DIR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            DIR::THE_DESTINATION_ADDR => false,
-            DIR::THE_DESTINATION_ADDR => true,
+            DIR::THE_DESTINATION_ADDR_1 => false,
+            DIR::THE_DESTINATION_ADDR_2 => true,
         }
     }
     #[allow(missing_docs)]
@@ -510,19 +510,19 @@ impl DIR {
     #[inline]
     pub fn _from(value: bool) -> DIR {
         match value {
-            false => DIR::THE_DESTINATION_ADDR,
-            true => DIR::THE_DESTINATION_ADDR,
+            false => DIR::THE_DESTINATION_ADDR_1,
+            true => DIR::THE_DESTINATION_ADDR_2,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_DESTINATION_ADDR`"]
+    #[doc = "Checks if the value of the field is `THE_DESTINATION_ADDR_1`"]
     #[inline]
-    pub fn is_the_destination_addr(&self) -> bool {
-        *self == DIR::THE_DESTINATION_ADDR
+    pub fn is_the_destination_addr_1(&self) -> bool {
+        *self == DIR::THE_DESTINATION_ADDR_1
     }
-    #[doc = "Checks if the value of the field is `THE_DESTINATION_ADDR`"]
+    #[doc = "Checks if the value of the field is `THE_DESTINATION_ADDR_2`"]
     #[inline]
-    pub fn is_the_destination_addr(&self) -> bool {
-        *self == DIR::THE_DESTINATION_ADDR
+    pub fn is_the_destination_addr_2(&self) -> bool {
+        *self == DIR::THE_DESTINATION_ADDR_2
     }
 }
 #[doc = "Possible values of the field `PROT1`"]
@@ -625,7 +625,7 @@ pub enum PROT3R {
     #[doc = "Access is not cacheable."]
     ACCESS_IS_NOT_CACHEA,
     #[doc = "Access is cacheable."]
-    ACCESS_IS_CACHEABLE_,
+    ACCESS_IS_CACHEABLE,
 }
 impl PROT3R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -643,7 +643,7 @@ impl PROT3R {
     pub fn bit(&self) -> bool {
         match *self {
             PROT3R::ACCESS_IS_NOT_CACHEA => false,
-            PROT3R::ACCESS_IS_CACHEABLE_ => true,
+            PROT3R::ACCESS_IS_CACHEABLE => true,
         }
     }
     #[allow(missing_docs)]
@@ -652,7 +652,7 @@ impl PROT3R {
     pub fn _from(value: bool) -> PROT3R {
         match value {
             false => PROT3R::ACCESS_IS_NOT_CACHEA,
-            true => PROT3R::ACCESS_IS_CACHEABLE_,
+            true => PROT3R::ACCESS_IS_CACHEABLE,
         }
     }
     #[doc = "Checks if the value of the field is `ACCESS_IS_NOT_CACHEA`"]
@@ -660,19 +660,19 @@ impl PROT3R {
     pub fn is_access_is_not_cachea(&self) -> bool {
         *self == PROT3R::ACCESS_IS_NOT_CACHEA
     }
-    #[doc = "Checks if the value of the field is `ACCESS_IS_CACHEABLE_`"]
+    #[doc = "Checks if the value of the field is `ACCESS_IS_CACHEABLE`"]
     #[inline]
-    pub fn is_access_is_cacheable_(&self) -> bool {
-        *self == PROT3R::ACCESS_IS_CACHEABLE_
+    pub fn is_access_is_cacheable(&self) -> bool {
+        *self == PROT3R::ACCESS_IS_CACHEABLE
     }
 }
 #[doc = "Possible values of the field `I`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IR {
     #[doc = "The terminal count interrupt is disabled."]
-    THE_TERMINAL_COUNT_I,
+    THE_TERMINAL_COUNT_I_1,
     #[doc = "The terminal count interrupt is enabled."]
-    THE_TERMINAL_COUNT_I,
+    THE_TERMINAL_COUNT_I_2,
 }
 impl IR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -689,8 +689,8 @@ impl IR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            IR::THE_TERMINAL_COUNT_I => false,
-            IR::THE_TERMINAL_COUNT_I => true,
+            IR::THE_TERMINAL_COUNT_I_1 => false,
+            IR::THE_TERMINAL_COUNT_I_2 => true,
         }
     }
     #[allow(missing_docs)]
@@ -698,19 +698,19 @@ impl IR {
     #[inline]
     pub fn _from(value: bool) -> IR {
         match value {
-            false => IR::THE_TERMINAL_COUNT_I,
-            true => IR::THE_TERMINAL_COUNT_I,
+            false => IR::THE_TERMINAL_COUNT_I_1,
+            true => IR::THE_TERMINAL_COUNT_I_2,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_TERMINAL_COUNT_I`"]
+    #[doc = "Checks if the value of the field is `THE_TERMINAL_COUNT_I_1`"]
     #[inline]
-    pub fn is_the_terminal_count_i(&self) -> bool {
-        *self == IR::THE_TERMINAL_COUNT_I
+    pub fn is_the_terminal_count_i_1(&self) -> bool {
+        *self == IR::THE_TERMINAL_COUNT_I_1
     }
-    #[doc = "Checks if the value of the field is `THE_TERMINAL_COUNT_I`"]
+    #[doc = "Checks if the value of the field is `THE_TERMINAL_COUNT_I_2`"]
     #[inline]
-    pub fn is_the_terminal_count_i(&self) -> bool {
-        *self == IR::THE_TERMINAL_COUNT_I
+    pub fn is_the_terminal_count_i_2(&self) -> bool {
+        *self == IR::THE_TERMINAL_COUNT_I_2
     }
 }
 #[doc = r" Proxy"]
@@ -1213,9 +1213,9 @@ impl<'a> _SIW<'a> {
 #[doc = "Values that can be written to the field `DI`"]
 pub enum DIW {
     #[doc = "The destination address is not incremented after each transfer."]
-    THE_DESTINATION_ADDR,
+    THE_DESTINATION_ADDR_1,
     #[doc = "The destination address is incremented after each transfer."]
-    THE_DESTINATION_ADDR,
+    THE_DESTINATION_ADDR_2,
 }
 impl DIW {
     #[allow(missing_docs)]
@@ -1223,8 +1223,8 @@ impl DIW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            DIW::THE_DESTINATION_ADDR => false,
-            DIW::THE_DESTINATION_ADDR => true,
+            DIW::THE_DESTINATION_ADDR_1 => false,
+            DIW::THE_DESTINATION_ADDR_2 => true,
         }
     }
 }
@@ -1242,13 +1242,13 @@ impl<'a> _DIW<'a> {
     }
     #[doc = "The destination address is not incremented after each transfer."]
     #[inline]
-    pub fn the_destination_addr(self) -> &'a mut W {
-        self.variant(DIW::THE_DESTINATION_ADDR)
+    pub fn the_destination_addr_1(self) -> &'a mut W {
+        self.variant(DIW::THE_DESTINATION_ADDR_1)
     }
     #[doc = "The destination address is incremented after each transfer."]
     #[inline]
-    pub fn the_destination_addr(self) -> &'a mut W {
-        self.variant(DIW::THE_DESTINATION_ADDR)
+    pub fn the_destination_addr_2(self) -> &'a mut W {
+        self.variant(DIW::THE_DESTINATION_ADDR_2)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -1389,7 +1389,7 @@ pub enum PROT3W {
     #[doc = "Access is not cacheable."]
     ACCESS_IS_NOT_CACHEA,
     #[doc = "Access is cacheable."]
-    ACCESS_IS_CACHEABLE_,
+    ACCESS_IS_CACHEABLE,
 }
 impl PROT3W {
     #[allow(missing_docs)]
@@ -1398,7 +1398,7 @@ impl PROT3W {
     pub fn _bits(&self) -> bool {
         match *self {
             PROT3W::ACCESS_IS_NOT_CACHEA => false,
-            PROT3W::ACCESS_IS_CACHEABLE_ => true,
+            PROT3W::ACCESS_IS_CACHEABLE => true,
         }
     }
 }
@@ -1421,8 +1421,8 @@ impl<'a> _PROT3W<'a> {
     }
     #[doc = "Access is cacheable."]
     #[inline]
-    pub fn access_is_cacheable_(self) -> &'a mut W {
-        self.variant(PROT3W::ACCESS_IS_CACHEABLE_)
+    pub fn access_is_cacheable(self) -> &'a mut W {
+        self.variant(PROT3W::ACCESS_IS_CACHEABLE)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -1445,9 +1445,9 @@ impl<'a> _PROT3W<'a> {
 #[doc = "Values that can be written to the field `I`"]
 pub enum IW {
     #[doc = "The terminal count interrupt is disabled."]
-    THE_TERMINAL_COUNT_I,
+    THE_TERMINAL_COUNT_I_1,
     #[doc = "The terminal count interrupt is enabled."]
-    THE_TERMINAL_COUNT_I,
+    THE_TERMINAL_COUNT_I_2,
 }
 impl IW {
     #[allow(missing_docs)]
@@ -1455,8 +1455,8 @@ impl IW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            IW::THE_TERMINAL_COUNT_I => false,
-            IW::THE_TERMINAL_COUNT_I => true,
+            IW::THE_TERMINAL_COUNT_I_1 => false,
+            IW::THE_TERMINAL_COUNT_I_2 => true,
         }
     }
 }
@@ -1474,13 +1474,13 @@ impl<'a> _IW<'a> {
     }
     #[doc = "The terminal count interrupt is disabled."]
     #[inline]
-    pub fn the_terminal_count_i(self) -> &'a mut W {
-        self.variant(IW::THE_TERMINAL_COUNT_I)
+    pub fn the_terminal_count_i_1(self) -> &'a mut W {
+        self.variant(IW::THE_TERMINAL_COUNT_I_1)
     }
     #[doc = "The terminal count interrupt is enabled."]
     #[inline]
-    pub fn the_terminal_count_i(self) -> &'a mut W {
-        self.variant(IW::THE_TERMINAL_COUNT_I)
+    pub fn the_terminal_count_i_2(self) -> &'a mut W {
+        self.variant(IW::THE_TERMINAL_COUNT_I_2)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

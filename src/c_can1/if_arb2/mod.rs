@@ -59,7 +59,7 @@ pub enum DIRR {
     #[doc = "Direction = transmit. On TXRQST, the respective Message Object is transmitted as a Data Frame. On reception of a Remote Frame with matching identifier, the TXRQST bit of this Message Object is set (if RMTEN = one)."]
     DIRECTION_EQ_TRANSMIT,
     #[doc = "Direction = receive. On TXRQST, a Remote Frame with the identifier of this Message Object is transmitted. On reception of a Data Frame with matching identifier, that message is stored in this Message Object."]
-    DIRECTION_EQ_RECEIVE_,
+    DIRECTION_EQ_RECEIVE,
 }
 impl DIRR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -77,7 +77,7 @@ impl DIRR {
     pub fn bit(&self) -> bool {
         match *self {
             DIRR::DIRECTION_EQ_TRANSMIT => true,
-            DIRR::DIRECTION_EQ_RECEIVE_ => false,
+            DIRR::DIRECTION_EQ_RECEIVE => false,
         }
     }
     #[allow(missing_docs)]
@@ -86,7 +86,7 @@ impl DIRR {
     pub fn _from(value: bool) -> DIRR {
         match value {
             true => DIRR::DIRECTION_EQ_TRANSMIT,
-            false => DIRR::DIRECTION_EQ_RECEIVE_,
+            false => DIRR::DIRECTION_EQ_RECEIVE,
         }
     }
     #[doc = "Checks if the value of the field is `DIRECTION_EQ_TRANSMIT`"]
@@ -94,19 +94,19 @@ impl DIRR {
     pub fn is_direction_eq_transmit(&self) -> bool {
         *self == DIRR::DIRECTION_EQ_TRANSMIT
     }
-    #[doc = "Checks if the value of the field is `DIRECTION_EQ_RECEIVE_`"]
+    #[doc = "Checks if the value of the field is `DIRECTION_EQ_RECEIVE`"]
     #[inline]
-    pub fn is_direction_eq_receive_(&self) -> bool {
-        *self == DIRR::DIRECTION_EQ_RECEIVE_
+    pub fn is_direction_eq_receive(&self) -> bool {
+        *self == DIRR::DIRECTION_EQ_RECEIVE
     }
 }
 #[doc = "Possible values of the field `XTD`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum XTDR {
     #[doc = "The 29-bit extended identifier will be used for this message object."]
-    THE_29_BIT_EXTENDED_,
+    THE_29_BIT_EXTENDED,
     #[doc = "The 11-bit standard identifier will be used for this message object."]
-    THE_11_BIT_STANDARD_,
+    THE_11_BIT_STANDARD,
 }
 impl XTDR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -123,8 +123,8 @@ impl XTDR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            XTDR::THE_29_BIT_EXTENDED_ => true,
-            XTDR::THE_11_BIT_STANDARD_ => false,
+            XTDR::THE_29_BIT_EXTENDED => true,
+            XTDR::THE_11_BIT_STANDARD => false,
         }
     }
     #[allow(missing_docs)]
@@ -132,28 +132,28 @@ impl XTDR {
     #[inline]
     pub fn _from(value: bool) -> XTDR {
         match value {
-            true => XTDR::THE_29_BIT_EXTENDED_,
-            false => XTDR::THE_11_BIT_STANDARD_,
+            true => XTDR::THE_29_BIT_EXTENDED,
+            false => XTDR::THE_11_BIT_STANDARD,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_29_BIT_EXTENDED_`"]
+    #[doc = "Checks if the value of the field is `THE_29_BIT_EXTENDED`"]
     #[inline]
-    pub fn is_the_29_bit_extended_(&self) -> bool {
-        *self == XTDR::THE_29_BIT_EXTENDED_
+    pub fn is_the_29_bit_extended(&self) -> bool {
+        *self == XTDR::THE_29_BIT_EXTENDED
     }
-    #[doc = "Checks if the value of the field is `THE_11_BIT_STANDARD_`"]
+    #[doc = "Checks if the value of the field is `THE_11_BIT_STANDARD`"]
     #[inline]
-    pub fn is_the_11_bit_standard_(&self) -> bool {
-        *self == XTDR::THE_11_BIT_STANDARD_
+    pub fn is_the_11_bit_standard(&self) -> bool {
+        *self == XTDR::THE_11_BIT_STANDARD
     }
 }
 #[doc = "Possible values of the field `MSGVAL`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MSGVALR {
     #[doc = "The message object is configured and should be considered by the message handler."]
-    THE_MESSAGE_OBJECT_I,
+    THE_MESSAGE_OBJECT_I_1,
     #[doc = "The message object is ignored by the message handler."]
-    THE_MESSAGE_OBJECT_I,
+    THE_MESSAGE_OBJECT_I_2,
 }
 impl MSGVALR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -170,8 +170,8 @@ impl MSGVALR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            MSGVALR::THE_MESSAGE_OBJECT_I => true,
-            MSGVALR::THE_MESSAGE_OBJECT_I => false,
+            MSGVALR::THE_MESSAGE_OBJECT_I_1 => true,
+            MSGVALR::THE_MESSAGE_OBJECT_I_2 => false,
         }
     }
     #[allow(missing_docs)]
@@ -179,19 +179,19 @@ impl MSGVALR {
     #[inline]
     pub fn _from(value: bool) -> MSGVALR {
         match value {
-            true => MSGVALR::THE_MESSAGE_OBJECT_I,
-            false => MSGVALR::THE_MESSAGE_OBJECT_I,
+            true => MSGVALR::THE_MESSAGE_OBJECT_I_1,
+            false => MSGVALR::THE_MESSAGE_OBJECT_I_2,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_MESSAGE_OBJECT_I`"]
+    #[doc = "Checks if the value of the field is `THE_MESSAGE_OBJECT_I_1`"]
     #[inline]
-    pub fn is_the_message_object_i(&self) -> bool {
-        *self == MSGVALR::THE_MESSAGE_OBJECT_I
+    pub fn is_the_message_object_i_1(&self) -> bool {
+        *self == MSGVALR::THE_MESSAGE_OBJECT_I_1
     }
-    #[doc = "Checks if the value of the field is `THE_MESSAGE_OBJECT_I`"]
+    #[doc = "Checks if the value of the field is `THE_MESSAGE_OBJECT_I_2`"]
     #[inline]
-    pub fn is_the_message_object_i(&self) -> bool {
-        *self == MSGVALR::THE_MESSAGE_OBJECT_I
+    pub fn is_the_message_object_i_2(&self) -> bool {
+        *self == MSGVALR::THE_MESSAGE_OBJECT_I_2
     }
 }
 #[doc = r" Proxy"]
@@ -214,7 +214,7 @@ pub enum DIRW {
     #[doc = "Direction = transmit. On TXRQST, the respective Message Object is transmitted as a Data Frame. On reception of a Remote Frame with matching identifier, the TXRQST bit of this Message Object is set (if RMTEN = one)."]
     DIRECTION_EQ_TRANSMIT,
     #[doc = "Direction = receive. On TXRQST, a Remote Frame with the identifier of this Message Object is transmitted. On reception of a Data Frame with matching identifier, that message is stored in this Message Object."]
-    DIRECTION_EQ_RECEIVE_,
+    DIRECTION_EQ_RECEIVE,
 }
 impl DIRW {
     #[allow(missing_docs)]
@@ -223,7 +223,7 @@ impl DIRW {
     pub fn _bits(&self) -> bool {
         match *self {
             DIRW::DIRECTION_EQ_TRANSMIT => true,
-            DIRW::DIRECTION_EQ_RECEIVE_ => false,
+            DIRW::DIRECTION_EQ_RECEIVE => false,
         }
     }
 }
@@ -246,8 +246,8 @@ impl<'a> _DIRW<'a> {
     }
     #[doc = "Direction = receive. On TXRQST, a Remote Frame with the identifier of this Message Object is transmitted. On reception of a Data Frame with matching identifier, that message is stored in this Message Object."]
     #[inline]
-    pub fn direction_eq_receive_(self) -> &'a mut W {
-        self.variant(DIRW::DIRECTION_EQ_RECEIVE_)
+    pub fn direction_eq_receive(self) -> &'a mut W {
+        self.variant(DIRW::DIRECTION_EQ_RECEIVE)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -270,9 +270,9 @@ impl<'a> _DIRW<'a> {
 #[doc = "Values that can be written to the field `XTD`"]
 pub enum XTDW {
     #[doc = "The 29-bit extended identifier will be used for this message object."]
-    THE_29_BIT_EXTENDED_,
+    THE_29_BIT_EXTENDED,
     #[doc = "The 11-bit standard identifier will be used for this message object."]
-    THE_11_BIT_STANDARD_,
+    THE_11_BIT_STANDARD,
 }
 impl XTDW {
     #[allow(missing_docs)]
@@ -280,8 +280,8 @@ impl XTDW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            XTDW::THE_29_BIT_EXTENDED_ => true,
-            XTDW::THE_11_BIT_STANDARD_ => false,
+            XTDW::THE_29_BIT_EXTENDED => true,
+            XTDW::THE_11_BIT_STANDARD => false,
         }
     }
 }
@@ -299,13 +299,13 @@ impl<'a> _XTDW<'a> {
     }
     #[doc = "The 29-bit extended identifier will be used for this message object."]
     #[inline]
-    pub fn the_29_bit_extended_(self) -> &'a mut W {
-        self.variant(XTDW::THE_29_BIT_EXTENDED_)
+    pub fn the_29_bit_extended(self) -> &'a mut W {
+        self.variant(XTDW::THE_29_BIT_EXTENDED)
     }
     #[doc = "The 11-bit standard identifier will be used for this message object."]
     #[inline]
-    pub fn the_11_bit_standard_(self) -> &'a mut W {
-        self.variant(XTDW::THE_11_BIT_STANDARD_)
+    pub fn the_11_bit_standard(self) -> &'a mut W {
+        self.variant(XTDW::THE_11_BIT_STANDARD)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -328,9 +328,9 @@ impl<'a> _XTDW<'a> {
 #[doc = "Values that can be written to the field `MSGVAL`"]
 pub enum MSGVALW {
     #[doc = "The message object is configured and should be considered by the message handler."]
-    THE_MESSAGE_OBJECT_I,
+    THE_MESSAGE_OBJECT_I_1,
     #[doc = "The message object is ignored by the message handler."]
-    THE_MESSAGE_OBJECT_I,
+    THE_MESSAGE_OBJECT_I_2,
 }
 impl MSGVALW {
     #[allow(missing_docs)]
@@ -338,8 +338,8 @@ impl MSGVALW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            MSGVALW::THE_MESSAGE_OBJECT_I => true,
-            MSGVALW::THE_MESSAGE_OBJECT_I => false,
+            MSGVALW::THE_MESSAGE_OBJECT_I_1 => true,
+            MSGVALW::THE_MESSAGE_OBJECT_I_2 => false,
         }
     }
 }
@@ -357,13 +357,13 @@ impl<'a> _MSGVALW<'a> {
     }
     #[doc = "The message object is configured and should be considered by the message handler."]
     #[inline]
-    pub fn the_message_object_i(self) -> &'a mut W {
-        self.variant(MSGVALW::THE_MESSAGE_OBJECT_I)
+    pub fn the_message_object_i_1(self) -> &'a mut W {
+        self.variant(MSGVALW::THE_MESSAGE_OBJECT_I_1)
     }
     #[doc = "The message object is ignored by the message handler."]
     #[inline]
-    pub fn the_message_object_i(self) -> &'a mut W {
-        self.variant(MSGVALW::THE_MESSAGE_OBJECT_I)
+    pub fn the_message_object_i_2(self) -> &'a mut W {
+        self.variant(MSGVALW::THE_MESSAGE_OBJECT_I_2)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

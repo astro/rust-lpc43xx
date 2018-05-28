@@ -46,9 +46,9 @@ impl super::CCP {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCPA0R {
     #[doc = "MCOA0 passive."]
-    MCOA0_PASSIVE_,
+    MCOA0_PASSIVE,
     #[doc = "internal MCOA0."]
-    INTERNAL_MCOA0_,
+    INTERNAL_MCOA0,
 }
 impl CCPA0R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -65,8 +65,8 @@ impl CCPA0R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CCPA0R::MCOA0_PASSIVE_ => false,
-            CCPA0R::INTERNAL_MCOA0_ => true,
+            CCPA0R::MCOA0_PASSIVE => false,
+            CCPA0R::INTERNAL_MCOA0 => true,
         }
     }
     #[allow(missing_docs)]
@@ -74,26 +74,26 @@ impl CCPA0R {
     #[inline]
     pub fn _from(value: bool) -> CCPA0R {
         match value {
-            false => CCPA0R::MCOA0_PASSIVE_,
-            true => CCPA0R::INTERNAL_MCOA0_,
+            false => CCPA0R::MCOA0_PASSIVE,
+            true => CCPA0R::INTERNAL_MCOA0,
         }
     }
-    #[doc = "Checks if the value of the field is `MCOA0_PASSIVE_`"]
+    #[doc = "Checks if the value of the field is `MCOA0_PASSIVE`"]
     #[inline]
-    pub fn is_mcoa0_passive_(&self) -> bool {
-        *self == CCPA0R::MCOA0_PASSIVE_
+    pub fn is_mcoa0_passive(&self) -> bool {
+        *self == CCPA0R::MCOA0_PASSIVE
     }
-    #[doc = "Checks if the value of the field is `INTERNAL_MCOA0_`"]
+    #[doc = "Checks if the value of the field is `INTERNAL_MCOA0`"]
     #[inline]
-    pub fn is_internal_mcoa0_(&self) -> bool {
-        *self == CCPA0R::INTERNAL_MCOA0_
+    pub fn is_internal_mcoa0(&self) -> bool {
+        *self == CCPA0R::INTERNAL_MCOA0
     }
 }
 #[doc = "Possible values of the field `CCPB0`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCPB0R {
     #[doc = "MCOB0 passive."]
-    MCOB0_PASSIVE_,
+    MCOB0_PASSIVE,
     #[doc = "MCOB0 tracks internal MCOA0."]
     MCOB0_TRACKS_INTERNA,
 }
@@ -112,7 +112,7 @@ impl CCPB0R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CCPB0R::MCOB0_PASSIVE_ => false,
+            CCPB0R::MCOB0_PASSIVE => false,
             CCPB0R::MCOB0_TRACKS_INTERNA => true,
         }
     }
@@ -121,14 +121,14 @@ impl CCPB0R {
     #[inline]
     pub fn _from(value: bool) -> CCPB0R {
         match value {
-            false => CCPB0R::MCOB0_PASSIVE_,
+            false => CCPB0R::MCOB0_PASSIVE,
             true => CCPB0R::MCOB0_TRACKS_INTERNA,
         }
     }
-    #[doc = "Checks if the value of the field is `MCOB0_PASSIVE_`"]
+    #[doc = "Checks if the value of the field is `MCOB0_PASSIVE`"]
     #[inline]
-    pub fn is_mcob0_passive_(&self) -> bool {
-        *self == CCPB0R::MCOB0_PASSIVE_
+    pub fn is_mcob0_passive(&self) -> bool {
+        *self == CCPB0R::MCOB0_PASSIVE
     }
     #[doc = "Checks if the value of the field is `MCOB0_TRACKS_INTERNA`"]
     #[inline]
@@ -140,7 +140,7 @@ impl CCPB0R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCPA1R {
     #[doc = "MCOA1 passive."]
-    MCOA1_PASSIVE_,
+    MCOA1_PASSIVE,
     #[doc = "MCOA1 tracks internal MCOA0."]
     MCOA1_TRACKS_INTERNA,
 }
@@ -159,7 +159,7 @@ impl CCPA1R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CCPA1R::MCOA1_PASSIVE_ => false,
+            CCPA1R::MCOA1_PASSIVE => false,
             CCPA1R::MCOA1_TRACKS_INTERNA => true,
         }
     }
@@ -168,14 +168,14 @@ impl CCPA1R {
     #[inline]
     pub fn _from(value: bool) -> CCPA1R {
         match value {
-            false => CCPA1R::MCOA1_PASSIVE_,
+            false => CCPA1R::MCOA1_PASSIVE,
             true => CCPA1R::MCOA1_TRACKS_INTERNA,
         }
     }
-    #[doc = "Checks if the value of the field is `MCOA1_PASSIVE_`"]
+    #[doc = "Checks if the value of the field is `MCOA1_PASSIVE`"]
     #[inline]
-    pub fn is_mcoa1_passive_(&self) -> bool {
-        *self == CCPA1R::MCOA1_PASSIVE_
+    pub fn is_mcoa1_passive(&self) -> bool {
+        *self == CCPA1R::MCOA1_PASSIVE
     }
     #[doc = "Checks if the value of the field is `MCOA1_TRACKS_INTERNA`"]
     #[inline]
@@ -187,7 +187,7 @@ impl CCPA1R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCPB1R {
     #[doc = "MCOB1 passive."]
-    MCOB1_PASSIVE_,
+    MCOB1_PASSIVE,
     #[doc = "MCOB1 tracks internal MCOA0."]
     MCOB1_TRACKS_INTERNA,
 }
@@ -206,7 +206,7 @@ impl CCPB1R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CCPB1R::MCOB1_PASSIVE_ => false,
+            CCPB1R::MCOB1_PASSIVE => false,
             CCPB1R::MCOB1_TRACKS_INTERNA => true,
         }
     }
@@ -215,14 +215,14 @@ impl CCPB1R {
     #[inline]
     pub fn _from(value: bool) -> CCPB1R {
         match value {
-            false => CCPB1R::MCOB1_PASSIVE_,
+            false => CCPB1R::MCOB1_PASSIVE,
             true => CCPB1R::MCOB1_TRACKS_INTERNA,
         }
     }
-    #[doc = "Checks if the value of the field is `MCOB1_PASSIVE_`"]
+    #[doc = "Checks if the value of the field is `MCOB1_PASSIVE`"]
     #[inline]
-    pub fn is_mcob1_passive_(&self) -> bool {
-        *self == CCPB1R::MCOB1_PASSIVE_
+    pub fn is_mcob1_passive(&self) -> bool {
+        *self == CCPB1R::MCOB1_PASSIVE
     }
     #[doc = "Checks if the value of the field is `MCOB1_TRACKS_INTERNA`"]
     #[inline]
@@ -234,7 +234,7 @@ impl CCPB1R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCPA2R {
     #[doc = "MCOA2 passive."]
-    MCOA2_PASSIVE_,
+    MCOA2_PASSIVE,
     #[doc = "MCOA2 tracks internal MCOA0."]
     MCOA2_TRACKS_INTERNA,
 }
@@ -253,7 +253,7 @@ impl CCPA2R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CCPA2R::MCOA2_PASSIVE_ => false,
+            CCPA2R::MCOA2_PASSIVE => false,
             CCPA2R::MCOA2_TRACKS_INTERNA => true,
         }
     }
@@ -262,14 +262,14 @@ impl CCPA2R {
     #[inline]
     pub fn _from(value: bool) -> CCPA2R {
         match value {
-            false => CCPA2R::MCOA2_PASSIVE_,
+            false => CCPA2R::MCOA2_PASSIVE,
             true => CCPA2R::MCOA2_TRACKS_INTERNA,
         }
     }
-    #[doc = "Checks if the value of the field is `MCOA2_PASSIVE_`"]
+    #[doc = "Checks if the value of the field is `MCOA2_PASSIVE`"]
     #[inline]
-    pub fn is_mcoa2_passive_(&self) -> bool {
-        *self == CCPA2R::MCOA2_PASSIVE_
+    pub fn is_mcoa2_passive(&self) -> bool {
+        *self == CCPA2R::MCOA2_PASSIVE
     }
     #[doc = "Checks if the value of the field is `MCOA2_TRACKS_INTERNA`"]
     #[inline]
@@ -281,7 +281,7 @@ impl CCPA2R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCPB2R {
     #[doc = "MCOB2 passive."]
-    MCOB2_PASSIVE_,
+    MCOB2_PASSIVE,
     #[doc = "MCOB2 tracks internal MCOA0."]
     MCOB2_TRACKS_INTERNA,
 }
@@ -300,7 +300,7 @@ impl CCPB2R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CCPB2R::MCOB2_PASSIVE_ => false,
+            CCPB2R::MCOB2_PASSIVE => false,
             CCPB2R::MCOB2_TRACKS_INTERNA => true,
         }
     }
@@ -309,14 +309,14 @@ impl CCPB2R {
     #[inline]
     pub fn _from(value: bool) -> CCPB2R {
         match value {
-            false => CCPB2R::MCOB2_PASSIVE_,
+            false => CCPB2R::MCOB2_PASSIVE,
             true => CCPB2R::MCOB2_TRACKS_INTERNA,
         }
     }
-    #[doc = "Checks if the value of the field is `MCOB2_PASSIVE_`"]
+    #[doc = "Checks if the value of the field is `MCOB2_PASSIVE`"]
     #[inline]
-    pub fn is_mcob2_passive_(&self) -> bool {
-        *self == CCPB2R::MCOB2_PASSIVE_
+    pub fn is_mcob2_passive(&self) -> bool {
+        *self == CCPB2R::MCOB2_PASSIVE
     }
     #[doc = "Checks if the value of the field is `MCOB2_TRACKS_INTERNA`"]
     #[inline]
@@ -327,9 +327,9 @@ impl CCPB2R {
 #[doc = "Values that can be written to the field `CCPA0`"]
 pub enum CCPA0W {
     #[doc = "MCOA0 passive."]
-    MCOA0_PASSIVE_,
+    MCOA0_PASSIVE,
     #[doc = "internal MCOA0."]
-    INTERNAL_MCOA0_,
+    INTERNAL_MCOA0,
 }
 impl CCPA0W {
     #[allow(missing_docs)]
@@ -337,8 +337,8 @@ impl CCPA0W {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CCPA0W::MCOA0_PASSIVE_ => false,
-            CCPA0W::INTERNAL_MCOA0_ => true,
+            CCPA0W::MCOA0_PASSIVE => false,
+            CCPA0W::INTERNAL_MCOA0 => true,
         }
     }
 }
@@ -356,13 +356,13 @@ impl<'a> _CCPA0W<'a> {
     }
     #[doc = "MCOA0 passive."]
     #[inline]
-    pub fn mcoa0_passive_(self) -> &'a mut W {
-        self.variant(CCPA0W::MCOA0_PASSIVE_)
+    pub fn mcoa0_passive(self) -> &'a mut W {
+        self.variant(CCPA0W::MCOA0_PASSIVE)
     }
     #[doc = "internal MCOA0."]
     #[inline]
-    pub fn internal_mcoa0_(self) -> &'a mut W {
-        self.variant(CCPA0W::INTERNAL_MCOA0_)
+    pub fn internal_mcoa0(self) -> &'a mut W {
+        self.variant(CCPA0W::INTERNAL_MCOA0)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -385,7 +385,7 @@ impl<'a> _CCPA0W<'a> {
 #[doc = "Values that can be written to the field `CCPB0`"]
 pub enum CCPB0W {
     #[doc = "MCOB0 passive."]
-    MCOB0_PASSIVE_,
+    MCOB0_PASSIVE,
     #[doc = "MCOB0 tracks internal MCOA0."]
     MCOB0_TRACKS_INTERNA,
 }
@@ -395,7 +395,7 @@ impl CCPB0W {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CCPB0W::MCOB0_PASSIVE_ => false,
+            CCPB0W::MCOB0_PASSIVE => false,
             CCPB0W::MCOB0_TRACKS_INTERNA => true,
         }
     }
@@ -414,8 +414,8 @@ impl<'a> _CCPB0W<'a> {
     }
     #[doc = "MCOB0 passive."]
     #[inline]
-    pub fn mcob0_passive_(self) -> &'a mut W {
-        self.variant(CCPB0W::MCOB0_PASSIVE_)
+    pub fn mcob0_passive(self) -> &'a mut W {
+        self.variant(CCPB0W::MCOB0_PASSIVE)
     }
     #[doc = "MCOB0 tracks internal MCOA0."]
     #[inline]
@@ -443,7 +443,7 @@ impl<'a> _CCPB0W<'a> {
 #[doc = "Values that can be written to the field `CCPA1`"]
 pub enum CCPA1W {
     #[doc = "MCOA1 passive."]
-    MCOA1_PASSIVE_,
+    MCOA1_PASSIVE,
     #[doc = "MCOA1 tracks internal MCOA0."]
     MCOA1_TRACKS_INTERNA,
 }
@@ -453,7 +453,7 @@ impl CCPA1W {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CCPA1W::MCOA1_PASSIVE_ => false,
+            CCPA1W::MCOA1_PASSIVE => false,
             CCPA1W::MCOA1_TRACKS_INTERNA => true,
         }
     }
@@ -472,8 +472,8 @@ impl<'a> _CCPA1W<'a> {
     }
     #[doc = "MCOA1 passive."]
     #[inline]
-    pub fn mcoa1_passive_(self) -> &'a mut W {
-        self.variant(CCPA1W::MCOA1_PASSIVE_)
+    pub fn mcoa1_passive(self) -> &'a mut W {
+        self.variant(CCPA1W::MCOA1_PASSIVE)
     }
     #[doc = "MCOA1 tracks internal MCOA0."]
     #[inline]
@@ -501,7 +501,7 @@ impl<'a> _CCPA1W<'a> {
 #[doc = "Values that can be written to the field `CCPB1`"]
 pub enum CCPB1W {
     #[doc = "MCOB1 passive."]
-    MCOB1_PASSIVE_,
+    MCOB1_PASSIVE,
     #[doc = "MCOB1 tracks internal MCOA0."]
     MCOB1_TRACKS_INTERNA,
 }
@@ -511,7 +511,7 @@ impl CCPB1W {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CCPB1W::MCOB1_PASSIVE_ => false,
+            CCPB1W::MCOB1_PASSIVE => false,
             CCPB1W::MCOB1_TRACKS_INTERNA => true,
         }
     }
@@ -530,8 +530,8 @@ impl<'a> _CCPB1W<'a> {
     }
     #[doc = "MCOB1 passive."]
     #[inline]
-    pub fn mcob1_passive_(self) -> &'a mut W {
-        self.variant(CCPB1W::MCOB1_PASSIVE_)
+    pub fn mcob1_passive(self) -> &'a mut W {
+        self.variant(CCPB1W::MCOB1_PASSIVE)
     }
     #[doc = "MCOB1 tracks internal MCOA0."]
     #[inline]
@@ -559,7 +559,7 @@ impl<'a> _CCPB1W<'a> {
 #[doc = "Values that can be written to the field `CCPA2`"]
 pub enum CCPA2W {
     #[doc = "MCOA2 passive."]
-    MCOA2_PASSIVE_,
+    MCOA2_PASSIVE,
     #[doc = "MCOA2 tracks internal MCOA0."]
     MCOA2_TRACKS_INTERNA,
 }
@@ -569,7 +569,7 @@ impl CCPA2W {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CCPA2W::MCOA2_PASSIVE_ => false,
+            CCPA2W::MCOA2_PASSIVE => false,
             CCPA2W::MCOA2_TRACKS_INTERNA => true,
         }
     }
@@ -588,8 +588,8 @@ impl<'a> _CCPA2W<'a> {
     }
     #[doc = "MCOA2 passive."]
     #[inline]
-    pub fn mcoa2_passive_(self) -> &'a mut W {
-        self.variant(CCPA2W::MCOA2_PASSIVE_)
+    pub fn mcoa2_passive(self) -> &'a mut W {
+        self.variant(CCPA2W::MCOA2_PASSIVE)
     }
     #[doc = "MCOA2 tracks internal MCOA0."]
     #[inline]
@@ -617,7 +617,7 @@ impl<'a> _CCPA2W<'a> {
 #[doc = "Values that can be written to the field `CCPB2`"]
 pub enum CCPB2W {
     #[doc = "MCOB2 passive."]
-    MCOB2_PASSIVE_,
+    MCOB2_PASSIVE,
     #[doc = "MCOB2 tracks internal MCOA0."]
     MCOB2_TRACKS_INTERNA,
 }
@@ -627,7 +627,7 @@ impl CCPB2W {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CCPB2W::MCOB2_PASSIVE_ => false,
+            CCPB2W::MCOB2_PASSIVE => false,
             CCPB2W::MCOB2_TRACKS_INTERNA => true,
         }
     }
@@ -646,8 +646,8 @@ impl<'a> _CCPB2W<'a> {
     }
     #[doc = "MCOB2 passive."]
     #[inline]
-    pub fn mcob2_passive_(self) -> &'a mut W {
-        self.variant(CCPB2W::MCOB2_PASSIVE_)
+    pub fn mcob2_passive(self) -> &'a mut W {
+        self.variant(CCPB2W::MCOB2_PASSIVE)
     }
     #[doc = "MCOB2 tracks internal MCOA0."]
     #[inline]

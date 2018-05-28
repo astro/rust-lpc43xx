@@ -93,9 +93,9 @@ impl RUNR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AUTOR {
     #[doc = "Auto is disabled."]
-    AUTO_IS_DISABLED_,
+    AUTO_IS_DISABLED,
     #[doc = "Auto is enabled."]
-    AUTO_IS_ENABLED_,
+    AUTO_IS_ENABLED,
 }
 impl AUTOR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -112,8 +112,8 @@ impl AUTOR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            AUTOR::AUTO_IS_DISABLED_ => false,
-            AUTOR::AUTO_IS_ENABLED_ => true,
+            AUTOR::AUTO_IS_DISABLED => false,
+            AUTOR::AUTO_IS_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -121,28 +121,28 @@ impl AUTOR {
     #[inline]
     pub fn _from(value: bool) -> AUTOR {
         match value {
-            false => AUTOR::AUTO_IS_DISABLED_,
-            true => AUTOR::AUTO_IS_ENABLED_,
+            false => AUTOR::AUTO_IS_DISABLED,
+            true => AUTOR::AUTO_IS_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `AUTO_IS_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `AUTO_IS_DISABLED`"]
     #[inline]
-    pub fn is_auto_is_disabled_(&self) -> bool {
-        *self == AUTOR::AUTO_IS_DISABLED_
+    pub fn is_auto_is_disabled(&self) -> bool {
+        *self == AUTOR::AUTO_IS_DISABLED
     }
-    #[doc = "Checks if the value of the field is `AUTO_IS_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `AUTO_IS_ENABLED`"]
     #[inline]
-    pub fn is_auto_is_enabled_(&self) -> bool {
-        *self == AUTOR::AUTO_IS_ENABLED_
+    pub fn is_auto_is_enabled(&self) -> bool {
+        *self == AUTOR::AUTO_IS_ENABLED
     }
 }
 #[doc = "Possible values of the field `WAKEUP`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum WAKEUPR {
     #[doc = "Wake-up is disabled."]
-    WAKE_UP_IS_DISABLED_,
+    WAKE_UP_IS_DISABLED,
     #[doc = "Wake-up is enabled."]
-    WAKE_UP_IS_ENABLED_,
+    WAKE_UP_IS_ENABLED,
 }
 impl WAKEUPR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -159,8 +159,8 @@ impl WAKEUPR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            WAKEUPR::WAKE_UP_IS_DISABLED_ => false,
-            WAKEUPR::WAKE_UP_IS_ENABLED_ => true,
+            WAKEUPR::WAKE_UP_IS_DISABLED => false,
+            WAKEUPR::WAKE_UP_IS_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -168,19 +168,19 @@ impl WAKEUPR {
     #[inline]
     pub fn _from(value: bool) -> WAKEUPR {
         match value {
-            false => WAKEUPR::WAKE_UP_IS_DISABLED_,
-            true => WAKEUPR::WAKE_UP_IS_ENABLED_,
+            false => WAKEUPR::WAKE_UP_IS_DISABLED,
+            true => WAKEUPR::WAKE_UP_IS_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `WAKE_UP_IS_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `WAKE_UP_IS_DISABLED`"]
     #[inline]
-    pub fn is_wake_up_is_disabled_(&self) -> bool {
-        *self == WAKEUPR::WAKE_UP_IS_DISABLED_
+    pub fn is_wake_up_is_disabled(&self) -> bool {
+        *self == WAKEUPR::WAKE_UP_IS_DISABLED
     }
-    #[doc = "Checks if the value of the field is `WAKE_UP_IS_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `WAKE_UP_IS_ENABLED`"]
     #[inline]
-    pub fn is_wake_up_is_enabled_(&self) -> bool {
-        *self == WAKEUPR::WAKE_UP_IS_ENABLED_
+    pub fn is_wake_up_is_enabled(&self) -> bool {
+        *self == WAKEUPR::WAKE_UP_IS_ENABLED
     }
 }
 #[doc = "Values that can be written to the field `RUN`"]
@@ -244,9 +244,9 @@ impl<'a> _RUNW<'a> {
 #[doc = "Values that can be written to the field `AUTO`"]
 pub enum AUTOW {
     #[doc = "Auto is disabled."]
-    AUTO_IS_DISABLED_,
+    AUTO_IS_DISABLED,
     #[doc = "Auto is enabled."]
-    AUTO_IS_ENABLED_,
+    AUTO_IS_ENABLED,
 }
 impl AUTOW {
     #[allow(missing_docs)]
@@ -254,8 +254,8 @@ impl AUTOW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            AUTOW::AUTO_IS_DISABLED_ => false,
-            AUTOW::AUTO_IS_ENABLED_ => true,
+            AUTOW::AUTO_IS_DISABLED => false,
+            AUTOW::AUTO_IS_ENABLED => true,
         }
     }
 }
@@ -273,13 +273,13 @@ impl<'a> _AUTOW<'a> {
     }
     #[doc = "Auto is disabled."]
     #[inline]
-    pub fn auto_is_disabled_(self) -> &'a mut W {
-        self.variant(AUTOW::AUTO_IS_DISABLED_)
+    pub fn auto_is_disabled(self) -> &'a mut W {
+        self.variant(AUTOW::AUTO_IS_DISABLED)
     }
     #[doc = "Auto is enabled."]
     #[inline]
-    pub fn auto_is_enabled_(self) -> &'a mut W {
-        self.variant(AUTOW::AUTO_IS_ENABLED_)
+    pub fn auto_is_enabled(self) -> &'a mut W {
+        self.variant(AUTOW::AUTO_IS_ENABLED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -302,9 +302,9 @@ impl<'a> _AUTOW<'a> {
 #[doc = "Values that can be written to the field `WAKEUP`"]
 pub enum WAKEUPW {
     #[doc = "Wake-up is disabled."]
-    WAKE_UP_IS_DISABLED_,
+    WAKE_UP_IS_DISABLED,
     #[doc = "Wake-up is enabled."]
-    WAKE_UP_IS_ENABLED_,
+    WAKE_UP_IS_ENABLED,
 }
 impl WAKEUPW {
     #[allow(missing_docs)]
@@ -312,8 +312,8 @@ impl WAKEUPW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            WAKEUPW::WAKE_UP_IS_DISABLED_ => false,
-            WAKEUPW::WAKE_UP_IS_ENABLED_ => true,
+            WAKEUPW::WAKE_UP_IS_DISABLED => false,
+            WAKEUPW::WAKE_UP_IS_ENABLED => true,
         }
     }
 }
@@ -331,13 +331,13 @@ impl<'a> _WAKEUPW<'a> {
     }
     #[doc = "Wake-up is disabled."]
     #[inline]
-    pub fn wake_up_is_disabled_(self) -> &'a mut W {
-        self.variant(WAKEUPW::WAKE_UP_IS_DISABLED_)
+    pub fn wake_up_is_disabled(self) -> &'a mut W {
+        self.variant(WAKEUPW::WAKE_UP_IS_DISABLED)
     }
     #[doc = "Wake-up is enabled."]
     #[inline]
-    pub fn wake_up_is_enabled_(self) -> &'a mut W {
-        self.variant(WAKEUPW::WAKE_UP_IS_ENABLED_)
+    pub fn wake_up_is_enabled(self) -> &'a mut W {
+        self.variant(WAKEUPW::WAKE_UP_IS_ENABLED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

@@ -478,20 +478,20 @@ impl SAMPLECTRLR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum WAKEUP0CTRLR {
     #[doc = "Input to the event router."]
-    INPUT_TO_THE_EVENT_R,
+    INPUT_TO_THE_EVENT_R_1,
     #[doc = "Output from the event router."]
     OUTPUT_FROM_THE_EVEN,
     #[doc = "Input to the event router."]
-    INPUT_TO_THE_EVENT_R,
+    INPUT_TO_THE_EVENT_R_2,
 }
 impl WAKEUP0CTRLR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
         match *self {
-            WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R => 0,
+            WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R_1 => 0,
             WAKEUP0CTRLR::OUTPUT_FROM_THE_EVEN => 1,
-            WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R => 3,
+            WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R_2 => 3,
         }
     }
     #[allow(missing_docs)]
@@ -499,46 +499,46 @@ impl WAKEUP0CTRLR {
     #[inline]
     pub fn _from(value: u8) -> WAKEUP0CTRLR {
         match value {
-            0 => WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R,
+            0 => WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R_1,
             1 => WAKEUP0CTRLR::OUTPUT_FROM_THE_EVEN,
-            3 => WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R,
+            3 => WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R_2,
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT_TO_THE_EVENT_R`"]
+    #[doc = "Checks if the value of the field is `INPUT_TO_THE_EVENT_R_1`"]
     #[inline]
-    pub fn is_input_to_the_event_r(&self) -> bool {
-        *self == WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R
+    pub fn is_input_to_the_event_r_1(&self) -> bool {
+        *self == WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R_1
     }
     #[doc = "Checks if the value of the field is `OUTPUT_FROM_THE_EVEN`"]
     #[inline]
     pub fn is_output_from_the_even(&self) -> bool {
         *self == WAKEUP0CTRLR::OUTPUT_FROM_THE_EVEN
     }
-    #[doc = "Checks if the value of the field is `INPUT_TO_THE_EVENT_R`"]
+    #[doc = "Checks if the value of the field is `INPUT_TO_THE_EVENT_R_2`"]
     #[inline]
-    pub fn is_input_to_the_event_r(&self) -> bool {
-        *self == WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R
+    pub fn is_input_to_the_event_r_2(&self) -> bool {
+        *self == WAKEUP0CTRLR::INPUT_TO_THE_EVENT_R_2
     }
 }
 #[doc = "Possible values of the field `WAKEUP1CTRL`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum WAKEUP1CTRLR {
     #[doc = "Input to event router."]
-    INPUT_TO_EVENT_ROUTE,
+    INPUT_TO_EVENT_ROUTE_1,
     #[doc = "Output from the event router."]
     OUTPUT_FROM_THE_EVEN,
     #[doc = "Input to event router."]
-    INPUT_TO_EVENT_ROUTE,
+    INPUT_TO_EVENT_ROUTE_2,
 }
 impl WAKEUP1CTRLR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
         match *self {
-            WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE => 0,
+            WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE_1 => 0,
             WAKEUP1CTRLR::OUTPUT_FROM_THE_EVEN => 1,
-            WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE => 3,
+            WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE_2 => 3,
         }
     }
     #[allow(missing_docs)]
@@ -546,26 +546,26 @@ impl WAKEUP1CTRLR {
     #[inline]
     pub fn _from(value: u8) -> WAKEUP1CTRLR {
         match value {
-            0 => WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE,
+            0 => WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE_1,
             1 => WAKEUP1CTRLR::OUTPUT_FROM_THE_EVEN,
-            3 => WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE,
+            3 => WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE_2,
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT_TO_EVENT_ROUTE`"]
+    #[doc = "Checks if the value of the field is `INPUT_TO_EVENT_ROUTE_1`"]
     #[inline]
-    pub fn is_input_to_event_route(&self) -> bool {
-        *self == WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE
+    pub fn is_input_to_event_route_1(&self) -> bool {
+        *self == WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE_1
     }
     #[doc = "Checks if the value of the field is `OUTPUT_FROM_THE_EVEN`"]
     #[inline]
     pub fn is_output_from_the_even(&self) -> bool {
         *self == WAKEUP1CTRLR::OUTPUT_FROM_THE_EVEN
     }
-    #[doc = "Checks if the value of the field is `INPUT_TO_EVENT_ROUTE`"]
+    #[doc = "Checks if the value of the field is `INPUT_TO_EVENT_ROUTE_2`"]
     #[inline]
-    pub fn is_input_to_event_route(&self) -> bool {
-        *self == WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE
+    pub fn is_input_to_event_route_2(&self) -> bool {
+        *self == WAKEUP1CTRLR::INPUT_TO_EVENT_ROUTE_2
     }
 }
 #[doc = "Values that can be written to the field `EN1KHZ`"]
@@ -1097,11 +1097,11 @@ impl<'a> _SAMPLECTRLW<'a> {
 #[doc = "Values that can be written to the field `WAKEUP0CTRL`"]
 pub enum WAKEUP0CTRLW {
     #[doc = "Input to the event router."]
-    INPUT_TO_THE_EVENT_R,
+    INPUT_TO_THE_EVENT_R_1,
     #[doc = "Output from the event router."]
     OUTPUT_FROM_THE_EVEN,
     #[doc = "Input to the event router."]
-    INPUT_TO_THE_EVENT_R,
+    INPUT_TO_THE_EVENT_R_2,
 }
 impl WAKEUP0CTRLW {
     #[allow(missing_docs)]
@@ -1109,9 +1109,9 @@ impl WAKEUP0CTRLW {
     #[inline]
     pub fn _bits(&self) -> u8 {
         match *self {
-            WAKEUP0CTRLW::INPUT_TO_THE_EVENT_R => 0,
+            WAKEUP0CTRLW::INPUT_TO_THE_EVENT_R_1 => 0,
             WAKEUP0CTRLW::OUTPUT_FROM_THE_EVEN => 1,
-            WAKEUP0CTRLW::INPUT_TO_THE_EVENT_R => 3,
+            WAKEUP0CTRLW::INPUT_TO_THE_EVENT_R_2 => 3,
         }
     }
 }
@@ -1127,8 +1127,8 @@ impl<'a> _WAKEUP0CTRLW<'a> {
     }
     #[doc = "Input to the event router."]
     #[inline]
-    pub fn input_to_the_event_r(self) -> &'a mut W {
-        self.variant(WAKEUP0CTRLW::INPUT_TO_THE_EVENT_R)
+    pub fn input_to_the_event_r_1(self) -> &'a mut W {
+        self.variant(WAKEUP0CTRLW::INPUT_TO_THE_EVENT_R_1)
     }
     #[doc = "Output from the event router."]
     #[inline]
@@ -1137,8 +1137,8 @@ impl<'a> _WAKEUP0CTRLW<'a> {
     }
     #[doc = "Input to the event router."]
     #[inline]
-    pub fn input_to_the_event_r(self) -> &'a mut W {
-        self.variant(WAKEUP0CTRLW::INPUT_TO_THE_EVENT_R)
+    pub fn input_to_the_event_r_2(self) -> &'a mut W {
+        self.variant(WAKEUP0CTRLW::INPUT_TO_THE_EVENT_R_2)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
@@ -1153,11 +1153,11 @@ impl<'a> _WAKEUP0CTRLW<'a> {
 #[doc = "Values that can be written to the field `WAKEUP1CTRL`"]
 pub enum WAKEUP1CTRLW {
     #[doc = "Input to event router."]
-    INPUT_TO_EVENT_ROUTE,
+    INPUT_TO_EVENT_ROUTE_1,
     #[doc = "Output from the event router."]
     OUTPUT_FROM_THE_EVEN,
     #[doc = "Input to event router."]
-    INPUT_TO_EVENT_ROUTE,
+    INPUT_TO_EVENT_ROUTE_2,
 }
 impl WAKEUP1CTRLW {
     #[allow(missing_docs)]
@@ -1165,9 +1165,9 @@ impl WAKEUP1CTRLW {
     #[inline]
     pub fn _bits(&self) -> u8 {
         match *self {
-            WAKEUP1CTRLW::INPUT_TO_EVENT_ROUTE => 0,
+            WAKEUP1CTRLW::INPUT_TO_EVENT_ROUTE_1 => 0,
             WAKEUP1CTRLW::OUTPUT_FROM_THE_EVEN => 1,
-            WAKEUP1CTRLW::INPUT_TO_EVENT_ROUTE => 3,
+            WAKEUP1CTRLW::INPUT_TO_EVENT_ROUTE_2 => 3,
         }
     }
 }
@@ -1183,8 +1183,8 @@ impl<'a> _WAKEUP1CTRLW<'a> {
     }
     #[doc = "Input to event router."]
     #[inline]
-    pub fn input_to_event_route(self) -> &'a mut W {
-        self.variant(WAKEUP1CTRLW::INPUT_TO_EVENT_ROUTE)
+    pub fn input_to_event_route_1(self) -> &'a mut W {
+        self.variant(WAKEUP1CTRLW::INPUT_TO_EVENT_ROUTE_1)
     }
     #[doc = "Output from the event router."]
     #[inline]
@@ -1193,8 +1193,8 @@ impl<'a> _WAKEUP1CTRLW<'a> {
     }
     #[doc = "Input to event router."]
     #[inline]
-    pub fn input_to_event_route(self) -> &'a mut W {
-        self.variant(WAKEUP1CTRLW::INPUT_TO_EVENT_ROUTE)
+    pub fn input_to_event_route_2(self) -> &'a mut W {
+        self.variant(WAKEUP1CTRLW::INPUT_TO_EVENT_ROUTE_2)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]

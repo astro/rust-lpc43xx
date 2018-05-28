@@ -48,7 +48,7 @@ pub enum BASICR {
     #[doc = "IF1 registers used as TX buffer, IF2 registers used as RX buffer."]
     IF1_TX_IF2_RX,
     #[doc = "Basic mode disabled."]
-    BASIC_MODE_DISABLED_,
+    BASIC_MODE_DISABLED,
 }
 impl BASICR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -66,7 +66,7 @@ impl BASICR {
     pub fn bit(&self) -> bool {
         match *self {
             BASICR::IF1_TX_IF2_RX => true,
-            BASICR::BASIC_MODE_DISABLED_ => false,
+            BASICR::BASIC_MODE_DISABLED => false,
         }
     }
     #[allow(missing_docs)]
@@ -75,7 +75,7 @@ impl BASICR {
     pub fn _from(value: bool) -> BASICR {
         match value {
             true => BASICR::IF1_TX_IF2_RX,
-            false => BASICR::BASIC_MODE_DISABLED_,
+            false => BASICR::BASIC_MODE_DISABLED,
         }
     }
     #[doc = "Checks if the value of the field is `IF1_TX_IF2_RX`"]
@@ -83,10 +83,10 @@ impl BASICR {
     pub fn is_if1_tx_if2_rx(&self) -> bool {
         *self == BASICR::IF1_TX_IF2_RX
     }
-    #[doc = "Checks if the value of the field is `BASIC_MODE_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `BASIC_MODE_DISABLED`"]
     #[inline]
-    pub fn is_basic_mode_disabled_(&self) -> bool {
-        *self == BASICR::BASIC_MODE_DISABLED_
+    pub fn is_basic_mode_disabled(&self) -> bool {
+        *self == BASICR::BASIC_MODE_DISABLED
     }
 }
 #[doc = "Possible values of the field `SILENT`"]
@@ -95,7 +95,7 @@ pub enum SILENTR {
     #[doc = "The module is in silent mode."]
     SILENT,
     #[doc = "Normal operation."]
-    NORMAL_OPERATION_,
+    NORMAL_OPERATION,
 }
 impl SILENTR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -113,7 +113,7 @@ impl SILENTR {
     pub fn bit(&self) -> bool {
         match *self {
             SILENTR::SILENT => true,
-            SILENTR::NORMAL_OPERATION_ => false,
+            SILENTR::NORMAL_OPERATION => false,
         }
     }
     #[allow(missing_docs)]
@@ -122,7 +122,7 @@ impl SILENTR {
     pub fn _from(value: bool) -> SILENTR {
         match value {
             true => SILENTR::SILENT,
-            false => SILENTR::NORMAL_OPERATION_,
+            false => SILENTR::NORMAL_OPERATION,
         }
     }
     #[doc = "Checks if the value of the field is `SILENT`"]
@@ -130,10 +130,10 @@ impl SILENTR {
     pub fn is_silent(&self) -> bool {
         *self == SILENTR::SILENT
     }
-    #[doc = "Checks if the value of the field is `NORMAL_OPERATION_`"]
+    #[doc = "Checks if the value of the field is `NORMAL_OPERATION`"]
     #[inline]
-    pub fn is_normal_operation_(&self) -> bool {
-        *self == SILENTR::NORMAL_OPERATION_
+    pub fn is_normal_operation(&self) -> bool {
+        *self == SILENTR::NORMAL_OPERATION
     }
 }
 #[doc = "Possible values of the field `LBACK`"]
@@ -187,7 +187,7 @@ impl LBACKR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TX1_0R {
     #[doc = "Level at the TD pin is controlled by the CAN controller. This is the value at reset."]
-    LEVEL_AT_THE_TD_PIN_,
+    LEVEL_AT_THE_TD_PIN,
     #[doc = "The sample point can be monitored at the TD pin."]
     THE_SAMPLE_POINT_CAN,
     #[doc = "TD pin is driven LOW/dominant."]
@@ -200,7 +200,7 @@ impl TX1_0R {
     #[inline]
     pub fn bits(&self) -> u8 {
         match *self {
-            TX1_0R::LEVEL_AT_THE_TD_PIN_ => 0,
+            TX1_0R::LEVEL_AT_THE_TD_PIN => 0,
             TX1_0R::THE_SAMPLE_POINT_CAN => 1,
             TX1_0R::TD_PIN_IS_DRIVEN_LOW => 2,
             TX1_0R::TD_PIN_IS_DRIVEN_HIG => 3,
@@ -211,17 +211,17 @@ impl TX1_0R {
     #[inline]
     pub fn _from(value: u8) -> TX1_0R {
         match value {
-            0 => TX1_0R::LEVEL_AT_THE_TD_PIN_,
+            0 => TX1_0R::LEVEL_AT_THE_TD_PIN,
             1 => TX1_0R::THE_SAMPLE_POINT_CAN,
             2 => TX1_0R::TD_PIN_IS_DRIVEN_LOW,
             3 => TX1_0R::TD_PIN_IS_DRIVEN_HIG,
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL_AT_THE_TD_PIN_`"]
+    #[doc = "Checks if the value of the field is `LEVEL_AT_THE_TD_PIN`"]
     #[inline]
-    pub fn is_level_at_the_td_pin_(&self) -> bool {
-        *self == TX1_0R::LEVEL_AT_THE_TD_PIN_
+    pub fn is_level_at_the_td_pin(&self) -> bool {
+        *self == TX1_0R::LEVEL_AT_THE_TD_PIN
     }
     #[doc = "Checks if the value of the field is `THE_SAMPLE_POINT_CAN`"]
     #[inline]
@@ -291,7 +291,7 @@ pub enum BASICW {
     #[doc = "IF1 registers used as TX buffer, IF2 registers used as RX buffer."]
     IF1_TX_IF2_RX,
     #[doc = "Basic mode disabled."]
-    BASIC_MODE_DISABLED_,
+    BASIC_MODE_DISABLED,
 }
 impl BASICW {
     #[allow(missing_docs)]
@@ -300,7 +300,7 @@ impl BASICW {
     pub fn _bits(&self) -> bool {
         match *self {
             BASICW::IF1_TX_IF2_RX => true,
-            BASICW::BASIC_MODE_DISABLED_ => false,
+            BASICW::BASIC_MODE_DISABLED => false,
         }
     }
 }
@@ -323,8 +323,8 @@ impl<'a> _BASICW<'a> {
     }
     #[doc = "Basic mode disabled."]
     #[inline]
-    pub fn basic_mode_disabled_(self) -> &'a mut W {
-        self.variant(BASICW::BASIC_MODE_DISABLED_)
+    pub fn basic_mode_disabled(self) -> &'a mut W {
+        self.variant(BASICW::BASIC_MODE_DISABLED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -349,7 +349,7 @@ pub enum SILENTW {
     #[doc = "The module is in silent mode."]
     SILENT,
     #[doc = "Normal operation."]
-    NORMAL_OPERATION_,
+    NORMAL_OPERATION,
 }
 impl SILENTW {
     #[allow(missing_docs)]
@@ -358,7 +358,7 @@ impl SILENTW {
     pub fn _bits(&self) -> bool {
         match *self {
             SILENTW::SILENT => true,
-            SILENTW::NORMAL_OPERATION_ => false,
+            SILENTW::NORMAL_OPERATION => false,
         }
     }
 }
@@ -381,8 +381,8 @@ impl<'a> _SILENTW<'a> {
     }
     #[doc = "Normal operation."]
     #[inline]
-    pub fn normal_operation_(self) -> &'a mut W {
-        self.variant(SILENTW::NORMAL_OPERATION_)
+    pub fn normal_operation(self) -> &'a mut W {
+        self.variant(SILENTW::NORMAL_OPERATION)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -463,7 +463,7 @@ impl<'a> _LBACKW<'a> {
 #[doc = "Values that can be written to the field `TX1_0`"]
 pub enum TX1_0W {
     #[doc = "Level at the TD pin is controlled by the CAN controller. This is the value at reset."]
-    LEVEL_AT_THE_TD_PIN_,
+    LEVEL_AT_THE_TD_PIN,
     #[doc = "The sample point can be monitored at the TD pin."]
     THE_SAMPLE_POINT_CAN,
     #[doc = "TD pin is driven LOW/dominant."]
@@ -477,7 +477,7 @@ impl TX1_0W {
     #[inline]
     pub fn _bits(&self) -> u8 {
         match *self {
-            TX1_0W::LEVEL_AT_THE_TD_PIN_ => 0,
+            TX1_0W::LEVEL_AT_THE_TD_PIN => 0,
             TX1_0W::THE_SAMPLE_POINT_CAN => 1,
             TX1_0W::TD_PIN_IS_DRIVEN_LOW => 2,
             TX1_0W::TD_PIN_IS_DRIVEN_HIG => 3,
@@ -498,8 +498,8 @@ impl<'a> _TX1_0W<'a> {
     }
     #[doc = "Level at the TD pin is controlled by the CAN controller. This is the value at reset."]
     #[inline]
-    pub fn level_at_the_td_pin_(self) -> &'a mut W {
-        self.variant(TX1_0W::LEVEL_AT_THE_TD_PIN_)
+    pub fn level_at_the_td_pin(self) -> &'a mut W {
+        self.variant(TX1_0W::LEVEL_AT_THE_TD_PIN)
     }
     #[doc = "The sample point can be monitored at the TD pin."]
     #[inline]

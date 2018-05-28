@@ -422,9 +422,9 @@ impl RCLR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PSR {
     #[doc = "The periodic schedule status is disabled."]
-    DISABLED,
+    DISABLED_1,
     #[doc = "The periodic schedule status is enabled."]
-    DISABLED,
+    DISABLED_2,
 }
 impl PSR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -441,8 +441,8 @@ impl PSR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            PSR::DISABLED => false,
-            PSR::DISABLED => true,
+            PSR::DISABLED_1 => false,
+            PSR::DISABLED_2 => true,
         }
     }
     #[allow(missing_docs)]
@@ -450,28 +450,28 @@ impl PSR {
     #[inline]
     pub fn _from(value: bool) -> PSR {
         match value {
-            false => PSR::DISABLED,
-            true => PSR::DISABLED,
+            false => PSR::DISABLED_1,
+            true => PSR::DISABLED_2,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Checks if the value of the field is `DISABLED_1`"]
     #[inline]
-    pub fn is_disabled(&self) -> bool {
-        *self == PSR::DISABLED
+    pub fn is_disabled_1(&self) -> bool {
+        *self == PSR::DISABLED_1
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Checks if the value of the field is `DISABLED_2`"]
     #[inline]
-    pub fn is_disabled(&self) -> bool {
-        *self == PSR::DISABLED
+    pub fn is_disabled_2(&self) -> bool {
+        *self == PSR::DISABLED_2
     }
 }
 #[doc = "Possible values of the field `AS`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ASR {
     #[doc = "Asynchronous schedule status is disabled."]
-    DISABLED,
+    DISABLED_1,
     #[doc = "Asynchronous schedule status is enabled."]
-    DISABLED,
+    DISABLED_2,
 }
 impl ASR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -488,8 +488,8 @@ impl ASR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ASR::DISABLED => false,
-            ASR::DISABLED => true,
+            ASR::DISABLED_1 => false,
+            ASR::DISABLED_2 => true,
         }
     }
     #[allow(missing_docs)]
@@ -497,19 +497,19 @@ impl ASR {
     #[inline]
     pub fn _from(value: bool) -> ASR {
         match value {
-            false => ASR::DISABLED,
-            true => ASR::DISABLED,
+            false => ASR::DISABLED_1,
+            true => ASR::DISABLED_2,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Checks if the value of the field is `DISABLED_1`"]
     #[inline]
-    pub fn is_disabled(&self) -> bool {
-        *self == ASR::DISABLED
+    pub fn is_disabled_1(&self) -> bool {
+        *self == ASR::DISABLED_1
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Checks if the value of the field is `DISABLED_2`"]
     #[inline]
-    pub fn is_disabled(&self) -> bool {
-        *self == ASR::DISABLED
+    pub fn is_disabled_2(&self) -> bool {
+        *self == ASR::DISABLED_2
     }
 }
 #[doc = "Possible values of the field `UAI`"]
@@ -1073,9 +1073,9 @@ impl<'a> _RCLW<'a> {
 #[doc = "Values that can be written to the field `PS`"]
 pub enum PSW {
     #[doc = "The periodic schedule status is disabled."]
-    DISABLED,
+    DISABLED_1,
     #[doc = "The periodic schedule status is enabled."]
-    DISABLED,
+    DISABLED_2,
 }
 impl PSW {
     #[allow(missing_docs)]
@@ -1083,8 +1083,8 @@ impl PSW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            PSW::DISABLED => false,
-            PSW::DISABLED => true,
+            PSW::DISABLED_1 => false,
+            PSW::DISABLED_2 => true,
         }
     }
 }
@@ -1102,13 +1102,13 @@ impl<'a> _PSW<'a> {
     }
     #[doc = "The periodic schedule status is disabled."]
     #[inline]
-    pub fn disabled(self) -> &'a mut W {
-        self.variant(PSW::DISABLED)
+    pub fn disabled_1(self) -> &'a mut W {
+        self.variant(PSW::DISABLED_1)
     }
     #[doc = "The periodic schedule status is enabled."]
     #[inline]
-    pub fn disabled(self) -> &'a mut W {
-        self.variant(PSW::DISABLED)
+    pub fn disabled_2(self) -> &'a mut W {
+        self.variant(PSW::DISABLED_2)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -1131,9 +1131,9 @@ impl<'a> _PSW<'a> {
 #[doc = "Values that can be written to the field `AS`"]
 pub enum ASW {
     #[doc = "Asynchronous schedule status is disabled."]
-    DISABLED,
+    DISABLED_1,
     #[doc = "Asynchronous schedule status is enabled."]
-    DISABLED,
+    DISABLED_2,
 }
 impl ASW {
     #[allow(missing_docs)]
@@ -1141,8 +1141,8 @@ impl ASW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            ASW::DISABLED => false,
-            ASW::DISABLED => true,
+            ASW::DISABLED_1 => false,
+            ASW::DISABLED_2 => true,
         }
     }
 }
@@ -1160,13 +1160,13 @@ impl<'a> _ASW<'a> {
     }
     #[doc = "Asynchronous schedule status is disabled."]
     #[inline]
-    pub fn disabled(self) -> &'a mut W {
-        self.variant(ASW::DISABLED)
+    pub fn disabled_1(self) -> &'a mut W {
+        self.variant(ASW::DISABLED_1)
     }
     #[doc = "Asynchronous schedule status is enabled."]
     #[inline]
-    pub fn disabled(self) -> &'a mut W {
-        self.variant(ASW::DISABLED)
+    pub fn disabled_2(self) -> &'a mut W {
+        self.variant(ASW::DISABLED_2)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

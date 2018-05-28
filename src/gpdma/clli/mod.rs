@@ -46,9 +46,9 @@ impl super::CLLI {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LMR {
     #[doc = "AHB Master 0."]
-    AHB_MASTER_0_,
+    AHB_MASTER_0,
     #[doc = "AHB Master 1."]
-    AHB_MASTER_1_,
+    AHB_MASTER_1,
 }
 impl LMR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -65,8 +65,8 @@ impl LMR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            LMR::AHB_MASTER_0_ => false,
-            LMR::AHB_MASTER_1_ => true,
+            LMR::AHB_MASTER_0 => false,
+            LMR::AHB_MASTER_1 => true,
         }
     }
     #[allow(missing_docs)]
@@ -74,19 +74,19 @@ impl LMR {
     #[inline]
     pub fn _from(value: bool) -> LMR {
         match value {
-            false => LMR::AHB_MASTER_0_,
-            true => LMR::AHB_MASTER_1_,
+            false => LMR::AHB_MASTER_0,
+            true => LMR::AHB_MASTER_1,
         }
     }
-    #[doc = "Checks if the value of the field is `AHB_MASTER_0_`"]
+    #[doc = "Checks if the value of the field is `AHB_MASTER_0`"]
     #[inline]
-    pub fn is_ahb_master_0_(&self) -> bool {
-        *self == LMR::AHB_MASTER_0_
+    pub fn is_ahb_master_0(&self) -> bool {
+        *self == LMR::AHB_MASTER_0
     }
-    #[doc = "Checks if the value of the field is `AHB_MASTER_1_`"]
+    #[doc = "Checks if the value of the field is `AHB_MASTER_1`"]
     #[inline]
-    pub fn is_ahb_master_1_(&self) -> bool {
-        *self == LMR::AHB_MASTER_1_
+    pub fn is_ahb_master_1(&self) -> bool {
+        *self == LMR::AHB_MASTER_1
     }
 }
 #[doc = r" Value of the field"]
@@ -124,9 +124,9 @@ impl LLIR {
 #[doc = "Values that can be written to the field `LM`"]
 pub enum LMW {
     #[doc = "AHB Master 0."]
-    AHB_MASTER_0_,
+    AHB_MASTER_0,
     #[doc = "AHB Master 1."]
-    AHB_MASTER_1_,
+    AHB_MASTER_1,
 }
 impl LMW {
     #[allow(missing_docs)]
@@ -134,8 +134,8 @@ impl LMW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            LMW::AHB_MASTER_0_ => false,
-            LMW::AHB_MASTER_1_ => true,
+            LMW::AHB_MASTER_0 => false,
+            LMW::AHB_MASTER_1 => true,
         }
     }
 }
@@ -153,13 +153,13 @@ impl<'a> _LMW<'a> {
     }
     #[doc = "AHB Master 0."]
     #[inline]
-    pub fn ahb_master_0_(self) -> &'a mut W {
-        self.variant(LMW::AHB_MASTER_0_)
+    pub fn ahb_master_0(self) -> &'a mut W {
+        self.variant(LMW::AHB_MASTER_0)
     }
     #[doc = "AHB Master 1."]
     #[inline]
-    pub fn ahb_master_1_(self) -> &'a mut W {
-        self.variant(LMW::AHB_MASTER_1_)
+    pub fn ahb_master_1(self) -> &'a mut W {
+        self.variant(LMW::AHB_MASTER_1)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

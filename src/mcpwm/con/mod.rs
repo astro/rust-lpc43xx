@@ -15,9 +15,9 @@ impl super::CON {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RUN0R {
     #[doc = "Stop."]
-    STOP_,
+    STOP,
     #[doc = "Run."]
-    RUN_,
+    RUN,
 }
 impl RUN0R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -34,8 +34,8 @@ impl RUN0R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            RUN0R::STOP_ => false,
-            RUN0R::RUN_ => true,
+            RUN0R::STOP => false,
+            RUN0R::RUN => true,
         }
     }
     #[allow(missing_docs)]
@@ -43,28 +43,28 @@ impl RUN0R {
     #[inline]
     pub fn _from(value: bool) -> RUN0R {
         match value {
-            false => RUN0R::STOP_,
-            true => RUN0R::RUN_,
+            false => RUN0R::STOP,
+            true => RUN0R::RUN,
         }
     }
-    #[doc = "Checks if the value of the field is `STOP_`"]
+    #[doc = "Checks if the value of the field is `STOP`"]
     #[inline]
-    pub fn is_stop_(&self) -> bool {
-        *self == RUN0R::STOP_
+    pub fn is_stop(&self) -> bool {
+        *self == RUN0R::STOP
     }
-    #[doc = "Checks if the value of the field is `RUN_`"]
+    #[doc = "Checks if the value of the field is `RUN`"]
     #[inline]
-    pub fn is_run_(&self) -> bool {
-        *self == RUN0R::RUN_
+    pub fn is_run(&self) -> bool {
+        *self == RUN0R::RUN
     }
 }
 #[doc = "Possible values of the field `CENTER0`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CENTER0R {
     #[doc = "Edge-aligned."]
-    EDGE_ALIGNED_,
+    EDGE_ALIGNED,
     #[doc = "Center-aligned."]
-    CENTER_ALIGNED_,
+    CENTER_ALIGNED,
 }
 impl CENTER0R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -81,8 +81,8 @@ impl CENTER0R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CENTER0R::EDGE_ALIGNED_ => false,
-            CENTER0R::CENTER_ALIGNED_ => true,
+            CENTER0R::EDGE_ALIGNED => false,
+            CENTER0R::CENTER_ALIGNED => true,
         }
     }
     #[allow(missing_docs)]
@@ -90,19 +90,19 @@ impl CENTER0R {
     #[inline]
     pub fn _from(value: bool) -> CENTER0R {
         match value {
-            false => CENTER0R::EDGE_ALIGNED_,
-            true => CENTER0R::CENTER_ALIGNED_,
+            false => CENTER0R::EDGE_ALIGNED,
+            true => CENTER0R::CENTER_ALIGNED,
         }
     }
-    #[doc = "Checks if the value of the field is `EDGE_ALIGNED_`"]
+    #[doc = "Checks if the value of the field is `EDGE_ALIGNED`"]
     #[inline]
-    pub fn is_edge_aligned_(&self) -> bool {
-        *self == CENTER0R::EDGE_ALIGNED_
+    pub fn is_edge_aligned(&self) -> bool {
+        *self == CENTER0R::EDGE_ALIGNED
     }
-    #[doc = "Checks if the value of the field is `CENTER_ALIGNED_`"]
+    #[doc = "Checks if the value of the field is `CENTER_ALIGNED`"]
     #[inline]
-    pub fn is_center_aligned_(&self) -> bool {
-        *self == CENTER0R::CENTER_ALIGNED_
+    pub fn is_center_aligned(&self) -> bool {
+        *self == CENTER0R::CENTER_ALIGNED
     }
 }
 #[doc = "Possible values of the field `POLA0`"]
@@ -156,9 +156,9 @@ impl POLA0R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DTE0R {
     #[doc = "Dead-time disabled."]
-    DEAD_TIME_DISABLED_,
+    DEAD_TIME_DISABLED,
     #[doc = "Dead-time enabled."]
-    DEAD_TIME_ENABLED_,
+    DEAD_TIME_ENABLED,
 }
 impl DTE0R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -175,8 +175,8 @@ impl DTE0R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            DTE0R::DEAD_TIME_DISABLED_ => false,
-            DTE0R::DEAD_TIME_ENABLED_ => true,
+            DTE0R::DEAD_TIME_DISABLED => false,
+            DTE0R::DEAD_TIME_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -184,19 +184,19 @@ impl DTE0R {
     #[inline]
     pub fn _from(value: bool) -> DTE0R {
         match value {
-            false => DTE0R::DEAD_TIME_DISABLED_,
-            true => DTE0R::DEAD_TIME_ENABLED_,
+            false => DTE0R::DEAD_TIME_DISABLED,
+            true => DTE0R::DEAD_TIME_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DEAD_TIME_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `DEAD_TIME_DISABLED`"]
     #[inline]
-    pub fn is_dead_time_disabled_(&self) -> bool {
-        *self == DTE0R::DEAD_TIME_DISABLED_
+    pub fn is_dead_time_disabled(&self) -> bool {
+        *self == DTE0R::DEAD_TIME_DISABLED
     }
-    #[doc = "Checks if the value of the field is `DEAD_TIME_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `DEAD_TIME_ENABLED`"]
     #[inline]
-    pub fn is_dead_time_enabled_(&self) -> bool {
-        *self == DTE0R::DEAD_TIME_ENABLED_
+    pub fn is_dead_time_enabled(&self) -> bool {
+        *self == DTE0R::DEAD_TIME_ENABLED
     }
 }
 #[doc = "Possible values of the field `DISUP0`"]
@@ -250,9 +250,9 @@ impl DISUP0R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RUN1R {
     #[doc = "Stop."]
-    STOP_,
+    STOP,
     #[doc = "Run."]
-    RUN_,
+    RUN,
 }
 impl RUN1R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -269,8 +269,8 @@ impl RUN1R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            RUN1R::STOP_ => false,
-            RUN1R::RUN_ => true,
+            RUN1R::STOP => false,
+            RUN1R::RUN => true,
         }
     }
     #[allow(missing_docs)]
@@ -278,28 +278,28 @@ impl RUN1R {
     #[inline]
     pub fn _from(value: bool) -> RUN1R {
         match value {
-            false => RUN1R::STOP_,
-            true => RUN1R::RUN_,
+            false => RUN1R::STOP,
+            true => RUN1R::RUN,
         }
     }
-    #[doc = "Checks if the value of the field is `STOP_`"]
+    #[doc = "Checks if the value of the field is `STOP`"]
     #[inline]
-    pub fn is_stop_(&self) -> bool {
-        *self == RUN1R::STOP_
+    pub fn is_stop(&self) -> bool {
+        *self == RUN1R::STOP
     }
-    #[doc = "Checks if the value of the field is `RUN_`"]
+    #[doc = "Checks if the value of the field is `RUN`"]
     #[inline]
-    pub fn is_run_(&self) -> bool {
-        *self == RUN1R::RUN_
+    pub fn is_run(&self) -> bool {
+        *self == RUN1R::RUN
     }
 }
 #[doc = "Possible values of the field `CENTER1`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CENTER1R {
     #[doc = "Edge-aligned."]
-    EDGE_ALIGNED_,
+    EDGE_ALIGNED,
     #[doc = "Center-aligned."]
-    CENTER_ALIGNED_,
+    CENTER_ALIGNED,
 }
 impl CENTER1R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -316,8 +316,8 @@ impl CENTER1R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CENTER1R::EDGE_ALIGNED_ => false,
-            CENTER1R::CENTER_ALIGNED_ => true,
+            CENTER1R::EDGE_ALIGNED => false,
+            CENTER1R::CENTER_ALIGNED => true,
         }
     }
     #[allow(missing_docs)]
@@ -325,19 +325,19 @@ impl CENTER1R {
     #[inline]
     pub fn _from(value: bool) -> CENTER1R {
         match value {
-            false => CENTER1R::EDGE_ALIGNED_,
-            true => CENTER1R::CENTER_ALIGNED_,
+            false => CENTER1R::EDGE_ALIGNED,
+            true => CENTER1R::CENTER_ALIGNED,
         }
     }
-    #[doc = "Checks if the value of the field is `EDGE_ALIGNED_`"]
+    #[doc = "Checks if the value of the field is `EDGE_ALIGNED`"]
     #[inline]
-    pub fn is_edge_aligned_(&self) -> bool {
-        *self == CENTER1R::EDGE_ALIGNED_
+    pub fn is_edge_aligned(&self) -> bool {
+        *self == CENTER1R::EDGE_ALIGNED
     }
-    #[doc = "Checks if the value of the field is `CENTER_ALIGNED_`"]
+    #[doc = "Checks if the value of the field is `CENTER_ALIGNED`"]
     #[inline]
-    pub fn is_center_aligned_(&self) -> bool {
-        *self == CENTER1R::CENTER_ALIGNED_
+    pub fn is_center_aligned(&self) -> bool {
+        *self == CENTER1R::CENTER_ALIGNED
     }
 }
 #[doc = "Possible values of the field `POLA1`"]
@@ -391,9 +391,9 @@ impl POLA1R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DTE1R {
     #[doc = "Dead-time disabled."]
-    DEAD_TIME_DISABLED_,
+    DEAD_TIME_DISABLED,
     #[doc = "Dead-time enabled."]
-    DEAD_TIME_ENABLED_,
+    DEAD_TIME_ENABLED,
 }
 impl DTE1R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -410,8 +410,8 @@ impl DTE1R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            DTE1R::DEAD_TIME_DISABLED_ => false,
-            DTE1R::DEAD_TIME_ENABLED_ => true,
+            DTE1R::DEAD_TIME_DISABLED => false,
+            DTE1R::DEAD_TIME_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -419,19 +419,19 @@ impl DTE1R {
     #[inline]
     pub fn _from(value: bool) -> DTE1R {
         match value {
-            false => DTE1R::DEAD_TIME_DISABLED_,
-            true => DTE1R::DEAD_TIME_ENABLED_,
+            false => DTE1R::DEAD_TIME_DISABLED,
+            true => DTE1R::DEAD_TIME_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DEAD_TIME_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `DEAD_TIME_DISABLED`"]
     #[inline]
-    pub fn is_dead_time_disabled_(&self) -> bool {
-        *self == DTE1R::DEAD_TIME_DISABLED_
+    pub fn is_dead_time_disabled(&self) -> bool {
+        *self == DTE1R::DEAD_TIME_DISABLED
     }
-    #[doc = "Checks if the value of the field is `DEAD_TIME_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `DEAD_TIME_ENABLED`"]
     #[inline]
-    pub fn is_dead_time_enabled_(&self) -> bool {
-        *self == DTE1R::DEAD_TIME_ENABLED_
+    pub fn is_dead_time_enabled(&self) -> bool {
+        *self == DTE1R::DEAD_TIME_ENABLED
     }
 }
 #[doc = "Possible values of the field `DISUP1`"]
@@ -485,9 +485,9 @@ impl DISUP1R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RUN2R {
     #[doc = "Stop."]
-    STOP_,
+    STOP,
     #[doc = "Run."]
-    RUN_,
+    RUN,
 }
 impl RUN2R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -504,8 +504,8 @@ impl RUN2R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            RUN2R::STOP_ => false,
-            RUN2R::RUN_ => true,
+            RUN2R::STOP => false,
+            RUN2R::RUN => true,
         }
     }
     #[allow(missing_docs)]
@@ -513,28 +513,28 @@ impl RUN2R {
     #[inline]
     pub fn _from(value: bool) -> RUN2R {
         match value {
-            false => RUN2R::STOP_,
-            true => RUN2R::RUN_,
+            false => RUN2R::STOP,
+            true => RUN2R::RUN,
         }
     }
-    #[doc = "Checks if the value of the field is `STOP_`"]
+    #[doc = "Checks if the value of the field is `STOP`"]
     #[inline]
-    pub fn is_stop_(&self) -> bool {
-        *self == RUN2R::STOP_
+    pub fn is_stop(&self) -> bool {
+        *self == RUN2R::STOP
     }
-    #[doc = "Checks if the value of the field is `RUN_`"]
+    #[doc = "Checks if the value of the field is `RUN`"]
     #[inline]
-    pub fn is_run_(&self) -> bool {
-        *self == RUN2R::RUN_
+    pub fn is_run(&self) -> bool {
+        *self == RUN2R::RUN
     }
 }
 #[doc = "Possible values of the field `CENTER2`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CENTER2R {
     #[doc = "Edge-aligned."]
-    EDGE_ALIGNED_,
+    EDGE_ALIGNED,
     #[doc = "Center-aligned."]
-    CENTER_ALIGNED_,
+    CENTER_ALIGNED,
 }
 impl CENTER2R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -551,8 +551,8 @@ impl CENTER2R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CENTER2R::EDGE_ALIGNED_ => false,
-            CENTER2R::CENTER_ALIGNED_ => true,
+            CENTER2R::EDGE_ALIGNED => false,
+            CENTER2R::CENTER_ALIGNED => true,
         }
     }
     #[allow(missing_docs)]
@@ -560,19 +560,19 @@ impl CENTER2R {
     #[inline]
     pub fn _from(value: bool) -> CENTER2R {
         match value {
-            false => CENTER2R::EDGE_ALIGNED_,
-            true => CENTER2R::CENTER_ALIGNED_,
+            false => CENTER2R::EDGE_ALIGNED,
+            true => CENTER2R::CENTER_ALIGNED,
         }
     }
-    #[doc = "Checks if the value of the field is `EDGE_ALIGNED_`"]
+    #[doc = "Checks if the value of the field is `EDGE_ALIGNED`"]
     #[inline]
-    pub fn is_edge_aligned_(&self) -> bool {
-        *self == CENTER2R::EDGE_ALIGNED_
+    pub fn is_edge_aligned(&self) -> bool {
+        *self == CENTER2R::EDGE_ALIGNED
     }
-    #[doc = "Checks if the value of the field is `CENTER_ALIGNED_`"]
+    #[doc = "Checks if the value of the field is `CENTER_ALIGNED`"]
     #[inline]
-    pub fn is_center_aligned_(&self) -> bool {
-        *self == CENTER2R::CENTER_ALIGNED_
+    pub fn is_center_aligned(&self) -> bool {
+        *self == CENTER2R::CENTER_ALIGNED
     }
 }
 #[doc = "Possible values of the field `POLA2`"]
@@ -626,9 +626,9 @@ impl POLA2R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DTE2R {
     #[doc = "Dead-time disabled."]
-    DEAD_TIME_DISABLED_,
+    DEAD_TIME_DISABLED,
     #[doc = "Dead-time enabled."]
-    DEAD_TIME_ENABLED_,
+    DEAD_TIME_ENABLED,
 }
 impl DTE2R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -645,8 +645,8 @@ impl DTE2R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            DTE2R::DEAD_TIME_DISABLED_ => false,
-            DTE2R::DEAD_TIME_ENABLED_ => true,
+            DTE2R::DEAD_TIME_DISABLED => false,
+            DTE2R::DEAD_TIME_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -654,19 +654,19 @@ impl DTE2R {
     #[inline]
     pub fn _from(value: bool) -> DTE2R {
         match value {
-            false => DTE2R::DEAD_TIME_DISABLED_,
-            true => DTE2R::DEAD_TIME_ENABLED_,
+            false => DTE2R::DEAD_TIME_DISABLED,
+            true => DTE2R::DEAD_TIME_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DEAD_TIME_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `DEAD_TIME_DISABLED`"]
     #[inline]
-    pub fn is_dead_time_disabled_(&self) -> bool {
-        *self == DTE2R::DEAD_TIME_DISABLED_
+    pub fn is_dead_time_disabled(&self) -> bool {
+        *self == DTE2R::DEAD_TIME_DISABLED
     }
-    #[doc = "Checks if the value of the field is `DEAD_TIME_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `DEAD_TIME_ENABLED`"]
     #[inline]
-    pub fn is_dead_time_enabled_(&self) -> bool {
-        *self == DTE2R::DEAD_TIME_ENABLED_
+    pub fn is_dead_time_enabled(&self) -> bool {
+        *self == DTE2R::DEAD_TIME_ENABLED
     }
 }
 #[doc = "Possible values of the field `DISUP2`"]
@@ -769,7 +769,7 @@ pub enum ACMODER {
     #[doc = "3-phase AC-mode off: Each PWM channel uses its own timer-counter and period register."]
     _3_PHASE_AC_MODE_OFF,
     #[doc = "3-phase AC-mode on: All PWM channels use the timer-counter and period register of channel 0."]
-    _3_PHASE_AC_MODE_ON_,
+    _3_PHASE_AC_MODE_ON,
 }
 impl ACMODER {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -787,7 +787,7 @@ impl ACMODER {
     pub fn bit(&self) -> bool {
         match *self {
             ACMODER::_3_PHASE_AC_MODE_OFF => false,
-            ACMODER::_3_PHASE_AC_MODE_ON_ => true,
+            ACMODER::_3_PHASE_AC_MODE_ON => true,
         }
     }
     #[allow(missing_docs)]
@@ -796,7 +796,7 @@ impl ACMODER {
     pub fn _from(value: bool) -> ACMODER {
         match value {
             false => ACMODER::_3_PHASE_AC_MODE_OFF,
-            true => ACMODER::_3_PHASE_AC_MODE_ON_,
+            true => ACMODER::_3_PHASE_AC_MODE_ON,
         }
     }
     #[doc = "Checks if the value of the field is `_3_PHASE_AC_MODE_OFF`"]
@@ -804,10 +804,10 @@ impl ACMODER {
     pub fn is_3_phase_ac_mode_off(&self) -> bool {
         *self == ACMODER::_3_PHASE_AC_MODE_OFF
     }
-    #[doc = "Checks if the value of the field is `_3_PHASE_AC_MODE_ON_`"]
+    #[doc = "Checks if the value of the field is `_3_PHASE_AC_MODE_ON`"]
     #[inline]
-    pub fn is_3_phase_ac_mode_on_(&self) -> bool {
-        *self == ACMODER::_3_PHASE_AC_MODE_ON_
+    pub fn is_3_phase_ac_mode_on(&self) -> bool {
+        *self == ACMODER::_3_PHASE_AC_MODE_ON
     }
 }
 #[doc = "Possible values of the field `DCMODE`"]
@@ -816,7 +816,7 @@ pub enum DCMODER {
     #[doc = "3-phase DC mode off: PWM channels are independent (unless bit ACMODE = 1)"]
     _3_PHASE_DC_MODE_OFF,
     #[doc = "3-phase DC mode on: The internal MCOA0 output is routed through the CP register (i.e. a mask) register to all six PWM outputs."]
-    _3_PHASE_DC_MODE_ON_,
+    _3_PHASE_DC_MODE_ON,
 }
 impl DCMODER {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -834,7 +834,7 @@ impl DCMODER {
     pub fn bit(&self) -> bool {
         match *self {
             DCMODER::_3_PHASE_DC_MODE_OFF => false,
-            DCMODER::_3_PHASE_DC_MODE_ON_ => true,
+            DCMODER::_3_PHASE_DC_MODE_ON => true,
         }
     }
     #[allow(missing_docs)]
@@ -843,7 +843,7 @@ impl DCMODER {
     pub fn _from(value: bool) -> DCMODER {
         match value {
             false => DCMODER::_3_PHASE_DC_MODE_OFF,
-            true => DCMODER::_3_PHASE_DC_MODE_ON_,
+            true => DCMODER::_3_PHASE_DC_MODE_ON,
         }
     }
     #[doc = "Checks if the value of the field is `_3_PHASE_DC_MODE_OFF`"]
@@ -851,10 +851,10 @@ impl DCMODER {
     pub fn is_3_phase_dc_mode_off(&self) -> bool {
         *self == DCMODER::_3_PHASE_DC_MODE_OFF
     }
-    #[doc = "Checks if the value of the field is `_3_PHASE_DC_MODE_ON_`"]
+    #[doc = "Checks if the value of the field is `_3_PHASE_DC_MODE_ON`"]
     #[inline]
-    pub fn is_3_phase_dc_mode_on_(&self) -> bool {
-        *self == DCMODER::_3_PHASE_DC_MODE_ON_
+    pub fn is_3_phase_dc_mode_on(&self) -> bool {
+        *self == DCMODER::_3_PHASE_DC_MODE_ON
     }
 }
 impl R {

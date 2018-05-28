@@ -140,9 +140,9 @@ impl EDGER {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SYNCHR {
     #[doc = "Disable   synchronization."]
-    DISABLE__SYNCHRONIZ,
+    DISABLE_SYNCHRONIZ,
     #[doc = "Enable   synchronization."]
-    ENABLE__SYNCHRONIZA,
+    ENABLE_SYNCHRONIZA,
 }
 impl SYNCHR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -159,8 +159,8 @@ impl SYNCHR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            SYNCHR::DISABLE__SYNCHRONIZ => false,
-            SYNCHR::ENABLE__SYNCHRONIZA => true,
+            SYNCHR::DISABLE_SYNCHRONIZ => false,
+            SYNCHR::ENABLE_SYNCHRONIZA => true,
         }
     }
     #[allow(missing_docs)]
@@ -168,19 +168,19 @@ impl SYNCHR {
     #[inline]
     pub fn _from(value: bool) -> SYNCHR {
         match value {
-            false => SYNCHR::DISABLE__SYNCHRONIZ,
-            true => SYNCHR::ENABLE__SYNCHRONIZA,
+            false => SYNCHR::DISABLE_SYNCHRONIZ,
+            true => SYNCHR::ENABLE_SYNCHRONIZA,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLE__SYNCHRONIZ`"]
+    #[doc = "Checks if the value of the field is `DISABLE_SYNCHRONIZ`"]
     #[inline]
-    pub fn is_disable__synchroniz(&self) -> bool {
-        *self == SYNCHR::DISABLE__SYNCHRONIZ
+    pub fn is_disable_synchroniz(&self) -> bool {
+        *self == SYNCHR::DISABLE_SYNCHRONIZ
     }
-    #[doc = "Checks if the value of the field is `ENABLE__SYNCHRONIZA`"]
+    #[doc = "Checks if the value of the field is `ENABLE_SYNCHRONIZA`"]
     #[inline]
-    pub fn is_enable__synchroniza(&self) -> bool {
-        *self == SYNCHR::ENABLE__SYNCHRONIZA
+    pub fn is_enable_synchroniza(&self) -> bool {
+        *self == SYNCHR::ENABLE_SYNCHRONIZA
     }
 }
 #[doc = "Possible values of the field `PULSE`"]
@@ -390,9 +390,9 @@ impl<'a> _EDGEW<'a> {
 #[doc = "Values that can be written to the field `SYNCH`"]
 pub enum SYNCHW {
     #[doc = "Disable   synchronization."]
-    DISABLE__SYNCHRONIZ,
+    DISABLE_SYNCHRONIZ,
     #[doc = "Enable   synchronization."]
-    ENABLE__SYNCHRONIZA,
+    ENABLE_SYNCHRONIZA,
 }
 impl SYNCHW {
     #[allow(missing_docs)]
@@ -400,8 +400,8 @@ impl SYNCHW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            SYNCHW::DISABLE__SYNCHRONIZ => false,
-            SYNCHW::ENABLE__SYNCHRONIZA => true,
+            SYNCHW::DISABLE_SYNCHRONIZ => false,
+            SYNCHW::ENABLE_SYNCHRONIZA => true,
         }
     }
 }
@@ -419,13 +419,13 @@ impl<'a> _SYNCHW<'a> {
     }
     #[doc = "Disable synchronization."]
     #[inline]
-    pub fn disable__synchroniz(self) -> &'a mut W {
-        self.variant(SYNCHW::DISABLE__SYNCHRONIZ)
+    pub fn disable_synchroniz(self) -> &'a mut W {
+        self.variant(SYNCHW::DISABLE_SYNCHRONIZ)
     }
     #[doc = "Enable synchronization."]
     #[inline]
-    pub fn enable__synchroniza(self) -> &'a mut W {
-        self.variant(SYNCHW::ENABLE__SYNCHRONIZA)
+    pub fn enable_synchroniza(self) -> &'a mut W {
+        self.variant(SYNCHW::ENABLE_SYNCHRONIZA)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

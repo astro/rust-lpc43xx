@@ -33,9 +33,9 @@ pub struct RegisterBlock {
     pub fifo_output: [FIFO_OUTPUT; 16],
     _reserved2: [u8; 192usize],
     #[doc = "0x300 - Table 0 descriptor n, n= 0 to 7"]
-    pub descriptor0_: [DESCRIPTOR0_; 8],
+    pub descriptor0: [DESCRIPTOR0; 8],
     #[doc = "0x320 - Table 1 descriptors n, n=0 to 7"]
-    pub descriptor1_: [DESCRIPTOR1_; 8],
+    pub descriptor1: [DESCRIPTOR1; 8],
     _reserved3: [u8; 3008usize],
     #[doc = "0xf00 - Interrupt 0 clear mask"]
     pub clr_en0: CLR_EN0,
@@ -148,17 +148,17 @@ pub struct FIFO_OUTPUT {
 #[doc = "FIFO output mapped to 16 consecutive address locations. An output contains the value and input channel ID of one or two converted samples"]
 pub mod fifo_output;
 #[doc = "Table 0 descriptor n, n= 0 to 7"]
-pub struct DESCRIPTOR0_ {
+pub struct DESCRIPTOR0 {
     register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Table 0 descriptor n, n= 0 to 7"]
-pub mod descriptor0_;
+pub mod descriptor0;
 #[doc = "Table 1 descriptors n, n=0 to 7"]
-pub struct DESCRIPTOR1_ {
+pub struct DESCRIPTOR1 {
     register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Table 1 descriptors n, n=0 to 7"]
-pub mod descriptor1_;
+pub mod descriptor1;
 #[doc = "Interrupt 0 clear mask"]
 pub struct CLR_EN0 {
     register: ::vcell::VolatileCell<u32>,

@@ -140,9 +140,9 @@ impl CSCR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PER {
     #[doc = "Port disabled."]
-    PORT_DISABLED_,
+    PORT_DISABLED,
     #[doc = "Port enabled."]
-    PORT_ENABLED_,
+    PORT_ENABLED,
 }
 impl PER {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -159,8 +159,8 @@ impl PER {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            PER::PORT_DISABLED_ => false,
-            PER::PORT_ENABLED_ => true,
+            PER::PORT_DISABLED => false,
+            PER::PORT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -168,26 +168,26 @@ impl PER {
     #[inline]
     pub fn _from(value: bool) -> PER {
         match value {
-            false => PER::PORT_DISABLED_,
-            true => PER::PORT_ENABLED_,
+            false => PER::PORT_DISABLED,
+            true => PER::PORT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `PORT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `PORT_DISABLED`"]
     #[inline]
-    pub fn is_port_disabled_(&self) -> bool {
-        *self == PER::PORT_DISABLED_
+    pub fn is_port_disabled(&self) -> bool {
+        *self == PER::PORT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `PORT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `PORT_ENABLED`"]
     #[inline]
-    pub fn is_port_enabled_(&self) -> bool {
-        *self == PER::PORT_ENABLED_
+    pub fn is_port_enabled(&self) -> bool {
+        *self == PER::PORT_ENABLED
     }
 }
 #[doc = "Possible values of the field `PEC`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PECR {
     #[doc = "No change."]
-    NO_CHANGE_,
+    NO_CHANGE,
     #[doc = "Port enabled/disabled status has changed."]
     CHANGED,
 }
@@ -206,7 +206,7 @@ impl PECR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            PECR::NO_CHANGE_ => false,
+            PECR::NO_CHANGE => false,
             PECR::CHANGED => true,
         }
     }
@@ -215,14 +215,14 @@ impl PECR {
     #[inline]
     pub fn _from(value: bool) -> PECR {
         match value {
-            false => PECR::NO_CHANGE_,
+            false => PECR::NO_CHANGE,
             true => PECR::CHANGED,
         }
     }
-    #[doc = "Checks if the value of the field is `NO_CHANGE_`"]
+    #[doc = "Checks if the value of the field is `NO_CHANGE`"]
     #[inline]
-    pub fn is_no_change_(&self) -> bool {
-        *self == PECR::NO_CHANGE_
+    pub fn is_no_change(&self) -> bool {
+        *self == PECR::NO_CHANGE
     }
     #[doc = "Checks if the value of the field is `CHANGED`"]
     #[inline]
@@ -349,7 +349,7 @@ impl FPRR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SUSPR {
     #[doc = "Port not in suspend state"]
-    PORT_NOT_IN_SUSPEND_,
+    PORT_NOT_IN_SUSPEND,
     #[doc = "Port in suspend state When in suspend state, downstream propagation of data is blocked on this port, except for port reset. The blocking occurs at the end of the current transaction if a transaction was in progress when this bit was written to 1. In the suspend state, the port is sensitive to resume detection. Note that the bit status does not change until the port is suspended and that there may be a delay in suspending a port if there is a transaction currently in progress on the USB."]
     PORT_IN_SUSPEND_STAT,
 }
@@ -368,7 +368,7 @@ impl SUSPR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            SUSPR::PORT_NOT_IN_SUSPEND_ => false,
+            SUSPR::PORT_NOT_IN_SUSPEND => false,
             SUSPR::PORT_IN_SUSPEND_STAT => true,
         }
     }
@@ -377,14 +377,14 @@ impl SUSPR {
     #[inline]
     pub fn _from(value: bool) -> SUSPR {
         match value {
-            false => SUSPR::PORT_NOT_IN_SUSPEND_,
+            false => SUSPR::PORT_NOT_IN_SUSPEND,
             true => SUSPR::PORT_IN_SUSPEND_STAT,
         }
     }
-    #[doc = "Checks if the value of the field is `PORT_NOT_IN_SUSPEND_`"]
+    #[doc = "Checks if the value of the field is `PORT_NOT_IN_SUSPEND`"]
     #[inline]
-    pub fn is_port_not_in_suspend_(&self) -> bool {
-        *self == SUSPR::PORT_NOT_IN_SUSPEND_
+    pub fn is_port_not_in_suspend(&self) -> bool {
+        *self == SUSPR::PORT_NOT_IN_SUSPEND
     }
     #[doc = "Checks if the value of the field is `PORT_IN_SUSPEND_STAT`"]
     #[inline]
@@ -546,9 +546,9 @@ impl LSR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PPR {
     #[doc = "Port power off."]
-    PORT_POWER_OFF_,
+    PORT_POWER_OFF,
     #[doc = "Port power on."]
-    PORT_POWER_ON_,
+    PORT_POWER_ON,
 }
 impl PPR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -565,8 +565,8 @@ impl PPR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            PPR::PORT_POWER_OFF_ => false,
-            PPR::PORT_POWER_ON_ => true,
+            PPR::PORT_POWER_OFF => false,
+            PPR::PORT_POWER_ON => true,
         }
     }
     #[allow(missing_docs)]
@@ -574,19 +574,19 @@ impl PPR {
     #[inline]
     pub fn _from(value: bool) -> PPR {
         match value {
-            false => PPR::PORT_POWER_OFF_,
-            true => PPR::PORT_POWER_ON_,
+            false => PPR::PORT_POWER_OFF,
+            true => PPR::PORT_POWER_ON,
         }
     }
-    #[doc = "Checks if the value of the field is `PORT_POWER_OFF_`"]
+    #[doc = "Checks if the value of the field is `PORT_POWER_OFF`"]
     #[inline]
-    pub fn is_port_power_off_(&self) -> bool {
-        *self == PPR::PORT_POWER_OFF_
+    pub fn is_port_power_off(&self) -> bool {
+        *self == PPR::PORT_POWER_OFF
     }
-    #[doc = "Checks if the value of the field is `PORT_POWER_ON_`"]
+    #[doc = "Checks if the value of the field is `PORT_POWER_ON`"]
     #[inline]
-    pub fn is_port_power_on_(&self) -> bool {
-        *self == PPR::PORT_POWER_ON_
+    pub fn is_port_power_on(&self) -> bool {
+        *self == PPR::PORT_POWER_ON
     }
 }
 #[doc = "Possible values of the field `PIC1_0`"]
@@ -1185,9 +1185,9 @@ impl<'a> _CSCW<'a> {
 #[doc = "Values that can be written to the field `PE`"]
 pub enum PEW {
     #[doc = "Port disabled."]
-    PORT_DISABLED_,
+    PORT_DISABLED,
     #[doc = "Port enabled."]
-    PORT_ENABLED_,
+    PORT_ENABLED,
 }
 impl PEW {
     #[allow(missing_docs)]
@@ -1195,8 +1195,8 @@ impl PEW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            PEW::PORT_DISABLED_ => false,
-            PEW::PORT_ENABLED_ => true,
+            PEW::PORT_DISABLED => false,
+            PEW::PORT_ENABLED => true,
         }
     }
 }
@@ -1214,13 +1214,13 @@ impl<'a> _PEW<'a> {
     }
     #[doc = "Port disabled."]
     #[inline]
-    pub fn port_disabled_(self) -> &'a mut W {
-        self.variant(PEW::PORT_DISABLED_)
+    pub fn port_disabled(self) -> &'a mut W {
+        self.variant(PEW::PORT_DISABLED)
     }
     #[doc = "Port enabled."]
     #[inline]
-    pub fn port_enabled_(self) -> &'a mut W {
-        self.variant(PEW::PORT_ENABLED_)
+    pub fn port_enabled(self) -> &'a mut W {
+        self.variant(PEW::PORT_ENABLED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -1243,7 +1243,7 @@ impl<'a> _PEW<'a> {
 #[doc = "Values that can be written to the field `PEC`"]
 pub enum PECW {
     #[doc = "No change."]
-    NO_CHANGE_,
+    NO_CHANGE,
     #[doc = "Port enabled/disabled status has changed."]
     CHANGED,
 }
@@ -1253,7 +1253,7 @@ impl PECW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            PECW::NO_CHANGE_ => false,
+            PECW::NO_CHANGE => false,
             PECW::CHANGED => true,
         }
     }
@@ -1272,8 +1272,8 @@ impl<'a> _PECW<'a> {
     }
     #[doc = "No change."]
     #[inline]
-    pub fn no_change_(self) -> &'a mut W {
-        self.variant(PECW::NO_CHANGE_)
+    pub fn no_change(self) -> &'a mut W {
+        self.variant(PECW::NO_CHANGE)
     }
     #[doc = "Port enabled/disabled status has changed."]
     #[inline]
@@ -1440,7 +1440,7 @@ impl<'a> _FPRW<'a> {
 #[doc = "Values that can be written to the field `SUSP`"]
 pub enum SUSPW {
     #[doc = "Port not in suspend state"]
-    PORT_NOT_IN_SUSPEND_,
+    PORT_NOT_IN_SUSPEND,
     #[doc = "Port in suspend state When in suspend state, downstream propagation of data is blocked on this port, except for port reset. The blocking occurs at the end of the current transaction if a transaction was in progress when this bit was written to 1. In the suspend state, the port is sensitive to resume detection. Note that the bit status does not change until the port is suspended and that there may be a delay in suspending a port if there is a transaction currently in progress on the USB."]
     PORT_IN_SUSPEND_STAT,
 }
@@ -1450,7 +1450,7 @@ impl SUSPW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            SUSPW::PORT_NOT_IN_SUSPEND_ => false,
+            SUSPW::PORT_NOT_IN_SUSPEND => false,
             SUSPW::PORT_IN_SUSPEND_STAT => true,
         }
     }
@@ -1469,8 +1469,8 @@ impl<'a> _SUSPW<'a> {
     }
     #[doc = "Port not in suspend state"]
     #[inline]
-    pub fn port_not_in_suspend_(self) -> &'a mut W {
-        self.variant(SUSPW::PORT_NOT_IN_SUSPEND_)
+    pub fn port_not_in_suspend(self) -> &'a mut W {
+        self.variant(SUSPW::PORT_NOT_IN_SUSPEND)
     }
     #[doc = "Port in suspend state When in suspend state, downstream propagation of data is blocked on this port, except for port reset. The blocking occurs at the end of the current transaction if a transaction was in progress when this bit was written to 1. In the suspend state, the port is sensitive to resume detection. Note that the bit status does not change until the port is suspended and that there may be a delay in suspending a port if there is a transaction currently in progress on the USB."]
     #[inline]
@@ -1680,9 +1680,9 @@ impl<'a> _LSW<'a> {
 #[doc = "Values that can be written to the field `PP`"]
 pub enum PPW {
     #[doc = "Port power off."]
-    PORT_POWER_OFF_,
+    PORT_POWER_OFF,
     #[doc = "Port power on."]
-    PORT_POWER_ON_,
+    PORT_POWER_ON,
 }
 impl PPW {
     #[allow(missing_docs)]
@@ -1690,8 +1690,8 @@ impl PPW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            PPW::PORT_POWER_OFF_ => false,
-            PPW::PORT_POWER_ON_ => true,
+            PPW::PORT_POWER_OFF => false,
+            PPW::PORT_POWER_ON => true,
         }
     }
 }
@@ -1709,13 +1709,13 @@ impl<'a> _PPW<'a> {
     }
     #[doc = "Port power off."]
     #[inline]
-    pub fn port_power_off_(self) -> &'a mut W {
-        self.variant(PPW::PORT_POWER_OFF_)
+    pub fn port_power_off(self) -> &'a mut W {
+        self.variant(PPW::PORT_POWER_OFF)
     }
     #[doc = "Port power on."]
     #[inline]
-    pub fn port_power_on_(self) -> &'a mut W {
-        self.variant(PPW::PORT_POWER_ON_)
+    pub fn port_power_on(self) -> &'a mut W {
+        self.variant(PPW::PORT_POWER_ON)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

@@ -93,7 +93,7 @@ impl INTR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum COMBR {
     #[doc = "OR functionality: A grouped interrupt is generated when any one of the enabled inputs is active (based on its programmed polarity)."]
-    OR_FUNCTIONALITY_A_,
+    OR_FUNCTIONALITY_A,
     #[doc = "AND functionality: An interrupt is generated when all enabled bits are active (based on their programmed polarity)."]
     AND_FUNCTIONALITY_A,
 }
@@ -112,7 +112,7 @@ impl COMBR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            COMBR::OR_FUNCTIONALITY_A_ => false,
+            COMBR::OR_FUNCTIONALITY_A => false,
             COMBR::AND_FUNCTIONALITY_A => true,
         }
     }
@@ -121,14 +121,14 @@ impl COMBR {
     #[inline]
     pub fn _from(value: bool) -> COMBR {
         match value {
-            false => COMBR::OR_FUNCTIONALITY_A_,
+            false => COMBR::OR_FUNCTIONALITY_A,
             true => COMBR::AND_FUNCTIONALITY_A,
         }
     }
-    #[doc = "Checks if the value of the field is `OR_FUNCTIONALITY_A_`"]
+    #[doc = "Checks if the value of the field is `OR_FUNCTIONALITY_A`"]
     #[inline]
-    pub fn is_or_functionality_a_(&self) -> bool {
-        *self == COMBR::OR_FUNCTIONALITY_A_
+    pub fn is_or_functionality_a(&self) -> bool {
+        *self == COMBR::OR_FUNCTIONALITY_A
     }
     #[doc = "Checks if the value of the field is `AND_FUNCTIONALITY_A`"]
     #[inline]
@@ -244,7 +244,7 @@ impl<'a> _INTW<'a> {
 #[doc = "Values that can be written to the field `COMB`"]
 pub enum COMBW {
     #[doc = "OR functionality: A grouped interrupt is generated when any one of the enabled inputs is active (based on its programmed polarity)."]
-    OR_FUNCTIONALITY_A_,
+    OR_FUNCTIONALITY_A,
     #[doc = "AND functionality: An interrupt is generated when all enabled bits are active (based on their programmed polarity)."]
     AND_FUNCTIONALITY_A,
 }
@@ -254,7 +254,7 @@ impl COMBW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            COMBW::OR_FUNCTIONALITY_A_ => false,
+            COMBW::OR_FUNCTIONALITY_A => false,
             COMBW::AND_FUNCTIONALITY_A => true,
         }
     }
@@ -273,8 +273,8 @@ impl<'a> _COMBW<'a> {
     }
     #[doc = "OR functionality: A grouped interrupt is generated when any one of the enabled inputs is active (based on its programmed polarity)."]
     #[inline]
-    pub fn or_functionality_a_(self) -> &'a mut W {
-        self.variant(COMBW::OR_FUNCTIONALITY_A_)
+    pub fn or_functionality_a(self) -> &'a mut W {
+        self.variant(COMBW::OR_FUNCTIONALITY_A)
     }
     #[doc = "AND functionality: An interrupt is generated when all enabled bits are active (based on their programmed polarity)."]
     #[inline]

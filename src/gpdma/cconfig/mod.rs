@@ -46,9 +46,9 @@ impl super::CCONFIG {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ER {
     #[doc = "Channel disabled."]
-    CHANNEL_DISABLED_,
+    CHANNEL_DISABLED,
     #[doc = "Channel enabled."]
-    CHANNEL_ENABLED_,
+    CHANNEL_ENABLED,
 }
 impl ER {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -65,8 +65,8 @@ impl ER {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ER::CHANNEL_DISABLED_ => false,
-            ER::CHANNEL_ENABLED_ => true,
+            ER::CHANNEL_DISABLED => false,
+            ER::CHANNEL_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -74,19 +74,19 @@ impl ER {
     #[inline]
     pub fn _from(value: bool) -> ER {
         match value {
-            false => ER::CHANNEL_DISABLED_,
-            true => ER::CHANNEL_ENABLED_,
+            false => ER::CHANNEL_DISABLED,
+            true => ER::CHANNEL_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `CHANNEL_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `CHANNEL_DISABLED`"]
     #[inline]
-    pub fn is_channel_disabled_(&self) -> bool {
-        *self == ER::CHANNEL_DISABLED_
+    pub fn is_channel_disabled(&self) -> bool {
+        *self == ER::CHANNEL_DISABLED
     }
-    #[doc = "Checks if the value of the field is `CHANNEL_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `CHANNEL_ENABLED`"]
     #[inline]
-    pub fn is_channel_enabled_(&self) -> bool {
-        *self == ER::CHANNEL_ENABLED_
+    pub fn is_channel_enabled(&self) -> bool {
+        *self == ER::CHANNEL_ENABLED
     }
 }
 #[doc = "Possible values of the field `SRCPERIPHERAL`"]
@@ -95,21 +95,21 @@ pub enum SRCPERIPHERALR {
     #[doc = "Source = SPIFI"]
     SOURCE_EQ_SPIFI,
     #[doc = "Source = Timer 0 match 0/UART0 transmit"]
-    SOURCE_EQ_TIMER_0_MAT,
+    SOURCE_EQ_TIMER_0_MAT_1,
     #[doc = "Source = Timer 0 match 1/UART0 receive"]
-    SOURCE_EQ_TIMER_0_MAT,
+    SOURCE_EQ_TIMER_0_MAT_2,
     #[doc = "Source = Timer 1 match 0/UART1 transmit"]
-    SOURCE_EQ_TIMER_1_MAT,
+    SOURCE_EQ_TIMER_1_MAT_1,
     #[doc = "Source = Timer 1 match 1/UART 1 receive"]
-    SOURCE_EQ_TIMER_1_MAT,
+    SOURCE_EQ_TIMER_1_MAT_2,
     #[doc = "Source = Timer 2 match 0/UART 2 transmit"]
-    SOURCE_EQ_TIMER_2_MAT,
+    SOURCE_EQ_TIMER_2_MAT_1,
     #[doc = "Source = Timer 2 match 1/UART 2 receive"]
-    SOURCE_EQ_TIMER_2_MAT,
+    SOURCE_EQ_TIMER_2_MAT_2,
     #[doc = "Source = Timer 3 match 0/UART3 transmit/SCT DMA request 0"]
-    SOURCE_EQ_TIMER_3_MAT,
+    SOURCE_EQ_TIMER_3_MAT_1,
     #[doc = "Source = Timer 3 match 1/UART3 receive/SCT DMA request 1"]
-    SOURCE_EQ_TIMER_3_MAT,
+    SOURCE_EQ_TIMER_3_MAT_2,
     #[doc = "Source = SSP0 receive/I2S channel 0"]
     SOURCE_EQ_SSP0_RECEIV,
     #[doc = "Source = SSP0 transmit/I2S channel 1"]
@@ -133,14 +133,14 @@ impl SRCPERIPHERALR {
     pub fn bits(&self) -> u8 {
         match *self {
             SRCPERIPHERALR::SOURCE_EQ_SPIFI => 0,
-            SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT => 1,
-            SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT => 2,
-            SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT => 3,
-            SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT => 4,
-            SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT => 5,
-            SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT => 6,
-            SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT => 7,
-            SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT => 8,
+            SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT_1 => 1,
+            SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT_2 => 2,
+            SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT_1 => 3,
+            SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT_2 => 4,
+            SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT_1 => 5,
+            SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT_2 => 6,
+            SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT_1 => 7,
+            SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT_2 => 8,
             SRCPERIPHERALR::SOURCE_EQ_SSP0_RECEIV => 9,
             SRCPERIPHERALR::SOURCE_EQ_SSP0_TRANSM => 10,
             SRCPERIPHERALR::SOURCE_EQ_SSP1_RECEIV => 11,
@@ -157,14 +157,14 @@ impl SRCPERIPHERALR {
     pub fn _from(value: u8) -> SRCPERIPHERALR {
         match value {
             0 => SRCPERIPHERALR::SOURCE_EQ_SPIFI,
-            1 => SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT,
-            2 => SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT,
-            3 => SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT,
-            4 => SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT,
-            5 => SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT,
-            6 => SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT,
-            7 => SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT,
-            8 => SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT,
+            1 => SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT_1,
+            2 => SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT_2,
+            3 => SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT_1,
+            4 => SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT_2,
+            5 => SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT_1,
+            6 => SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT_2,
+            7 => SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT_1,
+            8 => SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT_2,
             9 => SRCPERIPHERALR::SOURCE_EQ_SSP0_RECEIV,
             10 => SRCPERIPHERALR::SOURCE_EQ_SSP0_TRANSM,
             11 => SRCPERIPHERALR::SOURCE_EQ_SSP1_RECEIV,
@@ -180,45 +180,45 @@ impl SRCPERIPHERALR {
     pub fn is_source_eq_spifi(&self) -> bool {
         *self == SRCPERIPHERALR::SOURCE_EQ_SPIFI
     }
-    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_0_MAT`"]
+    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_0_MAT_1`"]
     #[inline]
-    pub fn is_source_eq_timer_0_mat(&self) -> bool {
-        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT
+    pub fn is_source_eq_timer_0_mat_1(&self) -> bool {
+        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT_1
     }
-    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_0_MAT`"]
+    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_0_MAT_2`"]
     #[inline]
-    pub fn is_source_eq_timer_0_mat(&self) -> bool {
-        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT
+    pub fn is_source_eq_timer_0_mat_2(&self) -> bool {
+        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_0_MAT_2
     }
-    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_1_MAT`"]
+    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_1_MAT_1`"]
     #[inline]
-    pub fn is_source_eq_timer_1_mat(&self) -> bool {
-        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT
+    pub fn is_source_eq_timer_1_mat_1(&self) -> bool {
+        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT_1
     }
-    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_1_MAT`"]
+    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_1_MAT_2`"]
     #[inline]
-    pub fn is_source_eq_timer_1_mat(&self) -> bool {
-        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT
+    pub fn is_source_eq_timer_1_mat_2(&self) -> bool {
+        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_1_MAT_2
     }
-    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_2_MAT`"]
+    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_2_MAT_1`"]
     #[inline]
-    pub fn is_source_eq_timer_2_mat(&self) -> bool {
-        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT
+    pub fn is_source_eq_timer_2_mat_1(&self) -> bool {
+        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT_1
     }
-    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_2_MAT`"]
+    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_2_MAT_2`"]
     #[inline]
-    pub fn is_source_eq_timer_2_mat(&self) -> bool {
-        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT
+    pub fn is_source_eq_timer_2_mat_2(&self) -> bool {
+        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_2_MAT_2
     }
-    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_3_MAT`"]
+    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_3_MAT_1`"]
     #[inline]
-    pub fn is_source_eq_timer_3_mat(&self) -> bool {
-        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT
+    pub fn is_source_eq_timer_3_mat_1(&self) -> bool {
+        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT_1
     }
-    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_3_MAT`"]
+    #[doc = "Checks if the value of the field is `SOURCE_EQ_TIMER_3_MAT_2`"]
     #[inline]
-    pub fn is_source_eq_timer_3_mat(&self) -> bool {
-        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT
+    pub fn is_source_eq_timer_3_mat_2(&self) -> bool {
+        *self == SRCPERIPHERALR::SOURCE_EQ_TIMER_3_MAT_2
     }
     #[doc = "Checks if the value of the field is `SOURCE_EQ_SSP0_RECEIV`"]
     #[inline]
@@ -262,21 +262,21 @@ pub enum DESTPERIPHERALR {
     #[doc = "Destination = SPIFI"]
     DESTINATION_EQ_SPIFI,
     #[doc = "Destination = Timer 0 match 0/UART0 transmit"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_1,
     #[doc = "Destination = Timer 0 match 1/UART0 receive"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_2,
     #[doc = "Destination = Timer 1 match 0/UART1 transmit"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_3,
     #[doc = "Destination = Timer 1 match 1/UART 1 receive"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_4,
     #[doc = "Destination = Timer 2 match 0/UART 2 transmit"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_5,
     #[doc = "Destination = Timer 2 match 1/UART 2 receive"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_6,
     #[doc = "Destination = Timer 3 match 0/UART3 transmit/SCT DMA request 0"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_7,
     #[doc = "Destination = Timer 3 match 1/UART3 receive/SCT DMA request 1"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_8,
     #[doc = "Destination = SSP0 receive/I2S channel 0"]
     DESTINATION_EQ_SSP0_R,
     #[doc = "Destination = SSP0 transmit/I2S channel 1"]
@@ -300,14 +300,14 @@ impl DESTPERIPHERALR {
     pub fn bits(&self) -> u8 {
         match *self {
             DESTPERIPHERALR::DESTINATION_EQ_SPIFI => 0,
-            DESTPERIPHERALR::DESTINATION_EQ_TIMER_ => 1,
-            DESTPERIPHERALR::DESTINATION_EQ_TIMER_ => 2,
-            DESTPERIPHERALR::DESTINATION_EQ_TIMER_ => 3,
-            DESTPERIPHERALR::DESTINATION_EQ_TIMER_ => 4,
-            DESTPERIPHERALR::DESTINATION_EQ_TIMER_ => 5,
-            DESTPERIPHERALR::DESTINATION_EQ_TIMER_ => 6,
-            DESTPERIPHERALR::DESTINATION_EQ_TIMER_ => 7,
-            DESTPERIPHERALR::DESTINATION_EQ_TIMER_ => 8,
+            DESTPERIPHERALR::DESTINATION_EQ_TIMER_1 => 1,
+            DESTPERIPHERALR::DESTINATION_EQ_TIMER_2 => 2,
+            DESTPERIPHERALR::DESTINATION_EQ_TIMER_3 => 3,
+            DESTPERIPHERALR::DESTINATION_EQ_TIMER_4 => 4,
+            DESTPERIPHERALR::DESTINATION_EQ_TIMER_5 => 5,
+            DESTPERIPHERALR::DESTINATION_EQ_TIMER_6 => 6,
+            DESTPERIPHERALR::DESTINATION_EQ_TIMER_7 => 7,
+            DESTPERIPHERALR::DESTINATION_EQ_TIMER_8 => 8,
             DESTPERIPHERALR::DESTINATION_EQ_SSP0_R => 9,
             DESTPERIPHERALR::DESTINATION_EQ_SSP0_T => 10,
             DESTPERIPHERALR::DESTINATION_EQ_SSP1_R => 11,
@@ -324,14 +324,14 @@ impl DESTPERIPHERALR {
     pub fn _from(value: u8) -> DESTPERIPHERALR {
         match value {
             0 => DESTPERIPHERALR::DESTINATION_EQ_SPIFI,
-            1 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_,
-            2 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_,
-            3 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_,
-            4 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_,
-            5 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_,
-            6 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_,
-            7 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_,
-            8 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_,
+            1 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_1,
+            2 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_2,
+            3 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_3,
+            4 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_4,
+            5 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_5,
+            6 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_6,
+            7 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_7,
+            8 => DESTPERIPHERALR::DESTINATION_EQ_TIMER_8,
             9 => DESTPERIPHERALR::DESTINATION_EQ_SSP0_R,
             10 => DESTPERIPHERALR::DESTINATION_EQ_SSP0_T,
             11 => DESTPERIPHERALR::DESTINATION_EQ_SSP1_R,
@@ -347,45 +347,45 @@ impl DESTPERIPHERALR {
     pub fn is_destination_eq_spifi(&self) -> bool {
         *self == DESTPERIPHERALR::DESTINATION_EQ_SPIFI
     }
-    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_`"]
+    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_1`"]
     #[inline]
-    pub fn is_destination_eq_timer_(&self) -> bool {
-        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_
+    pub fn is_destination_eq_timer_1(&self) -> bool {
+        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_1
     }
-    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_`"]
+    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_2`"]
     #[inline]
-    pub fn is_destination_eq_timer_(&self) -> bool {
-        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_
+    pub fn is_destination_eq_timer_2(&self) -> bool {
+        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_2
     }
-    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_`"]
+    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_3`"]
     #[inline]
-    pub fn is_destination_eq_timer_(&self) -> bool {
-        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_
+    pub fn is_destination_eq_timer_3(&self) -> bool {
+        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_3
     }
-    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_`"]
+    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_4`"]
     #[inline]
-    pub fn is_destination_eq_timer_(&self) -> bool {
-        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_
+    pub fn is_destination_eq_timer_4(&self) -> bool {
+        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_4
     }
-    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_`"]
+    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_5`"]
     #[inline]
-    pub fn is_destination_eq_timer_(&self) -> bool {
-        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_
+    pub fn is_destination_eq_timer_5(&self) -> bool {
+        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_5
     }
-    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_`"]
+    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_6`"]
     #[inline]
-    pub fn is_destination_eq_timer_(&self) -> bool {
-        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_
+    pub fn is_destination_eq_timer_6(&self) -> bool {
+        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_6
     }
-    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_`"]
+    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_7`"]
     #[inline]
-    pub fn is_destination_eq_timer_(&self) -> bool {
-        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_
+    pub fn is_destination_eq_timer_7(&self) -> bool {
+        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_7
     }
-    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_`"]
+    #[doc = "Checks if the value of the field is `DESTINATION_EQ_TIMER_8`"]
     #[inline]
-    pub fn is_destination_eq_timer_(&self) -> bool {
-        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_
+    pub fn is_destination_eq_timer_8(&self) -> bool {
+        *self == DESTPERIPHERALR::DESTINATION_EQ_TIMER_8
     }
     #[doc = "Checks if the value of the field is `DESTINATION_EQ_SSP0_R`"]
     #[inline]
@@ -429,19 +429,19 @@ pub enum FLOWCNTRLR {
     #[doc = "Memory to memory (DMA control)"]
     MEMORY_TO_MEMORY,
     #[doc = "Memory to peripheral (DMA control)"]
-    MEMORY_TO_PERIPHERAL,
+    MEMORY_TO_PERIPHERAL_1,
     #[doc = "Peripheral to memory (DMA control)"]
-    PERIPHERAL_TO_MEMORY,
+    PERIPHERAL_TO_MEMORY_1,
     #[doc = "Source peripheral to destination peripheral (DMA control)"]
-    SOURCE_PERIPHERAL_TO,
+    SOURCE_PERIPHERAL_TO_1,
     #[doc = "Source peripheral to destination peripheral (destination control)"]
-    SOURCE_PERIPHERAL_TO,
+    SOURCE_PERIPHERAL_TO_2,
     #[doc = "Memory to peripheral (peripheral control)"]
-    MEMORY_TO_PERIPHERAL,
+    MEMORY_TO_PERIPHERAL_2,
     #[doc = "Peripheral to memory (peripheral control)"]
-    PERIPHERAL_TO_MEMORY,
+    PERIPHERAL_TO_MEMORY_2,
     #[doc = "Source peripheral to destination peripheral (source control)"]
-    SOURCE_PERIPHERAL_TO,
+    SOURCE_PERIPHERAL_TO_3,
 }
 impl FLOWCNTRLR {
     #[doc = r" Value of the field as raw bits"]
@@ -449,13 +449,13 @@ impl FLOWCNTRLR {
     pub fn bits(&self) -> u8 {
         match *self {
             FLOWCNTRLR::MEMORY_TO_MEMORY => 0,
-            FLOWCNTRLR::MEMORY_TO_PERIPHERAL => 1,
-            FLOWCNTRLR::PERIPHERAL_TO_MEMORY => 2,
-            FLOWCNTRLR::SOURCE_PERIPHERAL_TO => 3,
-            FLOWCNTRLR::SOURCE_PERIPHERAL_TO => 4,
-            FLOWCNTRLR::MEMORY_TO_PERIPHERAL => 5,
-            FLOWCNTRLR::PERIPHERAL_TO_MEMORY => 6,
-            FLOWCNTRLR::SOURCE_PERIPHERAL_TO => 7,
+            FLOWCNTRLR::MEMORY_TO_PERIPHERAL_1 => 1,
+            FLOWCNTRLR::PERIPHERAL_TO_MEMORY_1 => 2,
+            FLOWCNTRLR::SOURCE_PERIPHERAL_TO_1 => 3,
+            FLOWCNTRLR::SOURCE_PERIPHERAL_TO_2 => 4,
+            FLOWCNTRLR::MEMORY_TO_PERIPHERAL_2 => 5,
+            FLOWCNTRLR::PERIPHERAL_TO_MEMORY_2 => 6,
+            FLOWCNTRLR::SOURCE_PERIPHERAL_TO_3 => 7,
         }
     }
     #[allow(missing_docs)]
@@ -464,13 +464,13 @@ impl FLOWCNTRLR {
     pub fn _from(value: u8) -> FLOWCNTRLR {
         match value {
             0 => FLOWCNTRLR::MEMORY_TO_MEMORY,
-            1 => FLOWCNTRLR::MEMORY_TO_PERIPHERAL,
-            2 => FLOWCNTRLR::PERIPHERAL_TO_MEMORY,
-            3 => FLOWCNTRLR::SOURCE_PERIPHERAL_TO,
-            4 => FLOWCNTRLR::SOURCE_PERIPHERAL_TO,
-            5 => FLOWCNTRLR::MEMORY_TO_PERIPHERAL,
-            6 => FLOWCNTRLR::PERIPHERAL_TO_MEMORY,
-            7 => FLOWCNTRLR::SOURCE_PERIPHERAL_TO,
+            1 => FLOWCNTRLR::MEMORY_TO_PERIPHERAL_1,
+            2 => FLOWCNTRLR::PERIPHERAL_TO_MEMORY_1,
+            3 => FLOWCNTRLR::SOURCE_PERIPHERAL_TO_1,
+            4 => FLOWCNTRLR::SOURCE_PERIPHERAL_TO_2,
+            5 => FLOWCNTRLR::MEMORY_TO_PERIPHERAL_2,
+            6 => FLOWCNTRLR::PERIPHERAL_TO_MEMORY_2,
+            7 => FLOWCNTRLR::SOURCE_PERIPHERAL_TO_3,
             _ => unreachable!(),
         }
     }
@@ -479,40 +479,40 @@ impl FLOWCNTRLR {
     pub fn is_memory_to_memory(&self) -> bool {
         *self == FLOWCNTRLR::MEMORY_TO_MEMORY
     }
-    #[doc = "Checks if the value of the field is `MEMORY_TO_PERIPHERAL`"]
+    #[doc = "Checks if the value of the field is `MEMORY_TO_PERIPHERAL_1`"]
     #[inline]
-    pub fn is_memory_to_peripheral(&self) -> bool {
-        *self == FLOWCNTRLR::MEMORY_TO_PERIPHERAL
+    pub fn is_memory_to_peripheral_1(&self) -> bool {
+        *self == FLOWCNTRLR::MEMORY_TO_PERIPHERAL_1
     }
-    #[doc = "Checks if the value of the field is `PERIPHERAL_TO_MEMORY`"]
+    #[doc = "Checks if the value of the field is `PERIPHERAL_TO_MEMORY_1`"]
     #[inline]
-    pub fn is_peripheral_to_memory(&self) -> bool {
-        *self == FLOWCNTRLR::PERIPHERAL_TO_MEMORY
+    pub fn is_peripheral_to_memory_1(&self) -> bool {
+        *self == FLOWCNTRLR::PERIPHERAL_TO_MEMORY_1
     }
-    #[doc = "Checks if the value of the field is `SOURCE_PERIPHERAL_TO`"]
+    #[doc = "Checks if the value of the field is `SOURCE_PERIPHERAL_TO_1`"]
     #[inline]
-    pub fn is_source_peripheral_to(&self) -> bool {
-        *self == FLOWCNTRLR::SOURCE_PERIPHERAL_TO
+    pub fn is_source_peripheral_to_1(&self) -> bool {
+        *self == FLOWCNTRLR::SOURCE_PERIPHERAL_TO_1
     }
-    #[doc = "Checks if the value of the field is `SOURCE_PERIPHERAL_TO`"]
+    #[doc = "Checks if the value of the field is `SOURCE_PERIPHERAL_TO_2`"]
     #[inline]
-    pub fn is_source_peripheral_to(&self) -> bool {
-        *self == FLOWCNTRLR::SOURCE_PERIPHERAL_TO
+    pub fn is_source_peripheral_to_2(&self) -> bool {
+        *self == FLOWCNTRLR::SOURCE_PERIPHERAL_TO_2
     }
-    #[doc = "Checks if the value of the field is `MEMORY_TO_PERIPHERAL`"]
+    #[doc = "Checks if the value of the field is `MEMORY_TO_PERIPHERAL_2`"]
     #[inline]
-    pub fn is_memory_to_peripheral(&self) -> bool {
-        *self == FLOWCNTRLR::MEMORY_TO_PERIPHERAL
+    pub fn is_memory_to_peripheral_2(&self) -> bool {
+        *self == FLOWCNTRLR::MEMORY_TO_PERIPHERAL_2
     }
-    #[doc = "Checks if the value of the field is `PERIPHERAL_TO_MEMORY`"]
+    #[doc = "Checks if the value of the field is `PERIPHERAL_TO_MEMORY_2`"]
     #[inline]
-    pub fn is_peripheral_to_memory(&self) -> bool {
-        *self == FLOWCNTRLR::PERIPHERAL_TO_MEMORY
+    pub fn is_peripheral_to_memory_2(&self) -> bool {
+        *self == FLOWCNTRLR::PERIPHERAL_TO_MEMORY_2
     }
-    #[doc = "Checks if the value of the field is `SOURCE_PERIPHERAL_TO`"]
+    #[doc = "Checks if the value of the field is `SOURCE_PERIPHERAL_TO_3`"]
     #[inline]
-    pub fn is_source_peripheral_to(&self) -> bool {
-        *self == FLOWCNTRLR::SOURCE_PERIPHERAL_TO
+    pub fn is_source_peripheral_to_3(&self) -> bool {
+        *self == FLOWCNTRLR::SOURCE_PERIPHERAL_TO_3
     }
 }
 #[doc = r" Value of the field"]
@@ -603,7 +603,7 @@ impl AR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HR {
     #[doc = "Enable DMA requests."]
-    ENABLE_DMA_REQUESTS_,
+    ENABLE_DMA_REQUESTS,
     #[doc = "Ignore further source DMA requests."]
     IGNORE_FURTHER_SOURC,
 }
@@ -622,7 +622,7 @@ impl HR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            HR::ENABLE_DMA_REQUESTS_ => false,
+            HR::ENABLE_DMA_REQUESTS => false,
             HR::IGNORE_FURTHER_SOURC => true,
         }
     }
@@ -631,14 +631,14 @@ impl HR {
     #[inline]
     pub fn _from(value: bool) -> HR {
         match value {
-            false => HR::ENABLE_DMA_REQUESTS_,
+            false => HR::ENABLE_DMA_REQUESTS,
             true => HR::IGNORE_FURTHER_SOURC,
         }
     }
-    #[doc = "Checks if the value of the field is `ENABLE_DMA_REQUESTS_`"]
+    #[doc = "Checks if the value of the field is `ENABLE_DMA_REQUESTS`"]
     #[inline]
-    pub fn is_enable_dma_requests_(&self) -> bool {
-        *self == HR::ENABLE_DMA_REQUESTS_
+    pub fn is_enable_dma_requests(&self) -> bool {
+        *self == HR::ENABLE_DMA_REQUESTS
     }
     #[doc = "Checks if the value of the field is `IGNORE_FURTHER_SOURC`"]
     #[inline]
@@ -649,9 +649,9 @@ impl HR {
 #[doc = "Values that can be written to the field `E`"]
 pub enum EW {
     #[doc = "Channel disabled."]
-    CHANNEL_DISABLED_,
+    CHANNEL_DISABLED,
     #[doc = "Channel enabled."]
-    CHANNEL_ENABLED_,
+    CHANNEL_ENABLED,
 }
 impl EW {
     #[allow(missing_docs)]
@@ -659,8 +659,8 @@ impl EW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            EW::CHANNEL_DISABLED_ => false,
-            EW::CHANNEL_ENABLED_ => true,
+            EW::CHANNEL_DISABLED => false,
+            EW::CHANNEL_ENABLED => true,
         }
     }
 }
@@ -678,13 +678,13 @@ impl<'a> _EW<'a> {
     }
     #[doc = "Channel disabled."]
     #[inline]
-    pub fn channel_disabled_(self) -> &'a mut W {
-        self.variant(EW::CHANNEL_DISABLED_)
+    pub fn channel_disabled(self) -> &'a mut W {
+        self.variant(EW::CHANNEL_DISABLED)
     }
     #[doc = "Channel enabled."]
     #[inline]
-    pub fn channel_enabled_(self) -> &'a mut W {
-        self.variant(EW::CHANNEL_ENABLED_)
+    pub fn channel_enabled(self) -> &'a mut W {
+        self.variant(EW::CHANNEL_ENABLED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -709,21 +709,21 @@ pub enum SRCPERIPHERALW {
     #[doc = "Source = SPIFI"]
     SOURCE_EQ_SPIFI,
     #[doc = "Source = Timer 0 match 0/UART0 transmit"]
-    SOURCE_EQ_TIMER_0_MAT,
+    SOURCE_EQ_TIMER_0_MAT_1,
     #[doc = "Source = Timer 0 match 1/UART0 receive"]
-    SOURCE_EQ_TIMER_0_MAT,
+    SOURCE_EQ_TIMER_0_MAT_2,
     #[doc = "Source = Timer 1 match 0/UART1 transmit"]
-    SOURCE_EQ_TIMER_1_MAT,
+    SOURCE_EQ_TIMER_1_MAT_1,
     #[doc = "Source = Timer 1 match 1/UART 1 receive"]
-    SOURCE_EQ_TIMER_1_MAT,
+    SOURCE_EQ_TIMER_1_MAT_2,
     #[doc = "Source = Timer 2 match 0/UART 2 transmit"]
-    SOURCE_EQ_TIMER_2_MAT,
+    SOURCE_EQ_TIMER_2_MAT_1,
     #[doc = "Source = Timer 2 match 1/UART 2 receive"]
-    SOURCE_EQ_TIMER_2_MAT,
+    SOURCE_EQ_TIMER_2_MAT_2,
     #[doc = "Source = Timer 3 match 0/UART3 transmit/SCT DMA request 0"]
-    SOURCE_EQ_TIMER_3_MAT,
+    SOURCE_EQ_TIMER_3_MAT_1,
     #[doc = "Source = Timer 3 match 1/UART3 receive/SCT DMA request 1"]
-    SOURCE_EQ_TIMER_3_MAT,
+    SOURCE_EQ_TIMER_3_MAT_2,
     #[doc = "Source = SSP0 receive/I2S channel 0"]
     SOURCE_EQ_SSP0_RECEIV,
     #[doc = "Source = SSP0 transmit/I2S channel 1"]
@@ -746,14 +746,14 @@ impl SRCPERIPHERALW {
     pub fn _bits(&self) -> u8 {
         match *self {
             SRCPERIPHERALW::SOURCE_EQ_SPIFI => 0,
-            SRCPERIPHERALW::SOURCE_EQ_TIMER_0_MAT => 1,
-            SRCPERIPHERALW::SOURCE_EQ_TIMER_0_MAT => 2,
-            SRCPERIPHERALW::SOURCE_EQ_TIMER_1_MAT => 3,
-            SRCPERIPHERALW::SOURCE_EQ_TIMER_1_MAT => 4,
-            SRCPERIPHERALW::SOURCE_EQ_TIMER_2_MAT => 5,
-            SRCPERIPHERALW::SOURCE_EQ_TIMER_2_MAT => 6,
-            SRCPERIPHERALW::SOURCE_EQ_TIMER_3_MAT => 7,
-            SRCPERIPHERALW::SOURCE_EQ_TIMER_3_MAT => 8,
+            SRCPERIPHERALW::SOURCE_EQ_TIMER_0_MAT_1 => 1,
+            SRCPERIPHERALW::SOURCE_EQ_TIMER_0_MAT_2 => 2,
+            SRCPERIPHERALW::SOURCE_EQ_TIMER_1_MAT_1 => 3,
+            SRCPERIPHERALW::SOURCE_EQ_TIMER_1_MAT_2 => 4,
+            SRCPERIPHERALW::SOURCE_EQ_TIMER_2_MAT_1 => 5,
+            SRCPERIPHERALW::SOURCE_EQ_TIMER_2_MAT_2 => 6,
+            SRCPERIPHERALW::SOURCE_EQ_TIMER_3_MAT_1 => 7,
+            SRCPERIPHERALW::SOURCE_EQ_TIMER_3_MAT_2 => 8,
             SRCPERIPHERALW::SOURCE_EQ_SSP0_RECEIV => 9,
             SRCPERIPHERALW::SOURCE_EQ_SSP0_TRANSM => 10,
             SRCPERIPHERALW::SOURCE_EQ_SSP1_RECEIV => 11,
@@ -781,43 +781,43 @@ impl<'a> _SRCPERIPHERALW<'a> {
     }
     #[doc = "Source = Timer 0 match 0/UART0 transmit"]
     #[inline]
-    pub fn source_eq_timer_0_mat(self) -> &'a mut W {
-        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_0_MAT)
+    pub fn source_eq_timer_0_mat_1(self) -> &'a mut W {
+        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_0_MAT_1)
     }
     #[doc = "Source = Timer 0 match 1/UART0 receive"]
     #[inline]
-    pub fn source_eq_timer_0_mat(self) -> &'a mut W {
-        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_0_MAT)
+    pub fn source_eq_timer_0_mat_2(self) -> &'a mut W {
+        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_0_MAT_2)
     }
     #[doc = "Source = Timer 1 match 0/UART1 transmit"]
     #[inline]
-    pub fn source_eq_timer_1_mat(self) -> &'a mut W {
-        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_1_MAT)
+    pub fn source_eq_timer_1_mat_1(self) -> &'a mut W {
+        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_1_MAT_1)
     }
     #[doc = "Source = Timer 1 match 1/UART 1 receive"]
     #[inline]
-    pub fn source_eq_timer_1_mat(self) -> &'a mut W {
-        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_1_MAT)
+    pub fn source_eq_timer_1_mat_2(self) -> &'a mut W {
+        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_1_MAT_2)
     }
     #[doc = "Source = Timer 2 match 0/UART 2 transmit"]
     #[inline]
-    pub fn source_eq_timer_2_mat(self) -> &'a mut W {
-        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_2_MAT)
+    pub fn source_eq_timer_2_mat_1(self) -> &'a mut W {
+        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_2_MAT_1)
     }
     #[doc = "Source = Timer 2 match 1/UART 2 receive"]
     #[inline]
-    pub fn source_eq_timer_2_mat(self) -> &'a mut W {
-        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_2_MAT)
+    pub fn source_eq_timer_2_mat_2(self) -> &'a mut W {
+        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_2_MAT_2)
     }
     #[doc = "Source = Timer 3 match 0/UART3 transmit/SCT DMA request 0"]
     #[inline]
-    pub fn source_eq_timer_3_mat(self) -> &'a mut W {
-        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_3_MAT)
+    pub fn source_eq_timer_3_mat_1(self) -> &'a mut W {
+        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_3_MAT_1)
     }
     #[doc = "Source = Timer 3 match 1/UART3 receive/SCT DMA request 1"]
     #[inline]
-    pub fn source_eq_timer_3_mat(self) -> &'a mut W {
-        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_3_MAT)
+    pub fn source_eq_timer_3_mat_2(self) -> &'a mut W {
+        self.variant(SRCPERIPHERALW::SOURCE_EQ_TIMER_3_MAT_2)
     }
     #[doc = "Source = SSP0 receive/I2S channel 0"]
     #[inline]
@@ -869,21 +869,21 @@ pub enum DESTPERIPHERALW {
     #[doc = "Destination = SPIFI"]
     DESTINATION_EQ_SPIFI,
     #[doc = "Destination = Timer 0 match 0/UART0 transmit"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_1,
     #[doc = "Destination = Timer 0 match 1/UART0 receive"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_2,
     #[doc = "Destination = Timer 1 match 0/UART1 transmit"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_3,
     #[doc = "Destination = Timer 1 match 1/UART 1 receive"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_4,
     #[doc = "Destination = Timer 2 match 0/UART 2 transmit"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_5,
     #[doc = "Destination = Timer 2 match 1/UART 2 receive"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_6,
     #[doc = "Destination = Timer 3 match 0/UART3 transmit/SCT DMA request 0"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_7,
     #[doc = "Destination = Timer 3 match 1/UART3 receive/SCT DMA request 1"]
-    DESTINATION_EQ_TIMER_,
+    DESTINATION_EQ_TIMER_8,
     #[doc = "Destination = SSP0 receive/I2S channel 0"]
     DESTINATION_EQ_SSP0_R,
     #[doc = "Destination = SSP0 transmit/I2S channel 1"]
@@ -906,14 +906,14 @@ impl DESTPERIPHERALW {
     pub fn _bits(&self) -> u8 {
         match *self {
             DESTPERIPHERALW::DESTINATION_EQ_SPIFI => 0,
-            DESTPERIPHERALW::DESTINATION_EQ_TIMER_ => 1,
-            DESTPERIPHERALW::DESTINATION_EQ_TIMER_ => 2,
-            DESTPERIPHERALW::DESTINATION_EQ_TIMER_ => 3,
-            DESTPERIPHERALW::DESTINATION_EQ_TIMER_ => 4,
-            DESTPERIPHERALW::DESTINATION_EQ_TIMER_ => 5,
-            DESTPERIPHERALW::DESTINATION_EQ_TIMER_ => 6,
-            DESTPERIPHERALW::DESTINATION_EQ_TIMER_ => 7,
-            DESTPERIPHERALW::DESTINATION_EQ_TIMER_ => 8,
+            DESTPERIPHERALW::DESTINATION_EQ_TIMER_1 => 1,
+            DESTPERIPHERALW::DESTINATION_EQ_TIMER_2 => 2,
+            DESTPERIPHERALW::DESTINATION_EQ_TIMER_3 => 3,
+            DESTPERIPHERALW::DESTINATION_EQ_TIMER_4 => 4,
+            DESTPERIPHERALW::DESTINATION_EQ_TIMER_5 => 5,
+            DESTPERIPHERALW::DESTINATION_EQ_TIMER_6 => 6,
+            DESTPERIPHERALW::DESTINATION_EQ_TIMER_7 => 7,
+            DESTPERIPHERALW::DESTINATION_EQ_TIMER_8 => 8,
             DESTPERIPHERALW::DESTINATION_EQ_SSP0_R => 9,
             DESTPERIPHERALW::DESTINATION_EQ_SSP0_T => 10,
             DESTPERIPHERALW::DESTINATION_EQ_SSP1_R => 11,
@@ -941,43 +941,43 @@ impl<'a> _DESTPERIPHERALW<'a> {
     }
     #[doc = "Destination = Timer 0 match 0/UART0 transmit"]
     #[inline]
-    pub fn destination_eq_timer_(self) -> &'a mut W {
-        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_)
+    pub fn destination_eq_timer_1(self) -> &'a mut W {
+        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_1)
     }
     #[doc = "Destination = Timer 0 match 1/UART0 receive"]
     #[inline]
-    pub fn destination_eq_timer_(self) -> &'a mut W {
-        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_)
+    pub fn destination_eq_timer_2(self) -> &'a mut W {
+        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_2)
     }
     #[doc = "Destination = Timer 1 match 0/UART1 transmit"]
     #[inline]
-    pub fn destination_eq_timer_(self) -> &'a mut W {
-        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_)
+    pub fn destination_eq_timer_3(self) -> &'a mut W {
+        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_3)
     }
     #[doc = "Destination = Timer 1 match 1/UART 1 receive"]
     #[inline]
-    pub fn destination_eq_timer_(self) -> &'a mut W {
-        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_)
+    pub fn destination_eq_timer_4(self) -> &'a mut W {
+        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_4)
     }
     #[doc = "Destination = Timer 2 match 0/UART 2 transmit"]
     #[inline]
-    pub fn destination_eq_timer_(self) -> &'a mut W {
-        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_)
+    pub fn destination_eq_timer_5(self) -> &'a mut W {
+        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_5)
     }
     #[doc = "Destination = Timer 2 match 1/UART 2 receive"]
     #[inline]
-    pub fn destination_eq_timer_(self) -> &'a mut W {
-        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_)
+    pub fn destination_eq_timer_6(self) -> &'a mut W {
+        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_6)
     }
     #[doc = "Destination = Timer 3 match 0/UART3 transmit/SCT DMA request 0"]
     #[inline]
-    pub fn destination_eq_timer_(self) -> &'a mut W {
-        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_)
+    pub fn destination_eq_timer_7(self) -> &'a mut W {
+        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_7)
     }
     #[doc = "Destination = Timer 3 match 1/UART3 receive/SCT DMA request 1"]
     #[inline]
-    pub fn destination_eq_timer_(self) -> &'a mut W {
-        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_)
+    pub fn destination_eq_timer_8(self) -> &'a mut W {
+        self.variant(DESTPERIPHERALW::DESTINATION_EQ_TIMER_8)
     }
     #[doc = "Destination = SSP0 receive/I2S channel 0"]
     #[inline]
@@ -1029,19 +1029,19 @@ pub enum FLOWCNTRLW {
     #[doc = "Memory to memory (DMA control)"]
     MEMORY_TO_MEMORY,
     #[doc = "Memory to peripheral (DMA control)"]
-    MEMORY_TO_PERIPHERAL,
+    MEMORY_TO_PERIPHERAL_1,
     #[doc = "Peripheral to memory (DMA control)"]
-    PERIPHERAL_TO_MEMORY,
+    PERIPHERAL_TO_MEMORY_1,
     #[doc = "Source peripheral to destination peripheral (DMA control)"]
-    SOURCE_PERIPHERAL_TO,
+    SOURCE_PERIPHERAL_TO_1,
     #[doc = "Source peripheral to destination peripheral (destination control)"]
-    SOURCE_PERIPHERAL_TO,
+    SOURCE_PERIPHERAL_TO_2,
     #[doc = "Memory to peripheral (peripheral control)"]
-    MEMORY_TO_PERIPHERAL,
+    MEMORY_TO_PERIPHERAL_2,
     #[doc = "Peripheral to memory (peripheral control)"]
-    PERIPHERAL_TO_MEMORY,
+    PERIPHERAL_TO_MEMORY_2,
     #[doc = "Source peripheral to destination peripheral (source control)"]
-    SOURCE_PERIPHERAL_TO,
+    SOURCE_PERIPHERAL_TO_3,
 }
 impl FLOWCNTRLW {
     #[allow(missing_docs)]
@@ -1050,13 +1050,13 @@ impl FLOWCNTRLW {
     pub fn _bits(&self) -> u8 {
         match *self {
             FLOWCNTRLW::MEMORY_TO_MEMORY => 0,
-            FLOWCNTRLW::MEMORY_TO_PERIPHERAL => 1,
-            FLOWCNTRLW::PERIPHERAL_TO_MEMORY => 2,
-            FLOWCNTRLW::SOURCE_PERIPHERAL_TO => 3,
-            FLOWCNTRLW::SOURCE_PERIPHERAL_TO => 4,
-            FLOWCNTRLW::MEMORY_TO_PERIPHERAL => 5,
-            FLOWCNTRLW::PERIPHERAL_TO_MEMORY => 6,
-            FLOWCNTRLW::SOURCE_PERIPHERAL_TO => 7,
+            FLOWCNTRLW::MEMORY_TO_PERIPHERAL_1 => 1,
+            FLOWCNTRLW::PERIPHERAL_TO_MEMORY_1 => 2,
+            FLOWCNTRLW::SOURCE_PERIPHERAL_TO_1 => 3,
+            FLOWCNTRLW::SOURCE_PERIPHERAL_TO_2 => 4,
+            FLOWCNTRLW::MEMORY_TO_PERIPHERAL_2 => 5,
+            FLOWCNTRLW::PERIPHERAL_TO_MEMORY_2 => 6,
+            FLOWCNTRLW::SOURCE_PERIPHERAL_TO_3 => 7,
         }
     }
 }
@@ -1079,38 +1079,38 @@ impl<'a> _FLOWCNTRLW<'a> {
     }
     #[doc = "Memory to peripheral (DMA control)"]
     #[inline]
-    pub fn memory_to_peripheral(self) -> &'a mut W {
-        self.variant(FLOWCNTRLW::MEMORY_TO_PERIPHERAL)
+    pub fn memory_to_peripheral_1(self) -> &'a mut W {
+        self.variant(FLOWCNTRLW::MEMORY_TO_PERIPHERAL_1)
     }
     #[doc = "Peripheral to memory (DMA control)"]
     #[inline]
-    pub fn peripheral_to_memory(self) -> &'a mut W {
-        self.variant(FLOWCNTRLW::PERIPHERAL_TO_MEMORY)
+    pub fn peripheral_to_memory_1(self) -> &'a mut W {
+        self.variant(FLOWCNTRLW::PERIPHERAL_TO_MEMORY_1)
     }
     #[doc = "Source peripheral to destination peripheral (DMA control)"]
     #[inline]
-    pub fn source_peripheral_to(self) -> &'a mut W {
-        self.variant(FLOWCNTRLW::SOURCE_PERIPHERAL_TO)
+    pub fn source_peripheral_to_1(self) -> &'a mut W {
+        self.variant(FLOWCNTRLW::SOURCE_PERIPHERAL_TO_1)
     }
     #[doc = "Source peripheral to destination peripheral (destination control)"]
     #[inline]
-    pub fn source_peripheral_to(self) -> &'a mut W {
-        self.variant(FLOWCNTRLW::SOURCE_PERIPHERAL_TO)
+    pub fn source_peripheral_to_2(self) -> &'a mut W {
+        self.variant(FLOWCNTRLW::SOURCE_PERIPHERAL_TO_2)
     }
     #[doc = "Memory to peripheral (peripheral control)"]
     #[inline]
-    pub fn memory_to_peripheral(self) -> &'a mut W {
-        self.variant(FLOWCNTRLW::MEMORY_TO_PERIPHERAL)
+    pub fn memory_to_peripheral_2(self) -> &'a mut W {
+        self.variant(FLOWCNTRLW::MEMORY_TO_PERIPHERAL_2)
     }
     #[doc = "Peripheral to memory (peripheral control)"]
     #[inline]
-    pub fn peripheral_to_memory(self) -> &'a mut W {
-        self.variant(FLOWCNTRLW::PERIPHERAL_TO_MEMORY)
+    pub fn peripheral_to_memory_2(self) -> &'a mut W {
+        self.variant(FLOWCNTRLW::PERIPHERAL_TO_MEMORY_2)
     }
     #[doc = "Source peripheral to destination peripheral (source control)"]
     #[inline]
-    pub fn source_peripheral_to(self) -> &'a mut W {
-        self.variant(FLOWCNTRLW::SOURCE_PERIPHERAL_TO)
+    pub fn source_peripheral_to_3(self) -> &'a mut W {
+        self.variant(FLOWCNTRLW::SOURCE_PERIPHERAL_TO_3)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
@@ -1217,7 +1217,7 @@ impl<'a> _AW<'a> {
 #[doc = "Values that can be written to the field `H`"]
 pub enum HW {
     #[doc = "Enable DMA requests."]
-    ENABLE_DMA_REQUESTS_,
+    ENABLE_DMA_REQUESTS,
     #[doc = "Ignore further source DMA requests."]
     IGNORE_FURTHER_SOURC,
 }
@@ -1227,7 +1227,7 @@ impl HW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            HW::ENABLE_DMA_REQUESTS_ => false,
+            HW::ENABLE_DMA_REQUESTS => false,
             HW::IGNORE_FURTHER_SOURC => true,
         }
     }
@@ -1246,8 +1246,8 @@ impl<'a> _HW<'a> {
     }
     #[doc = "Enable DMA requests."]
     #[inline]
-    pub fn enable_dma_requests_(self) -> &'a mut W {
-        self.variant(HW::ENABLE_DMA_REQUESTS_)
+    pub fn enable_dma_requests(self) -> &'a mut W {
+        self.variant(HW::ENABLE_DMA_REQUESTS)
     }
     #[doc = "Ignore further source DMA requests."]
     #[inline]

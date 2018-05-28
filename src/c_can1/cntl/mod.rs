@@ -48,7 +48,7 @@ pub enum INITR {
     #[doc = "Initialization is started. On reset, software needs to initialize the CAN controller."]
     INITIALIZATION_IS_ST,
     #[doc = "Normal operation."]
-    NORMAL_OPERATION_,
+    NORMAL_OPERATION,
 }
 impl INITR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -66,7 +66,7 @@ impl INITR {
     pub fn bit(&self) -> bool {
         match *self {
             INITR::INITIALIZATION_IS_ST => true,
-            INITR::NORMAL_OPERATION_ => false,
+            INITR::NORMAL_OPERATION => false,
         }
     }
     #[allow(missing_docs)]
@@ -75,7 +75,7 @@ impl INITR {
     pub fn _from(value: bool) -> INITR {
         match value {
             true => INITR::INITIALIZATION_IS_ST,
-            false => INITR::NORMAL_OPERATION_,
+            false => INITR::NORMAL_OPERATION,
         }
     }
     #[doc = "Checks if the value of the field is `INITIALIZATION_IS_ST`"]
@@ -83,10 +83,10 @@ impl INITR {
     pub fn is_initialization_is_st(&self) -> bool {
         *self == INITR::INITIALIZATION_IS_ST
     }
-    #[doc = "Checks if the value of the field is `NORMAL_OPERATION_`"]
+    #[doc = "Checks if the value of the field is `NORMAL_OPERATION`"]
     #[inline]
-    pub fn is_normal_operation_(&self) -> bool {
-        *self == INITR::NORMAL_OPERATION_
+    pub fn is_normal_operation(&self) -> bool {
+        *self == INITR::NORMAL_OPERATION
     }
 }
 #[doc = "Possible values of the field `IE`"]
@@ -328,9 +328,9 @@ impl CCER {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TESTR {
     #[doc = "Test mode."]
-    TEST_MODE_,
+    TEST_MODE,
     #[doc = "Normal operation."]
-    NORMAL_OPERATION_,
+    NORMAL_OPERATION,
 }
 impl TESTR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -347,8 +347,8 @@ impl TESTR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            TESTR::TEST_MODE_ => true,
-            TESTR::NORMAL_OPERATION_ => false,
+            TESTR::TEST_MODE => true,
+            TESTR::NORMAL_OPERATION => false,
         }
     }
     #[allow(missing_docs)]
@@ -356,19 +356,19 @@ impl TESTR {
     #[inline]
     pub fn _from(value: bool) -> TESTR {
         match value {
-            true => TESTR::TEST_MODE_,
-            false => TESTR::NORMAL_OPERATION_,
+            true => TESTR::TEST_MODE,
+            false => TESTR::NORMAL_OPERATION,
         }
     }
-    #[doc = "Checks if the value of the field is `TEST_MODE_`"]
+    #[doc = "Checks if the value of the field is `TEST_MODE`"]
     #[inline]
-    pub fn is_test_mode_(&self) -> bool {
-        *self == TESTR::TEST_MODE_
+    pub fn is_test_mode(&self) -> bool {
+        *self == TESTR::TEST_MODE
     }
-    #[doc = "Checks if the value of the field is `NORMAL_OPERATION_`"]
+    #[doc = "Checks if the value of the field is `NORMAL_OPERATION`"]
     #[inline]
-    pub fn is_normal_operation_(&self) -> bool {
-        *self == TESTR::NORMAL_OPERATION_
+    pub fn is_normal_operation(&self) -> bool {
+        *self == TESTR::NORMAL_OPERATION
     }
 }
 #[doc = "Values that can be written to the field `INIT`"]
@@ -376,7 +376,7 @@ pub enum INITW {
     #[doc = "Initialization is started. On reset, software needs to initialize the CAN controller."]
     INITIALIZATION_IS_ST,
     #[doc = "Normal operation."]
-    NORMAL_OPERATION_,
+    NORMAL_OPERATION,
 }
 impl INITW {
     #[allow(missing_docs)]
@@ -385,7 +385,7 @@ impl INITW {
     pub fn _bits(&self) -> bool {
         match *self {
             INITW::INITIALIZATION_IS_ST => true,
-            INITW::NORMAL_OPERATION_ => false,
+            INITW::NORMAL_OPERATION => false,
         }
     }
 }
@@ -408,8 +408,8 @@ impl<'a> _INITW<'a> {
     }
     #[doc = "Normal operation."]
     #[inline]
-    pub fn normal_operation_(self) -> &'a mut W {
-        self.variant(INITW::NORMAL_OPERATION_)
+    pub fn normal_operation(self) -> &'a mut W {
+        self.variant(INITW::NORMAL_OPERATION)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -722,9 +722,9 @@ impl<'a> _CCEW<'a> {
 #[doc = "Values that can be written to the field `TEST`"]
 pub enum TESTW {
     #[doc = "Test mode."]
-    TEST_MODE_,
+    TEST_MODE,
     #[doc = "Normal operation."]
-    NORMAL_OPERATION_,
+    NORMAL_OPERATION,
 }
 impl TESTW {
     #[allow(missing_docs)]
@@ -732,8 +732,8 @@ impl TESTW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            TESTW::TEST_MODE_ => true,
-            TESTW::NORMAL_OPERATION_ => false,
+            TESTW::TEST_MODE => true,
+            TESTW::NORMAL_OPERATION => false,
         }
     }
 }
@@ -751,13 +751,13 @@ impl<'a> _TESTW<'a> {
     }
     #[doc = "Test mode."]
     #[inline]
-    pub fn test_mode_(self) -> &'a mut W {
-        self.variant(TESTW::TEST_MODE_)
+    pub fn test_mode(self) -> &'a mut W {
+        self.variant(TESTW::TEST_MODE)
     }
     #[doc = "Normal operation."]
     #[inline]
-    pub fn normal_operation_(self) -> &'a mut W {
-        self.variant(TESTW::NORMAL_OPERATION_)
+    pub fn normal_operation(self) -> &'a mut W {
+        self.variant(TESTW::NORMAL_OPERATION)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

@@ -46,7 +46,7 @@ impl super::IF_CMDMSK_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DATA_BR {
     #[doc = "Transfer data bytes 4-7 to IFx message buffer register."]
-    TRANSFER_DATA_BYTES_,
+    TRANSFER_DATA_BYTES,
     #[doc = "data bytes 4-7 unchanged."]
     DATA_BYTES_4_7_UNCHA,
 }
@@ -65,7 +65,7 @@ impl DATA_BR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            DATA_BR::TRANSFER_DATA_BYTES_ => true,
+            DATA_BR::TRANSFER_DATA_BYTES => true,
             DATA_BR::DATA_BYTES_4_7_UNCHA => false,
         }
     }
@@ -74,14 +74,14 @@ impl DATA_BR {
     #[inline]
     pub fn _from(value: bool) -> DATA_BR {
         match value {
-            true => DATA_BR::TRANSFER_DATA_BYTES_,
+            true => DATA_BR::TRANSFER_DATA_BYTES,
             false => DATA_BR::DATA_BYTES_4_7_UNCHA,
         }
     }
-    #[doc = "Checks if the value of the field is `TRANSFER_DATA_BYTES_`"]
+    #[doc = "Checks if the value of the field is `TRANSFER_DATA_BYTES`"]
     #[inline]
-    pub fn is_transfer_data_bytes_(&self) -> bool {
-        *self == DATA_BR::TRANSFER_DATA_BYTES_
+    pub fn is_transfer_data_bytes(&self) -> bool {
+        *self == DATA_BR::TRANSFER_DATA_BYTES
     }
     #[doc = "Checks if the value of the field is `DATA_BYTES_4_7_UNCHA`"]
     #[inline]
@@ -93,7 +93,7 @@ impl DATA_BR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DATA_AR {
     #[doc = "Transfer data bytes 0-3 to IFx message buffer."]
-    TRANSFER_DATA_BYTES_,
+    TRANSFER_DATA_BYTES,
     #[doc = "data bytes 0-3 unchanged."]
     DATA_BYTES_0_3_UNCHA,
 }
@@ -112,7 +112,7 @@ impl DATA_AR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            DATA_AR::TRANSFER_DATA_BYTES_ => true,
+            DATA_AR::TRANSFER_DATA_BYTES => true,
             DATA_AR::DATA_BYTES_0_3_UNCHA => false,
         }
     }
@@ -121,14 +121,14 @@ impl DATA_AR {
     #[inline]
     pub fn _from(value: bool) -> DATA_AR {
         match value {
-            true => DATA_AR::TRANSFER_DATA_BYTES_,
+            true => DATA_AR::TRANSFER_DATA_BYTES,
             false => DATA_AR::DATA_BYTES_0_3_UNCHA,
         }
     }
-    #[doc = "Checks if the value of the field is `TRANSFER_DATA_BYTES_`"]
+    #[doc = "Checks if the value of the field is `TRANSFER_DATA_BYTES`"]
     #[inline]
-    pub fn is_transfer_data_bytes_(&self) -> bool {
-        *self == DATA_AR::TRANSFER_DATA_BYTES_
+    pub fn is_transfer_data_bytes(&self) -> bool {
+        *self == DATA_AR::TRANSFER_DATA_BYTES
     }
     #[doc = "Checks if the value of the field is `DATA_BYTES_0_3_UNCHA`"]
     #[inline]
@@ -140,7 +140,7 @@ impl DATA_AR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum NEWDATR {
     #[doc = "Clear NEWDAT bit in the message object."]
-    CLEAR_NEWDAT_BIT_IN_,
+    CLEAR_NEWDAT_BIT_IN,
     #[doc = "NEWDAT bit remains unchanged. A read access to a message object can be combined with the reset of the control bits INTPND and NEWDAT in IF1/2_MCTRL. The values of these bits transferred to the IFx Message Control Register always reflect the status before resetting these bits."]
     NEWDAT_BIT_REMAINS_U,
 }
@@ -159,7 +159,7 @@ impl NEWDATR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            NEWDATR::CLEAR_NEWDAT_BIT_IN_ => true,
+            NEWDATR::CLEAR_NEWDAT_BIT_IN => true,
             NEWDATR::NEWDAT_BIT_REMAINS_U => false,
         }
     }
@@ -168,14 +168,14 @@ impl NEWDATR {
     #[inline]
     pub fn _from(value: bool) -> NEWDATR {
         match value {
-            true => NEWDATR::CLEAR_NEWDAT_BIT_IN_,
+            true => NEWDATR::CLEAR_NEWDAT_BIT_IN,
             false => NEWDATR::NEWDAT_BIT_REMAINS_U,
         }
     }
-    #[doc = "Checks if the value of the field is `CLEAR_NEWDAT_BIT_IN_`"]
+    #[doc = "Checks if the value of the field is `CLEAR_NEWDAT_BIT_IN`"]
     #[inline]
-    pub fn is_clear_newdat_bit_in_(&self) -> bool {
-        *self == NEWDATR::CLEAR_NEWDAT_BIT_IN_
+    pub fn is_clear_newdat_bit_in(&self) -> bool {
+        *self == NEWDATR::CLEAR_NEWDAT_BIT_IN
     }
     #[doc = "Checks if the value of the field is `NEWDAT_BIT_REMAINS_U`"]
     #[inline]
@@ -187,7 +187,7 @@ impl NEWDATR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CLRINTPNDR {
     #[doc = "Clear INTPND bit in the message object."]
-    CLEAR_INTPND_BIT_IN_,
+    CLEAR_INTPND_BIT_IN,
     #[doc = "INTPND bit remains unchanged."]
     INTPND_BIT_REMAINS_U,
 }
@@ -206,7 +206,7 @@ impl CLRINTPNDR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CLRINTPNDR::CLEAR_INTPND_BIT_IN_ => true,
+            CLRINTPNDR::CLEAR_INTPND_BIT_IN => true,
             CLRINTPNDR::INTPND_BIT_REMAINS_U => false,
         }
     }
@@ -215,14 +215,14 @@ impl CLRINTPNDR {
     #[inline]
     pub fn _from(value: bool) -> CLRINTPNDR {
         match value {
-            true => CLRINTPNDR::CLEAR_INTPND_BIT_IN_,
+            true => CLRINTPNDR::CLEAR_INTPND_BIT_IN,
             false => CLRINTPNDR::INTPND_BIT_REMAINS_U,
         }
     }
-    #[doc = "Checks if the value of the field is `CLEAR_INTPND_BIT_IN_`"]
+    #[doc = "Checks if the value of the field is `CLEAR_INTPND_BIT_IN`"]
     #[inline]
-    pub fn is_clear_intpnd_bit_in_(&self) -> bool {
-        *self == CLRINTPNDR::CLEAR_INTPND_BIT_IN_
+    pub fn is_clear_intpnd_bit_in(&self) -> bool {
+        *self == CLRINTPNDR::CLEAR_INTPND_BIT_IN
     }
     #[doc = "Checks if the value of the field is `INTPND_BIT_REMAINS_U`"]
     #[inline]
@@ -328,9 +328,9 @@ impl ARBR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MASKR {
     #[doc = "Transfer Identifier MASK + MDIR + MXTD to IFx message buffer register."]
-    TRANSFER_IDENTIFIER_,
+    TRANSFER_IDENTIFIER,
     #[doc = "Mask bits unchanged."]
-    MASK_BITS_UNCHANGED_,
+    MASK_BITS_UNCHANGED,
 }
 impl MASKR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -347,8 +347,8 @@ impl MASKR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            MASKR::TRANSFER_IDENTIFIER_ => true,
-            MASKR::MASK_BITS_UNCHANGED_ => false,
+            MASKR::TRANSFER_IDENTIFIER => true,
+            MASKR::MASK_BITS_UNCHANGED => false,
         }
     }
     #[allow(missing_docs)]
@@ -356,19 +356,19 @@ impl MASKR {
     #[inline]
     pub fn _from(value: bool) -> MASKR {
         match value {
-            true => MASKR::TRANSFER_IDENTIFIER_,
-            false => MASKR::MASK_BITS_UNCHANGED_,
+            true => MASKR::TRANSFER_IDENTIFIER,
+            false => MASKR::MASK_BITS_UNCHANGED,
         }
     }
-    #[doc = "Checks if the value of the field is `TRANSFER_IDENTIFIER_`"]
+    #[doc = "Checks if the value of the field is `TRANSFER_IDENTIFIER`"]
     #[inline]
-    pub fn is_transfer_identifier_(&self) -> bool {
-        *self == MASKR::TRANSFER_IDENTIFIER_
+    pub fn is_transfer_identifier(&self) -> bool {
+        *self == MASKR::TRANSFER_IDENTIFIER
     }
-    #[doc = "Checks if the value of the field is `MASK_BITS_UNCHANGED_`"]
+    #[doc = "Checks if the value of the field is `MASK_BITS_UNCHANGED`"]
     #[inline]
-    pub fn is_mask_bits_unchanged_(&self) -> bool {
-        *self == MASKR::MASK_BITS_UNCHANGED_
+    pub fn is_mask_bits_unchanged(&self) -> bool {
+        *self == MASKR::MASK_BITS_UNCHANGED
     }
 }
 #[doc = r" Value of the field"]
@@ -395,7 +395,7 @@ impl WR_RDR {
 #[doc = "Values that can be written to the field `DATA_B`"]
 pub enum DATA_BW {
     #[doc = "Transfer data bytes 4-7 to IFx message buffer register."]
-    TRANSFER_DATA_BYTES_,
+    TRANSFER_DATA_BYTES,
     #[doc = "data bytes 4-7 unchanged."]
     DATA_BYTES_4_7_UNCHA,
 }
@@ -405,7 +405,7 @@ impl DATA_BW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            DATA_BW::TRANSFER_DATA_BYTES_ => true,
+            DATA_BW::TRANSFER_DATA_BYTES => true,
             DATA_BW::DATA_BYTES_4_7_UNCHA => false,
         }
     }
@@ -424,8 +424,8 @@ impl<'a> _DATA_BW<'a> {
     }
     #[doc = "Transfer data bytes 4-7 to IFx message buffer register."]
     #[inline]
-    pub fn transfer_data_bytes_(self) -> &'a mut W {
-        self.variant(DATA_BW::TRANSFER_DATA_BYTES_)
+    pub fn transfer_data_bytes(self) -> &'a mut W {
+        self.variant(DATA_BW::TRANSFER_DATA_BYTES)
     }
     #[doc = "data bytes 4-7 unchanged."]
     #[inline]
@@ -453,7 +453,7 @@ impl<'a> _DATA_BW<'a> {
 #[doc = "Values that can be written to the field `DATA_A`"]
 pub enum DATA_AW {
     #[doc = "Transfer data bytes 0-3 to IFx message buffer."]
-    TRANSFER_DATA_BYTES_,
+    TRANSFER_DATA_BYTES,
     #[doc = "data bytes 0-3 unchanged."]
     DATA_BYTES_0_3_UNCHA,
 }
@@ -463,7 +463,7 @@ impl DATA_AW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            DATA_AW::TRANSFER_DATA_BYTES_ => true,
+            DATA_AW::TRANSFER_DATA_BYTES => true,
             DATA_AW::DATA_BYTES_0_3_UNCHA => false,
         }
     }
@@ -482,8 +482,8 @@ impl<'a> _DATA_AW<'a> {
     }
     #[doc = "Transfer data bytes 0-3 to IFx message buffer."]
     #[inline]
-    pub fn transfer_data_bytes_(self) -> &'a mut W {
-        self.variant(DATA_AW::TRANSFER_DATA_BYTES_)
+    pub fn transfer_data_bytes(self) -> &'a mut W {
+        self.variant(DATA_AW::TRANSFER_DATA_BYTES)
     }
     #[doc = "data bytes 0-3 unchanged."]
     #[inline]
@@ -511,7 +511,7 @@ impl<'a> _DATA_AW<'a> {
 #[doc = "Values that can be written to the field `NEWDAT`"]
 pub enum NEWDATW {
     #[doc = "Clear NEWDAT bit in the message object."]
-    CLEAR_NEWDAT_BIT_IN_,
+    CLEAR_NEWDAT_BIT_IN,
     #[doc = "NEWDAT bit remains unchanged. A read access to a message object can be combined with the reset of the control bits INTPND and NEWDAT in IF1/2_MCTRL. The values of these bits transferred to the IFx Message Control Register always reflect the status before resetting these bits."]
     NEWDAT_BIT_REMAINS_U,
 }
@@ -521,7 +521,7 @@ impl NEWDATW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            NEWDATW::CLEAR_NEWDAT_BIT_IN_ => true,
+            NEWDATW::CLEAR_NEWDAT_BIT_IN => true,
             NEWDATW::NEWDAT_BIT_REMAINS_U => false,
         }
     }
@@ -540,8 +540,8 @@ impl<'a> _NEWDATW<'a> {
     }
     #[doc = "Clear NEWDAT bit in the message object."]
     #[inline]
-    pub fn clear_newdat_bit_in_(self) -> &'a mut W {
-        self.variant(NEWDATW::CLEAR_NEWDAT_BIT_IN_)
+    pub fn clear_newdat_bit_in(self) -> &'a mut W {
+        self.variant(NEWDATW::CLEAR_NEWDAT_BIT_IN)
     }
     #[doc = "NEWDAT bit remains unchanged. A read access to a message object can be combined with the reset of the control bits INTPND and NEWDAT in IF1/2_MCTRL. The values of these bits transferred to the IFx Message Control Register always reflect the status before resetting these bits."]
     #[inline]
@@ -569,7 +569,7 @@ impl<'a> _NEWDATW<'a> {
 #[doc = "Values that can be written to the field `CLRINTPND`"]
 pub enum CLRINTPNDW {
     #[doc = "Clear INTPND bit in the message object."]
-    CLEAR_INTPND_BIT_IN_,
+    CLEAR_INTPND_BIT_IN,
     #[doc = "INTPND bit remains unchanged."]
     INTPND_BIT_REMAINS_U,
 }
@@ -579,7 +579,7 @@ impl CLRINTPNDW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CLRINTPNDW::CLEAR_INTPND_BIT_IN_ => true,
+            CLRINTPNDW::CLEAR_INTPND_BIT_IN => true,
             CLRINTPNDW::INTPND_BIT_REMAINS_U => false,
         }
     }
@@ -598,8 +598,8 @@ impl<'a> _CLRINTPNDW<'a> {
     }
     #[doc = "Clear INTPND bit in the message object."]
     #[inline]
-    pub fn clear_intpnd_bit_in_(self) -> &'a mut W {
-        self.variant(CLRINTPNDW::CLEAR_INTPND_BIT_IN_)
+    pub fn clear_intpnd_bit_in(self) -> &'a mut W {
+        self.variant(CLRINTPNDW::CLEAR_INTPND_BIT_IN)
     }
     #[doc = "INTPND bit remains unchanged."]
     #[inline]
@@ -743,9 +743,9 @@ impl<'a> _ARBW<'a> {
 #[doc = "Values that can be written to the field `MASK`"]
 pub enum MASKW {
     #[doc = "Transfer Identifier MASK + MDIR + MXTD to IFx message buffer register."]
-    TRANSFER_IDENTIFIER_,
+    TRANSFER_IDENTIFIER,
     #[doc = "Mask bits unchanged."]
-    MASK_BITS_UNCHANGED_,
+    MASK_BITS_UNCHANGED,
 }
 impl MASKW {
     #[allow(missing_docs)]
@@ -753,8 +753,8 @@ impl MASKW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            MASKW::TRANSFER_IDENTIFIER_ => true,
-            MASKW::MASK_BITS_UNCHANGED_ => false,
+            MASKW::TRANSFER_IDENTIFIER => true,
+            MASKW::MASK_BITS_UNCHANGED => false,
         }
     }
 }
@@ -772,13 +772,13 @@ impl<'a> _MASKW<'a> {
     }
     #[doc = "Transfer Identifier MASK + MDIR + MXTD to IFx message buffer register."]
     #[inline]
-    pub fn transfer_identifier_(self) -> &'a mut W {
-        self.variant(MASKW::TRANSFER_IDENTIFIER_)
+    pub fn transfer_identifier(self) -> &'a mut W {
+        self.variant(MASKW::TRANSFER_IDENTIFIER)
     }
     #[doc = "Mask bits unchanged."]
     #[inline]
-    pub fn mask_bits_unchanged_(self) -> &'a mut W {
-        self.variant(MASKW::MASK_BITS_UNCHANGED_)
+    pub fn mask_bits_unchanged(self) -> &'a mut W {
+        self.variant(MASKW::MASK_BITS_UNCHANGED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

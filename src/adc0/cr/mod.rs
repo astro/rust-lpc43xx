@@ -268,7 +268,7 @@ pub enum STARTR {
     #[doc = "Start conversion when the edge selected by bit 27 occurs on Motocon PWM output MCOA2."]
     MCOA2,
     #[doc = "Reserved."]
-    RESERVED_,
+    RESERVED,
 }
 impl STARTR {
     #[doc = r" Value of the field as raw bits"]
@@ -282,7 +282,7 @@ impl STARTR {
             STARTR::ADCTRIG0 => 4,
             STARTR::ADCTRIG1 => 5,
             STARTR::MCOA2 => 6,
-            STARTR::RESERVED_ => 7,
+            STARTR::RESERVED => 7,
         }
     }
     #[allow(missing_docs)]
@@ -297,7 +297,7 @@ impl STARTR {
             4 => STARTR::ADCTRIG0,
             5 => STARTR::ADCTRIG1,
             6 => STARTR::MCOA2,
-            7 => STARTR::RESERVED_,
+            7 => STARTR::RESERVED,
             _ => unreachable!(),
         }
     }
@@ -336,10 +336,10 @@ impl STARTR {
     pub fn is_mcoa2(&self) -> bool {
         *self == STARTR::MCOA2
     }
-    #[doc = "Checks if the value of the field is `RESERVED_`"]
+    #[doc = "Checks if the value of the field is `RESERVED`"]
     #[inline]
-    pub fn is_reserved_(&self) -> bool {
-        *self == STARTR::RESERVED_
+    pub fn is_reserved(&self) -> bool {
+        *self == STARTR::RESERVED
     }
 }
 #[doc = "Possible values of the field `EDGE`"]
@@ -650,7 +650,7 @@ pub enum STARTW {
     #[doc = "Start conversion when the edge selected by bit 27 occurs on Motocon PWM output MCOA2."]
     MCOA2,
     #[doc = "Reserved."]
-    RESERVED_,
+    RESERVED,
 }
 impl STARTW {
     #[allow(missing_docs)]
@@ -665,7 +665,7 @@ impl STARTW {
             STARTW::ADCTRIG0 => 4,
             STARTW::ADCTRIG1 => 5,
             STARTW::MCOA2 => 6,
-            STARTW::RESERVED_ => 7,
+            STARTW::RESERVED => 7,
         }
     }
 }
@@ -718,8 +718,8 @@ impl<'a> _STARTW<'a> {
     }
     #[doc = "Reserved."]
     #[inline]
-    pub fn reserved_(self) -> &'a mut W {
-        self.variant(STARTW::RESERVED_)
+    pub fn reserved(self) -> &'a mut W {
+        self.variant(STARTW::RESERVED)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]

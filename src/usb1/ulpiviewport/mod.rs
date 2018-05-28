@@ -92,7 +92,7 @@ pub enum ULPISSR {
     #[doc = "In another state  (ie. carkit, serial, low power)"]
     IN_ANOTHER_STATE,
     #[doc = "Normal Sync. State."]
-    NORMAL_SYNC_STATE_,
+    NORMAL_SYNC_STATE,
 }
 impl ULPISSR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -110,7 +110,7 @@ impl ULPISSR {
     pub fn bit(&self) -> bool {
         match *self {
             ULPISSR::IN_ANOTHER_STATE => false,
-            ULPISSR::NORMAL_SYNC_STATE_ => true,
+            ULPISSR::NORMAL_SYNC_STATE => true,
         }
     }
     #[allow(missing_docs)]
@@ -119,7 +119,7 @@ impl ULPISSR {
     pub fn _from(value: bool) -> ULPISSR {
         match value {
             false => ULPISSR::IN_ANOTHER_STATE,
-            true => ULPISSR::NORMAL_SYNC_STATE_,
+            true => ULPISSR::NORMAL_SYNC_STATE,
         }
     }
     #[doc = "Checks if the value of the field is `IN_ANOTHER_STATE`"]
@@ -127,10 +127,10 @@ impl ULPISSR {
     pub fn is_in_another_state(&self) -> bool {
         *self == ULPISSR::IN_ANOTHER_STATE
     }
-    #[doc = "Checks if the value of the field is `NORMAL_SYNC_STATE_`"]
+    #[doc = "Checks if the value of the field is `NORMAL_SYNC_STATE`"]
     #[inline]
-    pub fn is_normal_sync_state_(&self) -> bool {
-        *self == ULPISSR::NORMAL_SYNC_STATE_
+    pub fn is_normal_sync_state(&self) -> bool {
+        *self == ULPISSR::NORMAL_SYNC_STATE
     }
 }
 #[doc = "Possible values of the field `ULPIRW`"]
@@ -287,7 +287,7 @@ pub enum ULPISSW {
     #[doc = "In another state  (ie. carkit, serial, low power)"]
     IN_ANOTHER_STATE,
     #[doc = "Normal Sync. State."]
-    NORMAL_SYNC_STATE_,
+    NORMAL_SYNC_STATE,
 }
 impl ULPISSW {
     #[allow(missing_docs)]
@@ -296,7 +296,7 @@ impl ULPISSW {
     pub fn _bits(&self) -> bool {
         match *self {
             ULPISSW::IN_ANOTHER_STATE => false,
-            ULPISSW::NORMAL_SYNC_STATE_ => true,
+            ULPISSW::NORMAL_SYNC_STATE => true,
         }
     }
 }
@@ -319,8 +319,8 @@ impl<'a> _ULPISSW<'a> {
     }
     #[doc = "Normal Sync. State."]
     #[inline]
-    pub fn normal_sync_state_(self) -> &'a mut W {
-        self.variant(ULPISSW::NORMAL_SYNC_STATE_)
+    pub fn normal_sync_state(self) -> &'a mut W {
+        self.variant(ULPISSW::NORMAL_SYNC_STATE)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

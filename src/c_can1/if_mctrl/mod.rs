@@ -294,7 +294,7 @@ pub enum UMASKR {
     #[doc = "Use mask (MSK[28:0], MXTD, and MDIR) for acceptance filtering."]
     USE_MASK,
     #[doc = "Mask ignored."]
-    MASK_IGNORED_,
+    MASK_IGNORED,
 }
 impl UMASKR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -312,7 +312,7 @@ impl UMASKR {
     pub fn bit(&self) -> bool {
         match *self {
             UMASKR::USE_MASK => true,
-            UMASKR::MASK_IGNORED_ => false,
+            UMASKR::MASK_IGNORED => false,
         }
     }
     #[allow(missing_docs)]
@@ -321,7 +321,7 @@ impl UMASKR {
     pub fn _from(value: bool) -> UMASKR {
         match value {
             true => UMASKR::USE_MASK,
-            false => UMASKR::MASK_IGNORED_,
+            false => UMASKR::MASK_IGNORED,
         }
     }
     #[doc = "Checks if the value of the field is `USE_MASK`"]
@@ -329,10 +329,10 @@ impl UMASKR {
     pub fn is_use_mask(&self) -> bool {
         *self == UMASKR::USE_MASK
     }
-    #[doc = "Checks if the value of the field is `MASK_IGNORED_`"]
+    #[doc = "Checks if the value of the field is `MASK_IGNORED`"]
     #[inline]
-    pub fn is_mask_ignored_(&self) -> bool {
-        *self == UMASKR::MASK_IGNORED_
+    pub fn is_mask_ignored(&self) -> bool {
+        *self == UMASKR::MASK_IGNORED
     }
 }
 #[doc = "Possible values of the field `INTPND`"]
@@ -386,7 +386,7 @@ impl INTPNDR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MSGLSTR {
     #[doc = "The Message Handler stored a new message into this object when NEWDAT was still set, the CPU has lost a message."]
-    THE_MESSAGE_HANDLER_,
+    THE_MESSAGE_HANDLER,
     #[doc = "No message lost since this bit was reset last by the CPU."]
     NO_MESSAGE_LOST_SINC,
 }
@@ -405,7 +405,7 @@ impl MSGLSTR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            MSGLSTR::THE_MESSAGE_HANDLER_ => true,
+            MSGLSTR::THE_MESSAGE_HANDLER => true,
             MSGLSTR::NO_MESSAGE_LOST_SINC => false,
         }
     }
@@ -414,14 +414,14 @@ impl MSGLSTR {
     #[inline]
     pub fn _from(value: bool) -> MSGLSTR {
         match value {
-            true => MSGLSTR::THE_MESSAGE_HANDLER_,
+            true => MSGLSTR::THE_MESSAGE_HANDLER,
             false => MSGLSTR::NO_MESSAGE_LOST_SINC,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_MESSAGE_HANDLER_`"]
+    #[doc = "Checks if the value of the field is `THE_MESSAGE_HANDLER`"]
     #[inline]
-    pub fn is_the_message_handler_(&self) -> bool {
-        *self == MSGLSTR::THE_MESSAGE_HANDLER_
+    pub fn is_the_message_handler(&self) -> bool {
+        *self == MSGLSTR::THE_MESSAGE_HANDLER
     }
     #[doc = "Checks if the value of the field is `NO_MESSAGE_LOST_SINC`"]
     #[inline]
@@ -433,7 +433,7 @@ impl MSGLSTR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum NEWDATR {
     #[doc = "The message handler or the CPU has written new data into the data portion of this message object."]
-    THE_MESSAGE_HANDLER_,
+    THE_MESSAGE_HANDLER,
     #[doc = "No new data has been written into the data portion of this message object by the message handler since this flag was cleared last by the CPU."]
     NO_NEW_DATA_HAS_BEEN,
 }
@@ -452,7 +452,7 @@ impl NEWDATR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            NEWDATR::THE_MESSAGE_HANDLER_ => true,
+            NEWDATR::THE_MESSAGE_HANDLER => true,
             NEWDATR::NO_NEW_DATA_HAS_BEEN => false,
         }
     }
@@ -461,14 +461,14 @@ impl NEWDATR {
     #[inline]
     pub fn _from(value: bool) -> NEWDATR {
         match value {
-            true => NEWDATR::THE_MESSAGE_HANDLER_,
+            true => NEWDATR::THE_MESSAGE_HANDLER,
             false => NEWDATR::NO_NEW_DATA_HAS_BEEN,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_MESSAGE_HANDLER_`"]
+    #[doc = "Checks if the value of the field is `THE_MESSAGE_HANDLER`"]
     #[inline]
-    pub fn is_the_message_handler_(&self) -> bool {
-        *self == NEWDATR::THE_MESSAGE_HANDLER_
+    pub fn is_the_message_handler(&self) -> bool {
+        *self == NEWDATR::THE_MESSAGE_HANDLER
     }
     #[doc = "Checks if the value of the field is `NO_NEW_DATA_HAS_BEEN`"]
     #[inline]
@@ -786,7 +786,7 @@ pub enum UMASKW {
     #[doc = "Use mask (MSK[28:0], MXTD, and MDIR) for acceptance filtering."]
     USE_MASK,
     #[doc = "Mask ignored."]
-    MASK_IGNORED_,
+    MASK_IGNORED,
 }
 impl UMASKW {
     #[allow(missing_docs)]
@@ -795,7 +795,7 @@ impl UMASKW {
     pub fn _bits(&self) -> bool {
         match *self {
             UMASKW::USE_MASK => true,
-            UMASKW::MASK_IGNORED_ => false,
+            UMASKW::MASK_IGNORED => false,
         }
     }
 }
@@ -818,8 +818,8 @@ impl<'a> _UMASKW<'a> {
     }
     #[doc = "Mask ignored."]
     #[inline]
-    pub fn mask_ignored_(self) -> &'a mut W {
-        self.variant(UMASKW::MASK_IGNORED_)
+    pub fn mask_ignored(self) -> &'a mut W {
+        self.variant(UMASKW::MASK_IGNORED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -900,7 +900,7 @@ impl<'a> _INTPNDW<'a> {
 #[doc = "Values that can be written to the field `MSGLST`"]
 pub enum MSGLSTW {
     #[doc = "The Message Handler stored a new message into this object when NEWDAT was still set, the CPU has lost a message."]
-    THE_MESSAGE_HANDLER_,
+    THE_MESSAGE_HANDLER,
     #[doc = "No message lost since this bit was reset last by the CPU."]
     NO_MESSAGE_LOST_SINC,
 }
@@ -910,7 +910,7 @@ impl MSGLSTW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            MSGLSTW::THE_MESSAGE_HANDLER_ => true,
+            MSGLSTW::THE_MESSAGE_HANDLER => true,
             MSGLSTW::NO_MESSAGE_LOST_SINC => false,
         }
     }
@@ -929,8 +929,8 @@ impl<'a> _MSGLSTW<'a> {
     }
     #[doc = "The Message Handler stored a new message into this object when NEWDAT was still set, the CPU has lost a message."]
     #[inline]
-    pub fn the_message_handler_(self) -> &'a mut W {
-        self.variant(MSGLSTW::THE_MESSAGE_HANDLER_)
+    pub fn the_message_handler(self) -> &'a mut W {
+        self.variant(MSGLSTW::THE_MESSAGE_HANDLER)
     }
     #[doc = "No message lost since this bit was reset last by the CPU."]
     #[inline]
@@ -958,7 +958,7 @@ impl<'a> _MSGLSTW<'a> {
 #[doc = "Values that can be written to the field `NEWDAT`"]
 pub enum NEWDATW {
     #[doc = "The message handler or the CPU has written new data into the data portion of this message object."]
-    THE_MESSAGE_HANDLER_,
+    THE_MESSAGE_HANDLER,
     #[doc = "No new data has been written into the data portion of this message object by the message handler since this flag was cleared last by the CPU."]
     NO_NEW_DATA_HAS_BEEN,
 }
@@ -968,7 +968,7 @@ impl NEWDATW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            NEWDATW::THE_MESSAGE_HANDLER_ => true,
+            NEWDATW::THE_MESSAGE_HANDLER => true,
             NEWDATW::NO_NEW_DATA_HAS_BEEN => false,
         }
     }
@@ -987,8 +987,8 @@ impl<'a> _NEWDATW<'a> {
     }
     #[doc = "The message handler or the CPU has written new data into the data portion of this message object."]
     #[inline]
-    pub fn the_message_handler_(self) -> &'a mut W {
-        self.variant(NEWDATW::THE_MESSAGE_HANDLER_)
+    pub fn the_message_handler(self) -> &'a mut W {
+        self.variant(NEWDATW::THE_MESSAGE_HANDLER)
     }
     #[doc = "No new data has been written into the data portion of this message object by the message handler since this flag was cleared last by the CPU."]
     #[inline]

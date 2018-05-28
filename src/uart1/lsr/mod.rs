@@ -203,9 +203,9 @@ impl FER {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BIR {
     #[doc = "Break interrupt status is inactive."]
-    BREAK_INTERRUPT_STAT,
+    BREAK_INTERRUPT_STAT_1,
     #[doc = "Break interrupt status is active."]
-    BREAK_INTERRUPT_STAT,
+    BREAK_INTERRUPT_STAT_2,
 }
 impl BIR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -222,8 +222,8 @@ impl BIR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            BIR::BREAK_INTERRUPT_STAT => false,
-            BIR::BREAK_INTERRUPT_STAT => true,
+            BIR::BREAK_INTERRUPT_STAT_1 => false,
+            BIR::BREAK_INTERRUPT_STAT_2 => true,
         }
     }
     #[allow(missing_docs)]
@@ -231,19 +231,19 @@ impl BIR {
     #[inline]
     pub fn _from(value: bool) -> BIR {
         match value {
-            false => BIR::BREAK_INTERRUPT_STAT,
-            true => BIR::BREAK_INTERRUPT_STAT,
+            false => BIR::BREAK_INTERRUPT_STAT_1,
+            true => BIR::BREAK_INTERRUPT_STAT_2,
         }
     }
-    #[doc = "Checks if the value of the field is `BREAK_INTERRUPT_STAT`"]
+    #[doc = "Checks if the value of the field is `BREAK_INTERRUPT_STAT_1`"]
     #[inline]
-    pub fn is_break_interrupt_stat(&self) -> bool {
-        *self == BIR::BREAK_INTERRUPT_STAT
+    pub fn is_break_interrupt_stat_1(&self) -> bool {
+        *self == BIR::BREAK_INTERRUPT_STAT_1
     }
-    #[doc = "Checks if the value of the field is `BREAK_INTERRUPT_STAT`"]
+    #[doc = "Checks if the value of the field is `BREAK_INTERRUPT_STAT_2`"]
     #[inline]
-    pub fn is_break_interrupt_stat(&self) -> bool {
-        *self == BIR::BREAK_INTERRUPT_STAT
+    pub fn is_break_interrupt_stat_2(&self) -> bool {
+        *self == BIR::BREAK_INTERRUPT_STAT_2
     }
 }
 #[doc = "Possible values of the field `THRE`"]

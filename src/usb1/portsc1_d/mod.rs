@@ -46,9 +46,9 @@ impl super::PORTSC1_D {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CCSR {
     #[doc = "Device not attached A zero indicates that the device did not attach successfully or was forcibly disconnected by the software writing a zero to the Run bit in the USBCMD register. It does not state the device being disconnected or suspended."]
-    DEVICE_NOT_ATTACHED_,
+    DEVICE_NOT_ATTACHED,
     #[doc = "Device attached.  A one indicates that the device successfully attached and is operating in either high-speed mode or full-speed mode as indicated by the High Speed Port bit in this register."]
-    DEVICE_ATTACHED__A_,
+    DEVICE_ATTACHED_A,
 }
 impl CCSR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -65,8 +65,8 @@ impl CCSR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CCSR::DEVICE_NOT_ATTACHED_ => false,
-            CCSR::DEVICE_ATTACHED__A_ => true,
+            CCSR::DEVICE_NOT_ATTACHED => false,
+            CCSR::DEVICE_ATTACHED_A => true,
         }
     }
     #[allow(missing_docs)]
@@ -74,19 +74,19 @@ impl CCSR {
     #[inline]
     pub fn _from(value: bool) -> CCSR {
         match value {
-            false => CCSR::DEVICE_NOT_ATTACHED_,
-            true => CCSR::DEVICE_ATTACHED__A_,
+            false => CCSR::DEVICE_NOT_ATTACHED,
+            true => CCSR::DEVICE_ATTACHED_A,
         }
     }
-    #[doc = "Checks if the value of the field is `DEVICE_NOT_ATTACHED_`"]
+    #[doc = "Checks if the value of the field is `DEVICE_NOT_ATTACHED`"]
     #[inline]
-    pub fn is_device_not_attached_(&self) -> bool {
-        *self == CCSR::DEVICE_NOT_ATTACHED_
+    pub fn is_device_not_attached(&self) -> bool {
+        *self == CCSR::DEVICE_NOT_ATTACHED
     }
-    #[doc = "Checks if the value of the field is `DEVICE_ATTACHED__A_`"]
+    #[doc = "Checks if the value of the field is `DEVICE_ATTACHED_A`"]
     #[inline]
-    pub fn is_device_attached__a_(&self) -> bool {
-        *self == CCSR::DEVICE_ATTACHED__A_
+    pub fn is_device_attached_a(&self) -> bool {
+        *self == CCSR::DEVICE_ATTACHED_A
     }
 }
 #[doc = r" Value of the field"]
@@ -203,7 +203,7 @@ impl FPRR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SUSPR {
     #[doc = "Port not in suspend state"]
-    PORT_NOT_IN_SUSPEND_,
+    PORT_NOT_IN_SUSPEND,
     #[doc = "Port in suspend state"]
     PORT_IN_SUSPEND_STAT,
 }
@@ -222,7 +222,7 @@ impl SUSPR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            SUSPR::PORT_NOT_IN_SUSPEND_ => false,
+            SUSPR::PORT_NOT_IN_SUSPEND => false,
             SUSPR::PORT_IN_SUSPEND_STAT => true,
         }
     }
@@ -231,14 +231,14 @@ impl SUSPR {
     #[inline]
     pub fn _from(value: bool) -> SUSPR {
         match value {
-            false => SUSPR::PORT_NOT_IN_SUSPEND_,
+            false => SUSPR::PORT_NOT_IN_SUSPEND,
             true => SUSPR::PORT_IN_SUSPEND_STAT,
         }
     }
-    #[doc = "Checks if the value of the field is `PORT_NOT_IN_SUSPEND_`"]
+    #[doc = "Checks if the value of the field is `PORT_NOT_IN_SUSPEND`"]
     #[inline]
-    pub fn is_port_not_in_suspend_(&self) -> bool {
-        *self == SUSPR::PORT_NOT_IN_SUSPEND_
+    pub fn is_port_not_in_suspend(&self) -> bool {
+        *self == SUSPR::PORT_NOT_IN_SUSPEND
     }
     #[doc = "Checks if the value of the field is `PORT_IN_SUSPEND_STAT`"]
     #[inline]
@@ -702,9 +702,9 @@ impl PTSR {
 #[doc = "Values that can be written to the field `CCS`"]
 pub enum CCSW {
     #[doc = "Device not attached A zero indicates that the device did not attach successfully or was forcibly disconnected by the software writing a zero to the Run bit in the USBCMD register. It does not state the device being disconnected or suspended."]
-    DEVICE_NOT_ATTACHED_,
+    DEVICE_NOT_ATTACHED,
     #[doc = "Device attached.  A one indicates that the device successfully attached and is operating in either high-speed mode or full-speed mode as indicated by the High Speed Port bit in this register."]
-    DEVICE_ATTACHED__A_,
+    DEVICE_ATTACHED_A,
 }
 impl CCSW {
     #[allow(missing_docs)]
@@ -712,8 +712,8 @@ impl CCSW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CCSW::DEVICE_NOT_ATTACHED_ => false,
-            CCSW::DEVICE_ATTACHED__A_ => true,
+            CCSW::DEVICE_NOT_ATTACHED => false,
+            CCSW::DEVICE_ATTACHED_A => true,
         }
     }
 }
@@ -731,13 +731,13 @@ impl<'a> _CCSW<'a> {
     }
     #[doc = "Device not attached A zero indicates that the device did not attach successfully or was forcibly disconnected by the software writing a zero to the Run bit in the USBCMD register. It does not state the device being disconnected or suspended."]
     #[inline]
-    pub fn device_not_attached_(self) -> &'a mut W {
-        self.variant(CCSW::DEVICE_NOT_ATTACHED_)
+    pub fn device_not_attached(self) -> &'a mut W {
+        self.variant(CCSW::DEVICE_NOT_ATTACHED)
     }
     #[doc = "Device attached. A one indicates that the device successfully attached and is operating in either high-speed mode or full-speed mode as indicated by the High Speed Port bit in this register."]
     #[inline]
-    pub fn device_attached__a_(self) -> &'a mut W {
-        self.variant(CCSW::DEVICE_ATTACHED__A_)
+    pub fn device_attached_a(self) -> &'a mut W {
+        self.variant(CCSW::DEVICE_ATTACHED_A)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -887,7 +887,7 @@ impl<'a> _FPRW<'a> {
 #[doc = "Values that can be written to the field `SUSP`"]
 pub enum SUSPW {
     #[doc = "Port not in suspend state"]
-    PORT_NOT_IN_SUSPEND_,
+    PORT_NOT_IN_SUSPEND,
     #[doc = "Port in suspend state"]
     PORT_IN_SUSPEND_STAT,
 }
@@ -897,7 +897,7 @@ impl SUSPW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            SUSPW::PORT_NOT_IN_SUSPEND_ => false,
+            SUSPW::PORT_NOT_IN_SUSPEND => false,
             SUSPW::PORT_IN_SUSPEND_STAT => true,
         }
     }
@@ -916,8 +916,8 @@ impl<'a> _SUSPW<'a> {
     }
     #[doc = "Port not in suspend state"]
     #[inline]
-    pub fn port_not_in_suspend_(self) -> &'a mut W {
-        self.variant(SUSPW::PORT_NOT_IN_SUSPEND_)
+    pub fn port_not_in_suspend(self) -> &'a mut W {
+        self.variant(SUSPW::PORT_NOT_IN_SUSPEND)
     }
     #[doc = "Port in suspend state"]
     #[inline]

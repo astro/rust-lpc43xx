@@ -208,9 +208,9 @@ impl RXRR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RXER {
     #[doc = "Endpoint disabled."]
-    ENDPOINT_DISABLED_,
+    ENDPOINT_DISABLED,
     #[doc = "Endpoint enabled."]
-    ENDPOINT_ENABLED_,
+    ENDPOINT_ENABLED,
 }
 impl RXER {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -227,8 +227,8 @@ impl RXER {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            RXER::ENDPOINT_DISABLED_ => false,
-            RXER::ENDPOINT_ENABLED_ => true,
+            RXER::ENDPOINT_DISABLED => false,
+            RXER::ENDPOINT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -236,19 +236,19 @@ impl RXER {
     #[inline]
     pub fn _from(value: bool) -> RXER {
         match value {
-            false => RXER::ENDPOINT_DISABLED_,
-            true => RXER::ENDPOINT_ENABLED_,
+            false => RXER::ENDPOINT_DISABLED,
+            true => RXER::ENDPOINT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `ENDPOINT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `ENDPOINT_DISABLED`"]
     #[inline]
-    pub fn is_endpoint_disabled_(&self) -> bool {
-        *self == RXER::ENDPOINT_DISABLED_
+    pub fn is_endpoint_disabled(&self) -> bool {
+        *self == RXER::ENDPOINT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENDPOINT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `ENDPOINT_ENABLED`"]
     #[inline]
-    pub fn is_endpoint_enabled_(&self) -> bool {
-        *self == RXER::ENDPOINT_ENABLED_
+    pub fn is_endpoint_enabled(&self) -> bool {
+        *self == RXER::ENDPOINT_ENABLED
     }
 }
 #[doc = "Possible values of the field `TXS`"]
@@ -426,9 +426,9 @@ impl TXRR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TXER {
     #[doc = "Endpoint disabled."]
-    ENDPOINT_DISABLED_,
+    ENDPOINT_DISABLED,
     #[doc = "Endpoint enabled."]
-    ENDPOINT_ENABLED_,
+    ENDPOINT_ENABLED,
 }
 impl TXER {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -445,8 +445,8 @@ impl TXER {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            TXER::ENDPOINT_DISABLED_ => false,
-            TXER::ENDPOINT_ENABLED_ => true,
+            TXER::ENDPOINT_DISABLED => false,
+            TXER::ENDPOINT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -454,19 +454,19 @@ impl TXER {
     #[inline]
     pub fn _from(value: bool) -> TXER {
         match value {
-            false => TXER::ENDPOINT_DISABLED_,
-            true => TXER::ENDPOINT_ENABLED_,
+            false => TXER::ENDPOINT_DISABLED,
+            true => TXER::ENDPOINT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `ENDPOINT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `ENDPOINT_DISABLED`"]
     #[inline]
-    pub fn is_endpoint_disabled_(&self) -> bool {
-        *self == TXER::ENDPOINT_DISABLED_
+    pub fn is_endpoint_disabled(&self) -> bool {
+        *self == TXER::ENDPOINT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENDPOINT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `ENDPOINT_ENABLED`"]
     #[inline]
-    pub fn is_endpoint_enabled_(&self) -> bool {
-        *self == TXER::ENDPOINT_ENABLED_
+    pub fn is_endpoint_enabled(&self) -> bool {
+        *self == TXER::ENDPOINT_ENABLED
     }
 }
 #[doc = "Values that can be written to the field `RXS`"]
@@ -667,9 +667,9 @@ impl<'a> _RXRW<'a> {
 #[doc = "Values that can be written to the field `RXE`"]
 pub enum RXEW {
     #[doc = "Endpoint disabled."]
-    ENDPOINT_DISABLED_,
+    ENDPOINT_DISABLED,
     #[doc = "Endpoint enabled."]
-    ENDPOINT_ENABLED_,
+    ENDPOINT_ENABLED,
 }
 impl RXEW {
     #[allow(missing_docs)]
@@ -677,8 +677,8 @@ impl RXEW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            RXEW::ENDPOINT_DISABLED_ => false,
-            RXEW::ENDPOINT_ENABLED_ => true,
+            RXEW::ENDPOINT_DISABLED => false,
+            RXEW::ENDPOINT_ENABLED => true,
         }
     }
 }
@@ -696,13 +696,13 @@ impl<'a> _RXEW<'a> {
     }
     #[doc = "Endpoint disabled."]
     #[inline]
-    pub fn endpoint_disabled_(self) -> &'a mut W {
-        self.variant(RXEW::ENDPOINT_DISABLED_)
+    pub fn endpoint_disabled(self) -> &'a mut W {
+        self.variant(RXEW::ENDPOINT_DISABLED)
     }
     #[doc = "Endpoint enabled."]
     #[inline]
-    pub fn endpoint_enabled_(self) -> &'a mut W {
-        self.variant(RXEW::ENDPOINT_ENABLED_)
+    pub fn endpoint_enabled(self) -> &'a mut W {
+        self.variant(RXEW::ENDPOINT_ENABLED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -930,9 +930,9 @@ impl<'a> _TXRW<'a> {
 #[doc = "Values that can be written to the field `TXE`"]
 pub enum TXEW {
     #[doc = "Endpoint disabled."]
-    ENDPOINT_DISABLED_,
+    ENDPOINT_DISABLED,
     #[doc = "Endpoint enabled."]
-    ENDPOINT_ENABLED_,
+    ENDPOINT_ENABLED,
 }
 impl TXEW {
     #[allow(missing_docs)]
@@ -940,8 +940,8 @@ impl TXEW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            TXEW::ENDPOINT_DISABLED_ => false,
-            TXEW::ENDPOINT_ENABLED_ => true,
+            TXEW::ENDPOINT_DISABLED => false,
+            TXEW::ENDPOINT_ENABLED => true,
         }
     }
 }
@@ -959,13 +959,13 @@ impl<'a> _TXEW<'a> {
     }
     #[doc = "Endpoint disabled."]
     #[inline]
-    pub fn endpoint_disabled_(self) -> &'a mut W {
-        self.variant(TXEW::ENDPOINT_DISABLED_)
+    pub fn endpoint_disabled(self) -> &'a mut W {
+        self.variant(TXEW::ENDPOINT_DISABLED)
     }
     #[doc = "Endpoint enabled."]
     #[inline]
-    pub fn endpoint_enabled_(self) -> &'a mut W {
-        self.variant(TXEW::ENDPOINT_ENABLED_)
+    pub fn endpoint_enabled(self) -> &'a mut W {
+        self.variant(TXEW::ENDPOINT_ENABLED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

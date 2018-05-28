@@ -57,9 +57,9 @@ impl MSK28_16R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MDIRR {
     #[doc = "The message direction bit (DIR) is used for acceptance filtering."]
-    THE_MESSAGE_DIRECTIO,
+    THE_MESSAGE_DIRECTIO_1,
     #[doc = "The message direction bit (DIR) has no effect on acceptance filtering."]
-    THE_MESSAGE_DIRECTIO,
+    THE_MESSAGE_DIRECTIO_2,
 }
 impl MDIRR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -76,8 +76,8 @@ impl MDIRR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            MDIRR::THE_MESSAGE_DIRECTIO => true,
-            MDIRR::THE_MESSAGE_DIRECTIO => false,
+            MDIRR::THE_MESSAGE_DIRECTIO_1 => true,
+            MDIRR::THE_MESSAGE_DIRECTIO_2 => false,
         }
     }
     #[allow(missing_docs)]
@@ -85,28 +85,28 @@ impl MDIRR {
     #[inline]
     pub fn _from(value: bool) -> MDIRR {
         match value {
-            true => MDIRR::THE_MESSAGE_DIRECTIO,
-            false => MDIRR::THE_MESSAGE_DIRECTIO,
+            true => MDIRR::THE_MESSAGE_DIRECTIO_1,
+            false => MDIRR::THE_MESSAGE_DIRECTIO_2,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_MESSAGE_DIRECTIO`"]
+    #[doc = "Checks if the value of the field is `THE_MESSAGE_DIRECTIO_1`"]
     #[inline]
-    pub fn is_the_message_directio(&self) -> bool {
-        *self == MDIRR::THE_MESSAGE_DIRECTIO
+    pub fn is_the_message_directio_1(&self) -> bool {
+        *self == MDIRR::THE_MESSAGE_DIRECTIO_1
     }
-    #[doc = "Checks if the value of the field is `THE_MESSAGE_DIRECTIO`"]
+    #[doc = "Checks if the value of the field is `THE_MESSAGE_DIRECTIO_2`"]
     #[inline]
-    pub fn is_the_message_directio(&self) -> bool {
-        *self == MDIRR::THE_MESSAGE_DIRECTIO
+    pub fn is_the_message_directio_2(&self) -> bool {
+        *self == MDIRR::THE_MESSAGE_DIRECTIO_2
     }
 }
 #[doc = "Possible values of the field `MXTD`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MXTDR {
     #[doc = "The extended identifier bit (IDE) is used for acceptance filtering."]
-    THE_EXTENDED_IDENTIF,
+    THE_EXTENDED_IDENTIF_1,
     #[doc = "The extended identifier bit (IDE) has no effect on acceptance filtering."]
-    THE_EXTENDED_IDENTIF,
+    THE_EXTENDED_IDENTIF_2,
 }
 impl MXTDR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -123,8 +123,8 @@ impl MXTDR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            MXTDR::THE_EXTENDED_IDENTIF => true,
-            MXTDR::THE_EXTENDED_IDENTIF => false,
+            MXTDR::THE_EXTENDED_IDENTIF_1 => true,
+            MXTDR::THE_EXTENDED_IDENTIF_2 => false,
         }
     }
     #[allow(missing_docs)]
@@ -132,19 +132,19 @@ impl MXTDR {
     #[inline]
     pub fn _from(value: bool) -> MXTDR {
         match value {
-            true => MXTDR::THE_EXTENDED_IDENTIF,
-            false => MXTDR::THE_EXTENDED_IDENTIF,
+            true => MXTDR::THE_EXTENDED_IDENTIF_1,
+            false => MXTDR::THE_EXTENDED_IDENTIF_2,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_EXTENDED_IDENTIF`"]
+    #[doc = "Checks if the value of the field is `THE_EXTENDED_IDENTIF_1`"]
     #[inline]
-    pub fn is_the_extended_identif(&self) -> bool {
-        *self == MXTDR::THE_EXTENDED_IDENTIF
+    pub fn is_the_extended_identif_1(&self) -> bool {
+        *self == MXTDR::THE_EXTENDED_IDENTIF_1
     }
-    #[doc = "Checks if the value of the field is `THE_EXTENDED_IDENTIF`"]
+    #[doc = "Checks if the value of the field is `THE_EXTENDED_IDENTIF_2`"]
     #[inline]
-    pub fn is_the_extended_identif(&self) -> bool {
-        *self == MXTDR::THE_EXTENDED_IDENTIF
+    pub fn is_the_extended_identif_2(&self) -> bool {
+        *self == MXTDR::THE_EXTENDED_IDENTIF_2
     }
 }
 #[doc = r" Proxy"]
@@ -165,9 +165,9 @@ impl<'a> _MSK28_16W<'a> {
 #[doc = "Values that can be written to the field `MDIR`"]
 pub enum MDIRW {
     #[doc = "The message direction bit (DIR) is used for acceptance filtering."]
-    THE_MESSAGE_DIRECTIO,
+    THE_MESSAGE_DIRECTIO_1,
     #[doc = "The message direction bit (DIR) has no effect on acceptance filtering."]
-    THE_MESSAGE_DIRECTIO,
+    THE_MESSAGE_DIRECTIO_2,
 }
 impl MDIRW {
     #[allow(missing_docs)]
@@ -175,8 +175,8 @@ impl MDIRW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            MDIRW::THE_MESSAGE_DIRECTIO => true,
-            MDIRW::THE_MESSAGE_DIRECTIO => false,
+            MDIRW::THE_MESSAGE_DIRECTIO_1 => true,
+            MDIRW::THE_MESSAGE_DIRECTIO_2 => false,
         }
     }
 }
@@ -194,13 +194,13 @@ impl<'a> _MDIRW<'a> {
     }
     #[doc = "The message direction bit (DIR) is used for acceptance filtering."]
     #[inline]
-    pub fn the_message_directio(self) -> &'a mut W {
-        self.variant(MDIRW::THE_MESSAGE_DIRECTIO)
+    pub fn the_message_directio_1(self) -> &'a mut W {
+        self.variant(MDIRW::THE_MESSAGE_DIRECTIO_1)
     }
     #[doc = "The message direction bit (DIR) has no effect on acceptance filtering."]
     #[inline]
-    pub fn the_message_directio(self) -> &'a mut W {
-        self.variant(MDIRW::THE_MESSAGE_DIRECTIO)
+    pub fn the_message_directio_2(self) -> &'a mut W {
+        self.variant(MDIRW::THE_MESSAGE_DIRECTIO_2)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -223,9 +223,9 @@ impl<'a> _MDIRW<'a> {
 #[doc = "Values that can be written to the field `MXTD`"]
 pub enum MXTDW {
     #[doc = "The extended identifier bit (IDE) is used for acceptance filtering."]
-    THE_EXTENDED_IDENTIF,
+    THE_EXTENDED_IDENTIF_1,
     #[doc = "The extended identifier bit (IDE) has no effect on acceptance filtering."]
-    THE_EXTENDED_IDENTIF,
+    THE_EXTENDED_IDENTIF_2,
 }
 impl MXTDW {
     #[allow(missing_docs)]
@@ -233,8 +233,8 @@ impl MXTDW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            MXTDW::THE_EXTENDED_IDENTIF => true,
-            MXTDW::THE_EXTENDED_IDENTIF => false,
+            MXTDW::THE_EXTENDED_IDENTIF_1 => true,
+            MXTDW::THE_EXTENDED_IDENTIF_2 => false,
         }
     }
 }
@@ -252,13 +252,13 @@ impl<'a> _MXTDW<'a> {
     }
     #[doc = "The extended identifier bit (IDE) is used for acceptance filtering."]
     #[inline]
-    pub fn the_extended_identif(self) -> &'a mut W {
-        self.variant(MXTDW::THE_EXTENDED_IDENTIF)
+    pub fn the_extended_identif_1(self) -> &'a mut W {
+        self.variant(MXTDW::THE_EXTENDED_IDENTIF_1)
     }
     #[doc = "The extended identifier bit (IDE) has no effect on acceptance filtering."]
     #[inline]
-    pub fn the_extended_identif(self) -> &'a mut W {
-        self.variant(MXTDW::THE_EXTENDED_IDENTIF)
+    pub fn the_extended_identif_2(self) -> &'a mut W {
+        self.variant(MXTDW::THE_EXTENDED_IDENTIF_2)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

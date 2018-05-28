@@ -46,11 +46,11 @@ impl super::STAT {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LECR {
     #[doc = "No error."]
-    NO_ERROR_,
+    NO_ERROR,
     #[doc = "Stuff error: More than 5 equal bits in a sequence have occurred in a part of a received message where this is not allowed."]
     STUFF_ERROR_MORE_TH,
     #[doc = "Form error: A fixed format part of a received frame has the wrong format."]
-    FORM_ERROR_A_FIXED_,
+    FORM_ERROR_A_FIXED,
     #[doc = "AckError: The message this CAN core transmitted was not acknowledged."]
     ACKERROR_THE_MESSAG,
     #[doc = "Bit1Error: During the transmission of a message (with the exception of the arbitration field), the device wanted to send a HIGH/recessive level (bit of logical value 1), but the monitored bus value was LOW/dominant."]
@@ -67,9 +67,9 @@ impl LECR {
     #[inline]
     pub fn bits(&self) -> u8 {
         match *self {
-            LECR::NO_ERROR_ => 0,
+            LECR::NO_ERROR => 0,
             LECR::STUFF_ERROR_MORE_TH => 1,
-            LECR::FORM_ERROR_A_FIXED_ => 2,
+            LECR::FORM_ERROR_A_FIXED => 2,
             LECR::ACKERROR_THE_MESSAG => 3,
             LECR::BIT1ERROR_DURING_TH => 4,
             LECR::BIT0ERROR_DURING_TH => 5,
@@ -82,9 +82,9 @@ impl LECR {
     #[inline]
     pub fn _from(value: u8) -> LECR {
         match value {
-            0 => LECR::NO_ERROR_,
+            0 => LECR::NO_ERROR,
             1 => LECR::STUFF_ERROR_MORE_TH,
-            2 => LECR::FORM_ERROR_A_FIXED_,
+            2 => LECR::FORM_ERROR_A_FIXED,
             3 => LECR::ACKERROR_THE_MESSAG,
             4 => LECR::BIT1ERROR_DURING_TH,
             5 => LECR::BIT0ERROR_DURING_TH,
@@ -93,20 +93,20 @@ impl LECR {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `NO_ERROR_`"]
+    #[doc = "Checks if the value of the field is `NO_ERROR`"]
     #[inline]
-    pub fn is_no_error_(&self) -> bool {
-        *self == LECR::NO_ERROR_
+    pub fn is_no_error(&self) -> bool {
+        *self == LECR::NO_ERROR
     }
     #[doc = "Checks if the value of the field is `STUFF_ERROR_MORE_TH`"]
     #[inline]
     pub fn is_stuff_error_more_th(&self) -> bool {
         *self == LECR::STUFF_ERROR_MORE_TH
     }
-    #[doc = "Checks if the value of the field is `FORM_ERROR_A_FIXED_`"]
+    #[doc = "Checks if the value of the field is `FORM_ERROR_A_FIXED`"]
     #[inline]
-    pub fn is_form_error_a_fixed_(&self) -> bool {
-        *self == LECR::FORM_ERROR_A_FIXED_
+    pub fn is_form_error_a_fixed(&self) -> bool {
+        *self == LECR::FORM_ERROR_A_FIXED
     }
     #[doc = "Checks if the value of the field is `ACKERROR_THE_MESSAG`"]
     #[inline]
@@ -279,9 +279,9 @@ impl EPASSR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EWARNR {
     #[doc = "At least one of the error counters in the EML has reached the error warning limit of 96."]
-    AT_LEAST_ONE_OF_THE_,
+    AT_LEAST_ONE_OF_THE,
     #[doc = "Both error counters are below the error warning limit of 96."]
-    BOTH_ERROR_COUNTERS_,
+    BOTH_ERROR_COUNTERS,
 }
 impl EWARNR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -298,8 +298,8 @@ impl EWARNR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            EWARNR::AT_LEAST_ONE_OF_THE_ => true,
-            EWARNR::BOTH_ERROR_COUNTERS_ => false,
+            EWARNR::AT_LEAST_ONE_OF_THE => true,
+            EWARNR::BOTH_ERROR_COUNTERS => false,
         }
     }
     #[allow(missing_docs)]
@@ -307,19 +307,19 @@ impl EWARNR {
     #[inline]
     pub fn _from(value: bool) -> EWARNR {
         match value {
-            true => EWARNR::AT_LEAST_ONE_OF_THE_,
-            false => EWARNR::BOTH_ERROR_COUNTERS_,
+            true => EWARNR::AT_LEAST_ONE_OF_THE,
+            false => EWARNR::BOTH_ERROR_COUNTERS,
         }
     }
-    #[doc = "Checks if the value of the field is `AT_LEAST_ONE_OF_THE_`"]
+    #[doc = "Checks if the value of the field is `AT_LEAST_ONE_OF_THE`"]
     #[inline]
-    pub fn is_at_least_one_of_the_(&self) -> bool {
-        *self == EWARNR::AT_LEAST_ONE_OF_THE_
+    pub fn is_at_least_one_of_the(&self) -> bool {
+        *self == EWARNR::AT_LEAST_ONE_OF_THE
     }
-    #[doc = "Checks if the value of the field is `BOTH_ERROR_COUNTERS_`"]
+    #[doc = "Checks if the value of the field is `BOTH_ERROR_COUNTERS`"]
     #[inline]
-    pub fn is_both_error_counters_(&self) -> bool {
-        *self == EWARNR::BOTH_ERROR_COUNTERS_
+    pub fn is_both_error_counters(&self) -> bool {
+        *self == EWARNR::BOTH_ERROR_COUNTERS
     }
 }
 #[doc = "Possible values of the field `BOFF`"]
@@ -372,11 +372,11 @@ impl BOFFR {
 #[doc = "Values that can be written to the field `LEC`"]
 pub enum LECW {
     #[doc = "No error."]
-    NO_ERROR_,
+    NO_ERROR,
     #[doc = "Stuff error: More than 5 equal bits in a sequence have occurred in a part of a received message where this is not allowed."]
     STUFF_ERROR_MORE_TH,
     #[doc = "Form error: A fixed format part of a received frame has the wrong format."]
-    FORM_ERROR_A_FIXED_,
+    FORM_ERROR_A_FIXED,
     #[doc = "AckError: The message this CAN core transmitted was not acknowledged."]
     ACKERROR_THE_MESSAG,
     #[doc = "Bit1Error: During the transmission of a message (with the exception of the arbitration field), the device wanted to send a HIGH/recessive level (bit of logical value 1), but the monitored bus value was LOW/dominant."]
@@ -394,9 +394,9 @@ impl LECW {
     #[inline]
     pub fn _bits(&self) -> u8 {
         match *self {
-            LECW::NO_ERROR_ => 0,
+            LECW::NO_ERROR => 0,
             LECW::STUFF_ERROR_MORE_TH => 1,
-            LECW::FORM_ERROR_A_FIXED_ => 2,
+            LECW::FORM_ERROR_A_FIXED => 2,
             LECW::ACKERROR_THE_MESSAG => 3,
             LECW::BIT1ERROR_DURING_TH => 4,
             LECW::BIT0ERROR_DURING_TH => 5,
@@ -419,8 +419,8 @@ impl<'a> _LECW<'a> {
     }
     #[doc = "No error."]
     #[inline]
-    pub fn no_error_(self) -> &'a mut W {
-        self.variant(LECW::NO_ERROR_)
+    pub fn no_error(self) -> &'a mut W {
+        self.variant(LECW::NO_ERROR)
     }
     #[doc = "Stuff error: More than 5 equal bits in a sequence have occurred in a part of a received message where this is not allowed."]
     #[inline]
@@ -429,8 +429,8 @@ impl<'a> _LECW<'a> {
     }
     #[doc = "Form error: A fixed format part of a received frame has the wrong format."]
     #[inline]
-    pub fn form_error_a_fixed_(self) -> &'a mut W {
-        self.variant(LECW::FORM_ERROR_A_FIXED_)
+    pub fn form_error_a_fixed(self) -> &'a mut W {
+        self.variant(LECW::FORM_ERROR_A_FIXED)
     }
     #[doc = "AckError: The message this CAN core transmitted was not acknowledged."]
     #[inline]
@@ -644,9 +644,9 @@ impl<'a> _EPASSW<'a> {
 #[doc = "Values that can be written to the field `EWARN`"]
 pub enum EWARNW {
     #[doc = "At least one of the error counters in the EML has reached the error warning limit of 96."]
-    AT_LEAST_ONE_OF_THE_,
+    AT_LEAST_ONE_OF_THE,
     #[doc = "Both error counters are below the error warning limit of 96."]
-    BOTH_ERROR_COUNTERS_,
+    BOTH_ERROR_COUNTERS,
 }
 impl EWARNW {
     #[allow(missing_docs)]
@@ -654,8 +654,8 @@ impl EWARNW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            EWARNW::AT_LEAST_ONE_OF_THE_ => true,
-            EWARNW::BOTH_ERROR_COUNTERS_ => false,
+            EWARNW::AT_LEAST_ONE_OF_THE => true,
+            EWARNW::BOTH_ERROR_COUNTERS => false,
         }
     }
 }
@@ -673,13 +673,13 @@ impl<'a> _EWARNW<'a> {
     }
     #[doc = "At least one of the error counters in the EML has reached the error warning limit of 96."]
     #[inline]
-    pub fn at_least_one_of_the_(self) -> &'a mut W {
-        self.variant(EWARNW::AT_LEAST_ONE_OF_THE_)
+    pub fn at_least_one_of_the(self) -> &'a mut W {
+        self.variant(EWARNW::AT_LEAST_ONE_OF_THE)
     }
     #[doc = "Both error counters are below the error warning limit of 96."]
     #[inline]
-    pub fn both_error_counters_(self) -> &'a mut W {
-        self.variant(EWARNW::BOTH_ERROR_COUNTERS_)
+    pub fn both_error_counters(self) -> &'a mut W {
+        self.variant(EWARNW::BOTH_ERROR_COUNTERS)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

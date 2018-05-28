@@ -15,9 +15,9 @@ impl super::INTEN {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ILIM0R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl ILIM0R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -34,8 +34,8 @@ impl ILIM0R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ILIM0R::INTERRUPT_DISABLED_ => false,
-            ILIM0R::INTERRUPT_ENABLED_ => true,
+            ILIM0R::INTERRUPT_DISABLED => false,
+            ILIM0R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -43,28 +43,28 @@ impl ILIM0R {
     #[inline]
     pub fn _from(value: bool) -> ILIM0R {
         match value {
-            false => ILIM0R::INTERRUPT_DISABLED_,
-            true => ILIM0R::INTERRUPT_ENABLED_,
+            false => ILIM0R::INTERRUPT_DISABLED,
+            true => ILIM0R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == ILIM0R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == ILIM0R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == ILIM0R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == ILIM0R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `IMAT0`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IMAT0R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl IMAT0R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -81,8 +81,8 @@ impl IMAT0R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            IMAT0R::INTERRUPT_DISABLED_ => false,
-            IMAT0R::INTERRUPT_ENABLED_ => true,
+            IMAT0R::INTERRUPT_DISABLED => false,
+            IMAT0R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -90,28 +90,28 @@ impl IMAT0R {
     #[inline]
     pub fn _from(value: bool) -> IMAT0R {
         match value {
-            false => IMAT0R::INTERRUPT_DISABLED_,
-            true => IMAT0R::INTERRUPT_ENABLED_,
+            false => IMAT0R::INTERRUPT_DISABLED,
+            true => IMAT0R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == IMAT0R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == IMAT0R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == IMAT0R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == IMAT0R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `ICAP0`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ICAP0R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl ICAP0R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -128,8 +128,8 @@ impl ICAP0R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ICAP0R::INTERRUPT_DISABLED_ => false,
-            ICAP0R::INTERRUPT_ENABLED_ => true,
+            ICAP0R::INTERRUPT_DISABLED => false,
+            ICAP0R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -137,28 +137,28 @@ impl ICAP0R {
     #[inline]
     pub fn _from(value: bool) -> ICAP0R {
         match value {
-            false => ICAP0R::INTERRUPT_DISABLED_,
-            true => ICAP0R::INTERRUPT_ENABLED_,
+            false => ICAP0R::INTERRUPT_DISABLED,
+            true => ICAP0R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == ICAP0R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == ICAP0R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == ICAP0R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == ICAP0R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `ILIM1`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ILIM1R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl ILIM1R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -175,8 +175,8 @@ impl ILIM1R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ILIM1R::INTERRUPT_DISABLED_ => false,
-            ILIM1R::INTERRUPT_ENABLED_ => true,
+            ILIM1R::INTERRUPT_DISABLED => false,
+            ILIM1R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -184,28 +184,28 @@ impl ILIM1R {
     #[inline]
     pub fn _from(value: bool) -> ILIM1R {
         match value {
-            false => ILIM1R::INTERRUPT_DISABLED_,
-            true => ILIM1R::INTERRUPT_ENABLED_,
+            false => ILIM1R::INTERRUPT_DISABLED,
+            true => ILIM1R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == ILIM1R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == ILIM1R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == ILIM1R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == ILIM1R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `IMAT1`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IMAT1R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl IMAT1R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -222,8 +222,8 @@ impl IMAT1R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            IMAT1R::INTERRUPT_DISABLED_ => false,
-            IMAT1R::INTERRUPT_ENABLED_ => true,
+            IMAT1R::INTERRUPT_DISABLED => false,
+            IMAT1R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -231,28 +231,28 @@ impl IMAT1R {
     #[inline]
     pub fn _from(value: bool) -> IMAT1R {
         match value {
-            false => IMAT1R::INTERRUPT_DISABLED_,
-            true => IMAT1R::INTERRUPT_ENABLED_,
+            false => IMAT1R::INTERRUPT_DISABLED,
+            true => IMAT1R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == IMAT1R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == IMAT1R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == IMAT1R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == IMAT1R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `ICAP1`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ICAP1R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl ICAP1R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -269,8 +269,8 @@ impl ICAP1R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ICAP1R::INTERRUPT_DISABLED_ => false,
-            ICAP1R::INTERRUPT_ENABLED_ => true,
+            ICAP1R::INTERRUPT_DISABLED => false,
+            ICAP1R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -278,28 +278,28 @@ impl ICAP1R {
     #[inline]
     pub fn _from(value: bool) -> ICAP1R {
         match value {
-            false => ICAP1R::INTERRUPT_DISABLED_,
-            true => ICAP1R::INTERRUPT_ENABLED_,
+            false => ICAP1R::INTERRUPT_DISABLED,
+            true => ICAP1R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == ICAP1R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == ICAP1R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == ICAP1R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == ICAP1R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `ILIM2`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ILIM2R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl ILIM2R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -316,8 +316,8 @@ impl ILIM2R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ILIM2R::INTERRUPT_DISABLED_ => false,
-            ILIM2R::INTERRUPT_ENABLED_ => true,
+            ILIM2R::INTERRUPT_DISABLED => false,
+            ILIM2R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -325,28 +325,28 @@ impl ILIM2R {
     #[inline]
     pub fn _from(value: bool) -> ILIM2R {
         match value {
-            false => ILIM2R::INTERRUPT_DISABLED_,
-            true => ILIM2R::INTERRUPT_ENABLED_,
+            false => ILIM2R::INTERRUPT_DISABLED,
+            true => ILIM2R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == ILIM2R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == ILIM2R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == ILIM2R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == ILIM2R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `IMAT2`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IMAT2R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl IMAT2R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -363,8 +363,8 @@ impl IMAT2R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            IMAT2R::INTERRUPT_DISABLED_ => false,
-            IMAT2R::INTERRUPT_ENABLED_ => true,
+            IMAT2R::INTERRUPT_DISABLED => false,
+            IMAT2R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -372,28 +372,28 @@ impl IMAT2R {
     #[inline]
     pub fn _from(value: bool) -> IMAT2R {
         match value {
-            false => IMAT2R::INTERRUPT_DISABLED_,
-            true => IMAT2R::INTERRUPT_ENABLED_,
+            false => IMAT2R::INTERRUPT_DISABLED,
+            true => IMAT2R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == IMAT2R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == IMAT2R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == IMAT2R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == IMAT2R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `ICAP2`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ICAP2R {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl ICAP2R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -410,8 +410,8 @@ impl ICAP2R {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ICAP2R::INTERRUPT_DISABLED_ => false,
-            ICAP2R::INTERRUPT_ENABLED_ => true,
+            ICAP2R::INTERRUPT_DISABLED => false,
+            ICAP2R::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -419,28 +419,28 @@ impl ICAP2R {
     #[inline]
     pub fn _from(value: bool) -> ICAP2R {
         match value {
-            false => ICAP2R::INTERRUPT_DISABLED_,
-            true => ICAP2R::INTERRUPT_ENABLED_,
+            false => ICAP2R::INTERRUPT_DISABLED,
+            true => ICAP2R::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == ICAP2R::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == ICAP2R::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == ICAP2R::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == ICAP2R::INTERRUPT_ENABLED
     }
 }
 #[doc = "Possible values of the field `ABORT`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABORTR {
     #[doc = "Interrupt disabled."]
-    INTERRUPT_DISABLED_,
+    INTERRUPT_DISABLED,
     #[doc = "Interrupt enabled."]
-    INTERRUPT_ENABLED_,
+    INTERRUPT_ENABLED,
 }
 impl ABORTR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -457,8 +457,8 @@ impl ABORTR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ABORTR::INTERRUPT_DISABLED_ => false,
-            ABORTR::INTERRUPT_ENABLED_ => true,
+            ABORTR::INTERRUPT_DISABLED => false,
+            ABORTR::INTERRUPT_ENABLED => true,
         }
     }
     #[allow(missing_docs)]
@@ -466,19 +466,19 @@ impl ABORTR {
     #[inline]
     pub fn _from(value: bool) -> ABORTR {
         match value {
-            false => ABORTR::INTERRUPT_DISABLED_,
-            true => ABORTR::INTERRUPT_ENABLED_,
+            false => ABORTR::INTERRUPT_DISABLED,
+            true => ABORTR::INTERRUPT_ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_DISABLED`"]
     #[inline]
-    pub fn is_interrupt_disabled_(&self) -> bool {
-        *self == ABORTR::INTERRUPT_DISABLED_
+    pub fn is_interrupt_disabled(&self) -> bool {
+        *self == ABORTR::INTERRUPT_DISABLED
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED_`"]
+    #[doc = "Checks if the value of the field is `INTERRUPT_ENABLED`"]
     #[inline]
-    pub fn is_interrupt_enabled_(&self) -> bool {
-        *self == ABORTR::INTERRUPT_ENABLED_
+    pub fn is_interrupt_enabled(&self) -> bool {
+        *self == ABORTR::INTERRUPT_ENABLED
     }
 }
 impl R {

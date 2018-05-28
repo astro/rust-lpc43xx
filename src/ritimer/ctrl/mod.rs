@@ -140,9 +140,9 @@ impl RITENCLRR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RITENBRR {
     #[doc = "The timer is halted when the processor is halted for debugging."]
-    THE_TIMER_IS_HALTED_,
+    THE_TIMER_IS_HALTED,
     #[doc = "Debug has no effect on the timer operation."]
-    DEBUG_HAS_NO_EFFECT_,
+    DEBUG_HAS_NO_EFFECT,
 }
 impl RITENBRR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -159,8 +159,8 @@ impl RITENBRR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            RITENBRR::THE_TIMER_IS_HALTED_ => true,
-            RITENBRR::DEBUG_HAS_NO_EFFECT_ => false,
+            RITENBRR::THE_TIMER_IS_HALTED => true,
+            RITENBRR::DEBUG_HAS_NO_EFFECT => false,
         }
     }
     #[allow(missing_docs)]
@@ -168,28 +168,28 @@ impl RITENBRR {
     #[inline]
     pub fn _from(value: bool) -> RITENBRR {
         match value {
-            true => RITENBRR::THE_TIMER_IS_HALTED_,
-            false => RITENBRR::DEBUG_HAS_NO_EFFECT_,
+            true => RITENBRR::THE_TIMER_IS_HALTED,
+            false => RITENBRR::DEBUG_HAS_NO_EFFECT,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_TIMER_IS_HALTED_`"]
+    #[doc = "Checks if the value of the field is `THE_TIMER_IS_HALTED`"]
     #[inline]
-    pub fn is_the_timer_is_halted_(&self) -> bool {
-        *self == RITENBRR::THE_TIMER_IS_HALTED_
+    pub fn is_the_timer_is_halted(&self) -> bool {
+        *self == RITENBRR::THE_TIMER_IS_HALTED
     }
-    #[doc = "Checks if the value of the field is `DEBUG_HAS_NO_EFFECT_`"]
+    #[doc = "Checks if the value of the field is `DEBUG_HAS_NO_EFFECT`"]
     #[inline]
-    pub fn is_debug_has_no_effect_(&self) -> bool {
-        *self == RITENBRR::DEBUG_HAS_NO_EFFECT_
+    pub fn is_debug_has_no_effect(&self) -> bool {
+        *self == RITENBRR::DEBUG_HAS_NO_EFFECT
     }
 }
 #[doc = "Possible values of the field `RITEN`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RITENR {
     #[doc = "Timer enabled. This can be overruled by a debug halt if enabled in bit 2."]
-    TIMER_ENABLED_THIS_,
+    TIMER_ENABLED_THIS,
     #[doc = "Timer disabled."]
-    TIMER_DISABLED_,
+    TIMER_DISABLED,
 }
 impl RITENR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -206,8 +206,8 @@ impl RITENR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            RITENR::TIMER_ENABLED_THIS_ => true,
-            RITENR::TIMER_DISABLED_ => false,
+            RITENR::TIMER_ENABLED_THIS => true,
+            RITENR::TIMER_DISABLED => false,
         }
     }
     #[allow(missing_docs)]
@@ -215,19 +215,19 @@ impl RITENR {
     #[inline]
     pub fn _from(value: bool) -> RITENR {
         match value {
-            true => RITENR::TIMER_ENABLED_THIS_,
-            false => RITENR::TIMER_DISABLED_,
+            true => RITENR::TIMER_ENABLED_THIS,
+            false => RITENR::TIMER_DISABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `TIMER_ENABLED_THIS_`"]
+    #[doc = "Checks if the value of the field is `TIMER_ENABLED_THIS`"]
     #[inline]
-    pub fn is_timer_enabled_this_(&self) -> bool {
-        *self == RITENR::TIMER_ENABLED_THIS_
+    pub fn is_timer_enabled_this(&self) -> bool {
+        *self == RITENR::TIMER_ENABLED_THIS
     }
-    #[doc = "Checks if the value of the field is `TIMER_DISABLED_`"]
+    #[doc = "Checks if the value of the field is `TIMER_DISABLED`"]
     #[inline]
-    pub fn is_timer_disabled_(&self) -> bool {
-        *self == RITENR::TIMER_DISABLED_
+    pub fn is_timer_disabled(&self) -> bool {
+        *self == RITENR::TIMER_DISABLED
     }
 }
 #[doc = "Values that can be written to the field `RITINT`"]
@@ -349,9 +349,9 @@ impl<'a> _RITENCLRW<'a> {
 #[doc = "Values that can be written to the field `RITENBR`"]
 pub enum RITENBRW {
     #[doc = "The timer is halted when the processor is halted for debugging."]
-    THE_TIMER_IS_HALTED_,
+    THE_TIMER_IS_HALTED,
     #[doc = "Debug has no effect on the timer operation."]
-    DEBUG_HAS_NO_EFFECT_,
+    DEBUG_HAS_NO_EFFECT,
 }
 impl RITENBRW {
     #[allow(missing_docs)]
@@ -359,8 +359,8 @@ impl RITENBRW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            RITENBRW::THE_TIMER_IS_HALTED_ => true,
-            RITENBRW::DEBUG_HAS_NO_EFFECT_ => false,
+            RITENBRW::THE_TIMER_IS_HALTED => true,
+            RITENBRW::DEBUG_HAS_NO_EFFECT => false,
         }
     }
 }
@@ -378,13 +378,13 @@ impl<'a> _RITENBRW<'a> {
     }
     #[doc = "The timer is halted when the processor is halted for debugging."]
     #[inline]
-    pub fn the_timer_is_halted_(self) -> &'a mut W {
-        self.variant(RITENBRW::THE_TIMER_IS_HALTED_)
+    pub fn the_timer_is_halted(self) -> &'a mut W {
+        self.variant(RITENBRW::THE_TIMER_IS_HALTED)
     }
     #[doc = "Debug has no effect on the timer operation."]
     #[inline]
-    pub fn debug_has_no_effect_(self) -> &'a mut W {
-        self.variant(RITENBRW::DEBUG_HAS_NO_EFFECT_)
+    pub fn debug_has_no_effect(self) -> &'a mut W {
+        self.variant(RITENBRW::DEBUG_HAS_NO_EFFECT)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -407,9 +407,9 @@ impl<'a> _RITENBRW<'a> {
 #[doc = "Values that can be written to the field `RITEN`"]
 pub enum RITENW {
     #[doc = "Timer enabled. This can be overruled by a debug halt if enabled in bit 2."]
-    TIMER_ENABLED_THIS_,
+    TIMER_ENABLED_THIS,
     #[doc = "Timer disabled."]
-    TIMER_DISABLED_,
+    TIMER_DISABLED,
 }
 impl RITENW {
     #[allow(missing_docs)]
@@ -417,8 +417,8 @@ impl RITENW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            RITENW::TIMER_ENABLED_THIS_ => true,
-            RITENW::TIMER_DISABLED_ => false,
+            RITENW::TIMER_ENABLED_THIS => true,
+            RITENW::TIMER_DISABLED => false,
         }
     }
 }
@@ -436,13 +436,13 @@ impl<'a> _RITENW<'a> {
     }
     #[doc = "Timer enabled. This can be overruled by a debug halt if enabled in bit 2."]
     #[inline]
-    pub fn timer_enabled_this_(self) -> &'a mut W {
-        self.variant(RITENW::TIMER_ENABLED_THIS_)
+    pub fn timer_enabled_this(self) -> &'a mut W {
+        self.variant(RITENW::TIMER_ENABLED_THIS)
     }
     #[doc = "Timer disabled."]
     #[inline]
-    pub fn timer_disabled_(self) -> &'a mut W {
-        self.variant(RITENW::TIMER_DISABLED_)
+    pub fn timer_disabled(self) -> &'a mut W {
+        self.variant(RITENW::TIMER_DISABLED)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

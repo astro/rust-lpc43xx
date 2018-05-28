@@ -140,9 +140,9 @@ impl EDGER {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SYNCHR {
     #[doc = "Disable   synchronization."]
-    DISABLE__SYNCHRONIZ,
+    DISABLE_SYNCHRONIZ,
     #[doc = "Enable   synchronization."]
-    ENABLE__SYNCHRONIZA,
+    ENABLE_SYNCHRONIZA,
 }
 impl SYNCHR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -159,8 +159,8 @@ impl SYNCHR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            SYNCHR::DISABLE__SYNCHRONIZ => false,
-            SYNCHR::ENABLE__SYNCHRONIZA => true,
+            SYNCHR::DISABLE_SYNCHRONIZ => false,
+            SYNCHR::ENABLE_SYNCHRONIZA => true,
         }
     }
     #[allow(missing_docs)]
@@ -168,19 +168,19 @@ impl SYNCHR {
     #[inline]
     pub fn _from(value: bool) -> SYNCHR {
         match value {
-            false => SYNCHR::DISABLE__SYNCHRONIZ,
-            true => SYNCHR::ENABLE__SYNCHRONIZA,
+            false => SYNCHR::DISABLE_SYNCHRONIZ,
+            true => SYNCHR::ENABLE_SYNCHRONIZA,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLE__SYNCHRONIZ`"]
+    #[doc = "Checks if the value of the field is `DISABLE_SYNCHRONIZ`"]
     #[inline]
-    pub fn is_disable__synchroniz(&self) -> bool {
-        *self == SYNCHR::DISABLE__SYNCHRONIZ
+    pub fn is_disable_synchroniz(&self) -> bool {
+        *self == SYNCHR::DISABLE_SYNCHRONIZ
     }
-    #[doc = "Checks if the value of the field is `ENABLE__SYNCHRONIZA`"]
+    #[doc = "Checks if the value of the field is `ENABLE_SYNCHRONIZA`"]
     #[inline]
-    pub fn is_enable__synchroniza(&self) -> bool {
-        *self == SYNCHR::ENABLE__SYNCHRONIZA
+    pub fn is_enable_synchroniza(&self) -> bool {
+        *self == SYNCHR::ENABLE_SYNCHRONIZA
     }
 }
 #[doc = "Possible values of the field `PULSE`"]
@@ -238,9 +238,9 @@ pub enum SELECTR {
     #[doc = "USART0 RX active"]
     USART0_RX_ACTIVE,
     #[doc = "- I2S1_RX_MWS1"]
-    _I2S1_RX_MWS1,
+    I2S1_RX_MWS1,
     #[doc = "- I2S1_TX_MWS1"]
-    _I2S1_TX_MWS1,
+    I2S1_TX_MWS1,
     #[doc = r" Reserved"]
     _Reserved(u8),
 }
@@ -251,8 +251,8 @@ impl SELECTR {
         match *self {
             SELECTR::CTIN_4 => 0,
             SELECTR::USART0_RX_ACTIVE => 1,
-            SELECTR::_I2S1_RX_MWS1 => 2,
-            SELECTR::_I2S1_TX_MWS1 => 3,
+            SELECTR::I2S1_RX_MWS1 => 2,
+            SELECTR::I2S1_TX_MWS1 => 3,
             SELECTR::_Reserved(bits) => bits,
         }
     }
@@ -263,8 +263,8 @@ impl SELECTR {
         match value {
             0 => SELECTR::CTIN_4,
             1 => SELECTR::USART0_RX_ACTIVE,
-            2 => SELECTR::_I2S1_RX_MWS1,
-            3 => SELECTR::_I2S1_TX_MWS1,
+            2 => SELECTR::I2S1_RX_MWS1,
+            3 => SELECTR::I2S1_TX_MWS1,
             i => SELECTR::_Reserved(i),
         }
     }
@@ -278,15 +278,15 @@ impl SELECTR {
     pub fn is_usart0_rx_active(&self) -> bool {
         *self == SELECTR::USART0_RX_ACTIVE
     }
-    #[doc = "Checks if the value of the field is `_I2S1_RX_MWS1`"]
+    #[doc = "Checks if the value of the field is `I2S1_RX_MWS1`"]
     #[inline]
     pub fn is_i2s1_rx_mws1(&self) -> bool {
-        *self == SELECTR::_I2S1_RX_MWS1
+        *self == SELECTR::I2S1_RX_MWS1
     }
-    #[doc = "Checks if the value of the field is `_I2S1_TX_MWS1`"]
+    #[doc = "Checks if the value of the field is `I2S1_TX_MWS1`"]
     #[inline]
     pub fn is_i2s1_tx_mws1(&self) -> bool {
-        *self == SELECTR::_I2S1_TX_MWS1
+        *self == SELECTR::I2S1_TX_MWS1
     }
 }
 #[doc = "Values that can be written to the field `INV`"]
@@ -408,9 +408,9 @@ impl<'a> _EDGEW<'a> {
 #[doc = "Values that can be written to the field `SYNCH`"]
 pub enum SYNCHW {
     #[doc = "Disable   synchronization."]
-    DISABLE__SYNCHRONIZ,
+    DISABLE_SYNCHRONIZ,
     #[doc = "Enable   synchronization."]
-    ENABLE__SYNCHRONIZA,
+    ENABLE_SYNCHRONIZA,
 }
 impl SYNCHW {
     #[allow(missing_docs)]
@@ -418,8 +418,8 @@ impl SYNCHW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            SYNCHW::DISABLE__SYNCHRONIZ => false,
-            SYNCHW::ENABLE__SYNCHRONIZA => true,
+            SYNCHW::DISABLE_SYNCHRONIZ => false,
+            SYNCHW::ENABLE_SYNCHRONIZA => true,
         }
     }
 }
@@ -437,13 +437,13 @@ impl<'a> _SYNCHW<'a> {
     }
     #[doc = "Disable synchronization."]
     #[inline]
-    pub fn disable__synchroniz(self) -> &'a mut W {
-        self.variant(SYNCHW::DISABLE__SYNCHRONIZ)
+    pub fn disable_synchroniz(self) -> &'a mut W {
+        self.variant(SYNCHW::DISABLE_SYNCHRONIZ)
     }
     #[doc = "Enable synchronization."]
     #[inline]
-    pub fn enable__synchroniza(self) -> &'a mut W {
-        self.variant(SYNCHW::ENABLE__SYNCHRONIZA)
+    pub fn enable_synchroniza(self) -> &'a mut W {
+        self.variant(SYNCHW::ENABLE_SYNCHRONIZA)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -528,9 +528,9 @@ pub enum SELECTW {
     #[doc = "USART0 RX active"]
     USART0_RX_ACTIVE,
     #[doc = "- I2S1_RX_MWS1"]
-    _I2S1_RX_MWS1,
+    I2S1_RX_MWS1,
     #[doc = "- I2S1_TX_MWS1"]
-    _I2S1_TX_MWS1,
+    I2S1_TX_MWS1,
 }
 impl SELECTW {
     #[allow(missing_docs)]
@@ -540,8 +540,8 @@ impl SELECTW {
         match *self {
             SELECTW::CTIN_4 => 0,
             SELECTW::USART0_RX_ACTIVE => 1,
-            SELECTW::_I2S1_RX_MWS1 => 2,
-            SELECTW::_I2S1_TX_MWS1 => 3,
+            SELECTW::I2S1_RX_MWS1 => 2,
+            SELECTW::I2S1_TX_MWS1 => 3,
         }
     }
 }
@@ -567,13 +567,13 @@ impl<'a> _SELECTW<'a> {
     }
     #[doc = "- I2S1_RX_MWS1"]
     #[inline]
-    pub fn _i2s1_rx_mws1(self) -> &'a mut W {
-        self.variant(SELECTW::_I2S1_RX_MWS1)
+    pub fn i2s1_rx_mws1(self) -> &'a mut W {
+        self.variant(SELECTW::I2S1_RX_MWS1)
     }
     #[doc = "- I2S1_TX_MWS1"]
     #[inline]
-    pub fn _i2s1_tx_mws1(self) -> &'a mut W {
-        self.variant(SELECTW::_I2S1_TX_MWS1)
+    pub fn i2s1_tx_mws1(self) -> &'a mut W {
+        self.variant(SELECTW::I2S1_TX_MWS1)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]

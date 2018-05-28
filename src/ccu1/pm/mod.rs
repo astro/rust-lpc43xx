@@ -46,9 +46,9 @@ impl super::PM {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PDR {
     #[doc = "Normal operation."]
-    NORMAL_OPERATION_,
+    NORMAL_OPERATION,
     #[doc = "Clocks with wake-up mode enabled (W = 1) are disabled."]
-    CLOCKS_WITH_WAKE_UP_,
+    CLOCKS_WITH_WAKE_UP,
 }
 impl PDR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -65,8 +65,8 @@ impl PDR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            PDR::NORMAL_OPERATION_ => false,
-            PDR::CLOCKS_WITH_WAKE_UP_ => true,
+            PDR::NORMAL_OPERATION => false,
+            PDR::CLOCKS_WITH_WAKE_UP => true,
         }
     }
     #[allow(missing_docs)]
@@ -74,27 +74,27 @@ impl PDR {
     #[inline]
     pub fn _from(value: bool) -> PDR {
         match value {
-            false => PDR::NORMAL_OPERATION_,
-            true => PDR::CLOCKS_WITH_WAKE_UP_,
+            false => PDR::NORMAL_OPERATION,
+            true => PDR::CLOCKS_WITH_WAKE_UP,
         }
     }
-    #[doc = "Checks if the value of the field is `NORMAL_OPERATION_`"]
+    #[doc = "Checks if the value of the field is `NORMAL_OPERATION`"]
     #[inline]
-    pub fn is_normal_operation_(&self) -> bool {
-        *self == PDR::NORMAL_OPERATION_
+    pub fn is_normal_operation(&self) -> bool {
+        *self == PDR::NORMAL_OPERATION
     }
-    #[doc = "Checks if the value of the field is `CLOCKS_WITH_WAKE_UP_`"]
+    #[doc = "Checks if the value of the field is `CLOCKS_WITH_WAKE_UP`"]
     #[inline]
-    pub fn is_clocks_with_wake_up_(&self) -> bool {
-        *self == PDR::CLOCKS_WITH_WAKE_UP_
+    pub fn is_clocks_with_wake_up(&self) -> bool {
+        *self == PDR::CLOCKS_WITH_WAKE_UP
     }
 }
 #[doc = "Values that can be written to the field `PD`"]
 pub enum PDW {
     #[doc = "Normal operation."]
-    NORMAL_OPERATION_,
+    NORMAL_OPERATION,
     #[doc = "Clocks with wake-up mode enabled (W = 1) are disabled."]
-    CLOCKS_WITH_WAKE_UP_,
+    CLOCKS_WITH_WAKE_UP,
 }
 impl PDW {
     #[allow(missing_docs)]
@@ -102,8 +102,8 @@ impl PDW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            PDW::NORMAL_OPERATION_ => false,
-            PDW::CLOCKS_WITH_WAKE_UP_ => true,
+            PDW::NORMAL_OPERATION => false,
+            PDW::CLOCKS_WITH_WAKE_UP => true,
         }
     }
 }
@@ -121,13 +121,13 @@ impl<'a> _PDW<'a> {
     }
     #[doc = "Normal operation."]
     #[inline]
-    pub fn normal_operation_(self) -> &'a mut W {
-        self.variant(PDW::NORMAL_OPERATION_)
+    pub fn normal_operation(self) -> &'a mut W {
+        self.variant(PDW::NORMAL_OPERATION)
     }
     #[doc = "Clocks with wake-up mode enabled (W = 1) are disabled."]
     #[inline]
-    pub fn clocks_with_wake_up_(self) -> &'a mut W {
-        self.variant(PDW::CLOCKS_WITH_WAKE_UP_)
+    pub fn clocks_with_wake_up(self) -> &'a mut W {
+        self.variant(PDW::CLOCKS_WITH_WAKE_UP)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

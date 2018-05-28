@@ -135,9 +135,9 @@ impl CPHAR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CPOLR {
     #[doc = "SCK is active high."]
-    SCK_IS_ACTIVE_HIGH_,
+    SCK_IS_ACTIVE_HIGH,
     #[doc = "SCK is active low."]
-    SCK_IS_ACTIVE_LOW_,
+    SCK_IS_ACTIVE_LOW,
 }
 impl CPOLR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -154,8 +154,8 @@ impl CPOLR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CPOLR::SCK_IS_ACTIVE_HIGH_ => false,
-            CPOLR::SCK_IS_ACTIVE_LOW_ => true,
+            CPOLR::SCK_IS_ACTIVE_HIGH => false,
+            CPOLR::SCK_IS_ACTIVE_LOW => true,
         }
     }
     #[allow(missing_docs)]
@@ -163,19 +163,19 @@ impl CPOLR {
     #[inline]
     pub fn _from(value: bool) -> CPOLR {
         match value {
-            false => CPOLR::SCK_IS_ACTIVE_HIGH_,
-            true => CPOLR::SCK_IS_ACTIVE_LOW_,
+            false => CPOLR::SCK_IS_ACTIVE_HIGH,
+            true => CPOLR::SCK_IS_ACTIVE_LOW,
         }
     }
-    #[doc = "Checks if the value of the field is `SCK_IS_ACTIVE_HIGH_`"]
+    #[doc = "Checks if the value of the field is `SCK_IS_ACTIVE_HIGH`"]
     #[inline]
-    pub fn is_sck_is_active_high_(&self) -> bool {
-        *self == CPOLR::SCK_IS_ACTIVE_HIGH_
+    pub fn is_sck_is_active_high(&self) -> bool {
+        *self == CPOLR::SCK_IS_ACTIVE_HIGH
     }
-    #[doc = "Checks if the value of the field is `SCK_IS_ACTIVE_LOW_`"]
+    #[doc = "Checks if the value of the field is `SCK_IS_ACTIVE_LOW`"]
     #[inline]
-    pub fn is_sck_is_active_low_(&self) -> bool {
-        *self == CPOLR::SCK_IS_ACTIVE_LOW_
+    pub fn is_sck_is_active_low(&self) -> bool {
+        *self == CPOLR::SCK_IS_ACTIVE_LOW
     }
 }
 #[doc = "Possible values of the field `MSTR`"]
@@ -534,9 +534,9 @@ impl<'a> _CPHAW<'a> {
 #[doc = "Values that can be written to the field `CPOL`"]
 pub enum CPOLW {
     #[doc = "SCK is active high."]
-    SCK_IS_ACTIVE_HIGH_,
+    SCK_IS_ACTIVE_HIGH,
     #[doc = "SCK is active low."]
-    SCK_IS_ACTIVE_LOW_,
+    SCK_IS_ACTIVE_LOW,
 }
 impl CPOLW {
     #[allow(missing_docs)]
@@ -544,8 +544,8 @@ impl CPOLW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CPOLW::SCK_IS_ACTIVE_HIGH_ => false,
-            CPOLW::SCK_IS_ACTIVE_LOW_ => true,
+            CPOLW::SCK_IS_ACTIVE_HIGH => false,
+            CPOLW::SCK_IS_ACTIVE_LOW => true,
         }
     }
 }
@@ -563,13 +563,13 @@ impl<'a> _CPOLW<'a> {
     }
     #[doc = "SCK is active high."]
     #[inline]
-    pub fn sck_is_active_high_(self) -> &'a mut W {
-        self.variant(CPOLW::SCK_IS_ACTIVE_HIGH_)
+    pub fn sck_is_active_high(self) -> &'a mut W {
+        self.variant(CPOLW::SCK_IS_ACTIVE_HIGH)
     }
     #[doc = "SCK is active low."]
     #[inline]
-    pub fn sck_is_active_low_(self) -> &'a mut W {
-        self.variant(CPOLW::SCK_IS_ACTIVE_LOW_)
+    pub fn sck_is_active_low(self) -> &'a mut W {
+        self.variant(CPOLW::SCK_IS_ACTIVE_LOW)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

@@ -46,7 +46,7 @@ impl super::CONFIG {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ER {
     #[doc = "Disabled (default). Disabling the DMA Controller reduces power consumption."]
-    DISABLED__DEFAULT_,
+    DISABLED_DEFAULT,
     #[doc = "Enabled"]
     ENABLED,
 }
@@ -65,7 +65,7 @@ impl ER {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            ER::DISABLED__DEFAULT_ => false,
+            ER::DISABLED_DEFAULT => false,
             ER::ENABLED => true,
         }
     }
@@ -74,14 +74,14 @@ impl ER {
     #[inline]
     pub fn _from(value: bool) -> ER {
         match value {
-            false => ER::DISABLED__DEFAULT_,
+            false => ER::DISABLED_DEFAULT,
             true => ER::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED__DEFAULT_`"]
+    #[doc = "Checks if the value of the field is `DISABLED_DEFAULT`"]
     #[inline]
-    pub fn is_disabled__default_(&self) -> bool {
-        *self == ER::DISABLED__DEFAULT_
+    pub fn is_disabled_default(&self) -> bool {
+        *self == ER::DISABLED_DEFAULT
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline]
@@ -95,7 +95,7 @@ pub enum M0R {
     #[doc = "Little-endian mode (default)."]
     LITTLE_ENDIAN_MODE,
     #[doc = "Big-endian mode."]
-    BIG_ENDIAN_MODE_,
+    BIG_ENDIAN_MODE,
 }
 impl M0R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -113,7 +113,7 @@ impl M0R {
     pub fn bit(&self) -> bool {
         match *self {
             M0R::LITTLE_ENDIAN_MODE => false,
-            M0R::BIG_ENDIAN_MODE_ => true,
+            M0R::BIG_ENDIAN_MODE => true,
         }
     }
     #[allow(missing_docs)]
@@ -122,7 +122,7 @@ impl M0R {
     pub fn _from(value: bool) -> M0R {
         match value {
             false => M0R::LITTLE_ENDIAN_MODE,
-            true => M0R::BIG_ENDIAN_MODE_,
+            true => M0R::BIG_ENDIAN_MODE,
         }
     }
     #[doc = "Checks if the value of the field is `LITTLE_ENDIAN_MODE`"]
@@ -130,10 +130,10 @@ impl M0R {
     pub fn is_little_endian_mode(&self) -> bool {
         *self == M0R::LITTLE_ENDIAN_MODE
     }
-    #[doc = "Checks if the value of the field is `BIG_ENDIAN_MODE_`"]
+    #[doc = "Checks if the value of the field is `BIG_ENDIAN_MODE`"]
     #[inline]
-    pub fn is_big_endian_mode_(&self) -> bool {
-        *self == M0R::BIG_ENDIAN_MODE_
+    pub fn is_big_endian_mode(&self) -> bool {
+        *self == M0R::BIG_ENDIAN_MODE
     }
 }
 #[doc = "Possible values of the field `M1`"]
@@ -142,7 +142,7 @@ pub enum M1R {
     #[doc = "Little-endian mode (default)."]
     LITTLE_ENDIAN_MODE,
     #[doc = "Big-endian mode."]
-    BIG_ENDIAN_MODE_,
+    BIG_ENDIAN_MODE,
 }
 impl M1R {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -160,7 +160,7 @@ impl M1R {
     pub fn bit(&self) -> bool {
         match *self {
             M1R::LITTLE_ENDIAN_MODE => false,
-            M1R::BIG_ENDIAN_MODE_ => true,
+            M1R::BIG_ENDIAN_MODE => true,
         }
     }
     #[allow(missing_docs)]
@@ -169,7 +169,7 @@ impl M1R {
     pub fn _from(value: bool) -> M1R {
         match value {
             false => M1R::LITTLE_ENDIAN_MODE,
-            true => M1R::BIG_ENDIAN_MODE_,
+            true => M1R::BIG_ENDIAN_MODE,
         }
     }
     #[doc = "Checks if the value of the field is `LITTLE_ENDIAN_MODE`"]
@@ -177,16 +177,16 @@ impl M1R {
     pub fn is_little_endian_mode(&self) -> bool {
         *self == M1R::LITTLE_ENDIAN_MODE
     }
-    #[doc = "Checks if the value of the field is `BIG_ENDIAN_MODE_`"]
+    #[doc = "Checks if the value of the field is `BIG_ENDIAN_MODE`"]
     #[inline]
-    pub fn is_big_endian_mode_(&self) -> bool {
-        *self == M1R::BIG_ENDIAN_MODE_
+    pub fn is_big_endian_mode(&self) -> bool {
+        *self == M1R::BIG_ENDIAN_MODE
     }
 }
 #[doc = "Values that can be written to the field `E`"]
 pub enum EW {
     #[doc = "Disabled (default). Disabling the DMA Controller reduces power consumption."]
-    DISABLED__DEFAULT_,
+    DISABLED_DEFAULT,
     #[doc = "Enabled"]
     ENABLED,
 }
@@ -196,7 +196,7 @@ impl EW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            EW::DISABLED__DEFAULT_ => false,
+            EW::DISABLED_DEFAULT => false,
             EW::ENABLED => true,
         }
     }
@@ -215,8 +215,8 @@ impl<'a> _EW<'a> {
     }
     #[doc = "Disabled (default). Disabling the DMA Controller reduces power consumption."]
     #[inline]
-    pub fn disabled__default_(self) -> &'a mut W {
-        self.variant(EW::DISABLED__DEFAULT_)
+    pub fn disabled_default(self) -> &'a mut W {
+        self.variant(EW::DISABLED_DEFAULT)
     }
     #[doc = "Enabled"]
     #[inline]
@@ -246,7 +246,7 @@ pub enum M0W {
     #[doc = "Little-endian mode (default)."]
     LITTLE_ENDIAN_MODE,
     #[doc = "Big-endian mode."]
-    BIG_ENDIAN_MODE_,
+    BIG_ENDIAN_MODE,
 }
 impl M0W {
     #[allow(missing_docs)]
@@ -255,7 +255,7 @@ impl M0W {
     pub fn _bits(&self) -> bool {
         match *self {
             M0W::LITTLE_ENDIAN_MODE => false,
-            M0W::BIG_ENDIAN_MODE_ => true,
+            M0W::BIG_ENDIAN_MODE => true,
         }
     }
 }
@@ -278,8 +278,8 @@ impl<'a> _M0W<'a> {
     }
     #[doc = "Big-endian mode."]
     #[inline]
-    pub fn big_endian_mode_(self) -> &'a mut W {
-        self.variant(M0W::BIG_ENDIAN_MODE_)
+    pub fn big_endian_mode(self) -> &'a mut W {
+        self.variant(M0W::BIG_ENDIAN_MODE)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -304,7 +304,7 @@ pub enum M1W {
     #[doc = "Little-endian mode (default)."]
     LITTLE_ENDIAN_MODE,
     #[doc = "Big-endian mode."]
-    BIG_ENDIAN_MODE_,
+    BIG_ENDIAN_MODE,
 }
 impl M1W {
     #[allow(missing_docs)]
@@ -313,7 +313,7 @@ impl M1W {
     pub fn _bits(&self) -> bool {
         match *self {
             M1W::LITTLE_ENDIAN_MODE => false,
-            M1W::BIG_ENDIAN_MODE_ => true,
+            M1W::BIG_ENDIAN_MODE => true,
         }
     }
 }
@@ -336,8 +336,8 @@ impl<'a> _M1W<'a> {
     }
     #[doc = "Big-endian mode."]
     #[inline]
-    pub fn big_endian_mode_(self) -> &'a mut W {
-        self.variant(M1W::BIG_ENDIAN_MODE_)
+    pub fn big_endian_mode(self) -> &'a mut W {
+        self.variant(M1W::BIG_ENDIAN_MODE)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {

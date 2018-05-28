@@ -57,7 +57,7 @@ impl CALVALR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CALDIRR {
     #[doc = "Forward calibration. When CALVAL is equal to the calibration counter, the RTC timers will jump by 2 seconds."]
-    FORWARD_CALIBRATION_,
+    FORWARD_CALIBRATION,
     #[doc = "Backward calibration. When CALVAL is equal to the calibration counter, the RTC timers will stop incrementing for 1 second."]
     BACKWARD_CALIBRATION,
 }
@@ -76,7 +76,7 @@ impl CALDIRR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            CALDIRR::FORWARD_CALIBRATION_ => false,
+            CALDIRR::FORWARD_CALIBRATION => false,
             CALDIRR::BACKWARD_CALIBRATION => true,
         }
     }
@@ -85,14 +85,14 @@ impl CALDIRR {
     #[inline]
     pub fn _from(value: bool) -> CALDIRR {
         match value {
-            false => CALDIRR::FORWARD_CALIBRATION_,
+            false => CALDIRR::FORWARD_CALIBRATION,
             true => CALDIRR::BACKWARD_CALIBRATION,
         }
     }
-    #[doc = "Checks if the value of the field is `FORWARD_CALIBRATION_`"]
+    #[doc = "Checks if the value of the field is `FORWARD_CALIBRATION`"]
     #[inline]
-    pub fn is_forward_calibration_(&self) -> bool {
-        *self == CALDIRR::FORWARD_CALIBRATION_
+    pub fn is_forward_calibration(&self) -> bool {
+        *self == CALDIRR::FORWARD_CALIBRATION
     }
     #[doc = "Checks if the value of the field is `BACKWARD_CALIBRATION`"]
     #[inline]
@@ -118,7 +118,7 @@ impl<'a> _CALVALW<'a> {
 #[doc = "Values that can be written to the field `CALDIR`"]
 pub enum CALDIRW {
     #[doc = "Forward calibration. When CALVAL is equal to the calibration counter, the RTC timers will jump by 2 seconds."]
-    FORWARD_CALIBRATION_,
+    FORWARD_CALIBRATION,
     #[doc = "Backward calibration. When CALVAL is equal to the calibration counter, the RTC timers will stop incrementing for 1 second."]
     BACKWARD_CALIBRATION,
 }
@@ -128,7 +128,7 @@ impl CALDIRW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            CALDIRW::FORWARD_CALIBRATION_ => false,
+            CALDIRW::FORWARD_CALIBRATION => false,
             CALDIRW::BACKWARD_CALIBRATION => true,
         }
     }
@@ -147,8 +147,8 @@ impl<'a> _CALDIRW<'a> {
     }
     #[doc = "Forward calibration. When CALVAL is equal to the calibration counter, the RTC timers will jump by 2 seconds."]
     #[inline]
-    pub fn forward_calibration_(self) -> &'a mut W {
-        self.variant(CALDIRW::FORWARD_CALIBRATION_)
+    pub fn forward_calibration(self) -> &'a mut W {
+        self.variant(CALDIRW::FORWARD_CALIBRATION)
     }
     #[doc = "Backward calibration. When CALVAL is equal to the calibration counter, the RTC timers will stop incrementing for 1 second."]
     #[inline]

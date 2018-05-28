@@ -93,7 +93,7 @@ impl RUNR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AUTOR {
     #[doc = "Auto is disabled."]
-    DISABLED_,
+    DISABLED,
     #[doc = "Auto is enabled."]
     ENABLED,
 }
@@ -112,7 +112,7 @@ impl AUTOR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            AUTOR::DISABLED_ => false,
+            AUTOR::DISABLED => false,
             AUTOR::ENABLED => true,
         }
     }
@@ -121,14 +121,14 @@ impl AUTOR {
     #[inline]
     pub fn _from(value: bool) -> AUTOR {
         match value {
-            false => AUTOR::DISABLED_,
+            false => AUTOR::DISABLED,
             true => AUTOR::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED_`"]
+    #[doc = "Checks if the value of the field is `DISABLED`"]
     #[inline]
-    pub fn is_disabled_(&self) -> bool {
-        *self == AUTOR::DISABLED_
+    pub fn is_disabled(&self) -> bool {
+        *self == AUTOR::DISABLED
     }
     #[doc = "Checks if the value of the field is `ENABLED`"]
     #[inline]
@@ -285,7 +285,7 @@ impl<'a> _RUNW<'a> {
 #[doc = "Values that can be written to the field `AUTO`"]
 pub enum AUTOW {
     #[doc = "Auto is disabled."]
-    DISABLED_,
+    DISABLED,
     #[doc = "Auto is enabled."]
     ENABLED,
 }
@@ -295,7 +295,7 @@ impl AUTOW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            AUTOW::DISABLED_ => false,
+            AUTOW::DISABLED => false,
             AUTOW::ENABLED => true,
         }
     }
@@ -314,8 +314,8 @@ impl<'a> _AUTOW<'a> {
     }
     #[doc = "Auto is disabled."]
     #[inline]
-    pub fn disabled_(self) -> &'a mut W {
-        self.variant(AUTOW::DISABLED_)
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(AUTOW::DISABLED)
     }
     #[doc = "Auto is enabled."]
     #[inline]

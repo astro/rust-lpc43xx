@@ -43,10 +43,10 @@ impl super::CONFIG {
     }
 }
 #[doc = r" Value of the field"]
-pub struct TRIGGER__MASKR {
+pub struct TRIGGER_MASKR {
     bits: u8,
 }
-impl TRIGGER__MASKR {
+impl TRIGGER_MASKR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -118,10 +118,10 @@ impl RECOVERY_TIMER {
     }
 }
 #[doc = r" Proxy"]
-pub struct _TRIGGER__MASKW<'a> {
+pub struct _TRIGGER_MASKW<'a> {
     w: &'a mut W,
 }
-impl<'a> _TRIGGER__MASKW<'a> {
+impl<'a> _TRIGGER_MASKW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -216,13 +216,13 @@ impl R {
     }
     #[doc = "Bits 0:1 - 00 = triggers off 01 = software trigger only 10 = external trigger only 11 = both triggers allowed"]
     #[inline]
-    pub fn trigger__mask(&self) -> TRIGGER__MASKR {
+    pub fn trigger_mask(&self) -> TRIGGER_MASKR {
         let bits = {
             const MASK: u8 = 3;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        TRIGGER__MASKR { bits }
+        TRIGGER_MASKR { bits }
     }
     #[doc = "Bits 2:3 - 00 = rising external trigger 01 = falling external trigger 10 = low external trigger 11 = high external trigger"]
     #[inline]
@@ -279,8 +279,8 @@ impl W {
     }
     #[doc = "Bits 0:1 - 00 = triggers off 01 = software trigger only 10 = external trigger only 11 = both triggers allowed"]
     #[inline]
-    pub fn trigger__mask(&mut self) -> _TRIGGER__MASKW {
-        _TRIGGER__MASKW { w: self }
+    pub fn trigger_mask(&mut self) -> _TRIGGER_MASKW {
+        _TRIGGER_MASKW { w: self }
     }
     #[doc = "Bits 2:3 - 00 = rising external trigger 01 = falling external trigger 10 = low external trigger 11 = high external trigger"]
     #[inline]

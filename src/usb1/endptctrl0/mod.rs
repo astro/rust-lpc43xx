@@ -46,7 +46,7 @@ impl super::ENDPTCTRL0 {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RXSR {
     #[doc = "Endpoint ok."]
-    ENDPOINT_OK_,
+    ENDPOINT_OK,
     #[doc = "Endpoint stalled Software can write a one to this bit to force the endpoint to return a STALL handshake to the Host. It will continue returning STALL until the bit is cleared by software, or it will automatically be cleared upon receipt of a new SETUP request. After receiving a SETUP request, this bit will continue to be cleared by hardware until the associated ENDSETUPSTAT bit is cleared.[1]"]
     ENDPOINT_STALLED_SOF,
 }
@@ -65,7 +65,7 @@ impl RXSR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            RXSR::ENDPOINT_OK_ => false,
+            RXSR::ENDPOINT_OK => false,
             RXSR::ENDPOINT_STALLED_SOF => true,
         }
     }
@@ -74,14 +74,14 @@ impl RXSR {
     #[inline]
     pub fn _from(value: bool) -> RXSR {
         match value {
-            false => RXSR::ENDPOINT_OK_,
+            false => RXSR::ENDPOINT_OK,
             true => RXSR::ENDPOINT_STALLED_SOF,
         }
     }
-    #[doc = "Checks if the value of the field is `ENDPOINT_OK_`"]
+    #[doc = "Checks if the value of the field is `ENDPOINT_OK`"]
     #[inline]
-    pub fn is_endpoint_ok_(&self) -> bool {
-        *self == RXSR::ENDPOINT_OK_
+    pub fn is_endpoint_ok(&self) -> bool {
+        *self == RXSR::ENDPOINT_OK
     }
     #[doc = "Checks if the value of the field is `ENDPOINT_STALLED_SOF`"]
     #[inline]
@@ -125,7 +125,7 @@ impl RXER {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TXSR {
     #[doc = "Endpoint ok."]
-    ENDPOINT_OK_,
+    ENDPOINT_OK,
     #[doc = "Endpoint stalled Software can write a one to this bit to force the endpoint to return a STALL handshake to the Host. It will continue returning STALL until the bit is cleared by software, or it will automatically be cleared upon receipt of a new SETUP request. After receiving a SETUP request, this bit will continue to be cleared by hardware until the associated ENDSETUPSTAT bit is cleared.[1]"]
     ENDPOINT_STALLED_SOF,
 }
@@ -144,7 +144,7 @@ impl TXSR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            TXSR::ENDPOINT_OK_ => false,
+            TXSR::ENDPOINT_OK => false,
             TXSR::ENDPOINT_STALLED_SOF => true,
         }
     }
@@ -153,14 +153,14 @@ impl TXSR {
     #[inline]
     pub fn _from(value: bool) -> TXSR {
         match value {
-            false => TXSR::ENDPOINT_OK_,
+            false => TXSR::ENDPOINT_OK,
             true => TXSR::ENDPOINT_STALLED_SOF,
         }
     }
-    #[doc = "Checks if the value of the field is `ENDPOINT_OK_`"]
+    #[doc = "Checks if the value of the field is `ENDPOINT_OK`"]
     #[inline]
-    pub fn is_endpoint_ok_(&self) -> bool {
-        *self == TXSR::ENDPOINT_OK_
+    pub fn is_endpoint_ok(&self) -> bool {
+        *self == TXSR::ENDPOINT_OK
     }
     #[doc = "Checks if the value of the field is `ENDPOINT_STALLED_SOF`"]
     #[inline]
@@ -203,7 +203,7 @@ impl TXER {
 #[doc = "Values that can be written to the field `RXS`"]
 pub enum RXSW {
     #[doc = "Endpoint ok."]
-    ENDPOINT_OK_,
+    ENDPOINT_OK,
     #[doc = "Endpoint stalled Software can write a one to this bit to force the endpoint to return a STALL handshake to the Host. It will continue returning STALL until the bit is cleared by software, or it will automatically be cleared upon receipt of a new SETUP request. After receiving a SETUP request, this bit will continue to be cleared by hardware until the associated ENDSETUPSTAT bit is cleared.[1]"]
     ENDPOINT_STALLED_SOF,
 }
@@ -213,7 +213,7 @@ impl RXSW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            RXSW::ENDPOINT_OK_ => false,
+            RXSW::ENDPOINT_OK => false,
             RXSW::ENDPOINT_STALLED_SOF => true,
         }
     }
@@ -232,8 +232,8 @@ impl<'a> _RXSW<'a> {
     }
     #[doc = "Endpoint ok."]
     #[inline]
-    pub fn endpoint_ok_(self) -> &'a mut W {
-        self.variant(RXSW::ENDPOINT_OK_)
+    pub fn endpoint_ok(self) -> &'a mut W {
+        self.variant(RXSW::ENDPOINT_OK)
     }
     #[doc = "Endpoint stalled Software can write a one to this bit to force the endpoint to return a STALL handshake to the Host. It will continue returning STALL until the bit is cleared by software, or it will automatically be cleared upon receipt of a new SETUP request. After receiving a SETUP request, this bit will continue to be cleared by hardware until the associated ENDSETUPSTAT bit is cleared.[1]"]
     #[inline]
@@ -299,7 +299,7 @@ impl<'a> _RXEW<'a> {
 #[doc = "Values that can be written to the field `TXS`"]
 pub enum TXSW {
     #[doc = "Endpoint ok."]
-    ENDPOINT_OK_,
+    ENDPOINT_OK,
     #[doc = "Endpoint stalled Software can write a one to this bit to force the endpoint to return a STALL handshake to the Host. It will continue returning STALL until the bit is cleared by software, or it will automatically be cleared upon receipt of a new SETUP request. After receiving a SETUP request, this bit will continue to be cleared by hardware until the associated ENDSETUPSTAT bit is cleared.[1]"]
     ENDPOINT_STALLED_SOF,
 }
@@ -309,7 +309,7 @@ impl TXSW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            TXSW::ENDPOINT_OK_ => false,
+            TXSW::ENDPOINT_OK => false,
             TXSW::ENDPOINT_STALLED_SOF => true,
         }
     }
@@ -328,8 +328,8 @@ impl<'a> _TXSW<'a> {
     }
     #[doc = "Endpoint ok."]
     #[inline]
-    pub fn endpoint_ok_(self) -> &'a mut W {
-        self.variant(TXSW::ENDPOINT_OK_)
+    pub fn endpoint_ok(self) -> &'a mut W {
+        self.variant(TXSW::ENDPOINT_OK)
     }
     #[doc = "Endpoint stalled Software can write a one to this bit to force the endpoint to return a STALL handshake to the Host. It will continue returning STALL until the bit is cleared by software, or it will automatically be cleared upon receipt of a new SETUP request. After receiving a SETUP request, this bit will continue to be cleared by hardware until the associated ENDSETUPSTAT bit is cleared.[1]"]
     #[inline]

@@ -276,9 +276,9 @@ impl ASER {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IAAR {
     #[doc = "The host controller sets this bit to zero after it has set the Interrupt on Sync Advance status bit in the USBSTS register to one."]
-    THE_HOST_CONTROLLER_,
+    THE_HOST_CONTROLLER,
     #[doc = "Software must write a 1 to this bit to ring the doorbell. When the host controller has evicted all appropriate cached schedule states, it sets the Interrupt on Async Advance status bit in the USBSTS register. If the Interrupt on Sync Advance Enable bit in the USBINTR register is one, then the host controller will assert an interrupt at the next interrupt threshold. Software should not write a one to this bit when the asynchronous schedule is inactive. Doing so will yield undefined results."]
-    SOFTWARE_MUST_WRITE_,
+    SOFTWARE_MUST_WRITE,
 }
 impl IAAR {
     #[doc = r" Returns `true` if the bit is clear (0)"]
@@ -295,8 +295,8 @@ impl IAAR {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            IAAR::THE_HOST_CONTROLLER_ => false,
-            IAAR::SOFTWARE_MUST_WRITE_ => true,
+            IAAR::THE_HOST_CONTROLLER => false,
+            IAAR::SOFTWARE_MUST_WRITE => true,
         }
     }
     #[allow(missing_docs)]
@@ -304,19 +304,19 @@ impl IAAR {
     #[inline]
     pub fn _from(value: bool) -> IAAR {
         match value {
-            false => IAAR::THE_HOST_CONTROLLER_,
-            true => IAAR::SOFTWARE_MUST_WRITE_,
+            false => IAAR::THE_HOST_CONTROLLER,
+            true => IAAR::SOFTWARE_MUST_WRITE,
         }
     }
-    #[doc = "Checks if the value of the field is `THE_HOST_CONTROLLER_`"]
+    #[doc = "Checks if the value of the field is `THE_HOST_CONTROLLER`"]
     #[inline]
-    pub fn is_the_host_controller_(&self) -> bool {
-        *self == IAAR::THE_HOST_CONTROLLER_
+    pub fn is_the_host_controller(&self) -> bool {
+        *self == IAAR::THE_HOST_CONTROLLER
     }
-    #[doc = "Checks if the value of the field is `SOFTWARE_MUST_WRITE_`"]
+    #[doc = "Checks if the value of the field is `SOFTWARE_MUST_WRITE`"]
     #[inline]
-    pub fn is_software_must_write_(&self) -> bool {
-        *self == IAAR::SOFTWARE_MUST_WRITE_
+    pub fn is_software_must_write(&self) -> bool {
+        *self == IAAR::SOFTWARE_MUST_WRITE
     }
 }
 #[doc = r" Value of the field"]
@@ -690,9 +690,9 @@ impl<'a> _ASEW<'a> {
 #[doc = "Values that can be written to the field `IAA`"]
 pub enum IAAW {
     #[doc = "The host controller sets this bit to zero after it has set the Interrupt on Sync Advance status bit in the USBSTS register to one."]
-    THE_HOST_CONTROLLER_,
+    THE_HOST_CONTROLLER,
     #[doc = "Software must write a 1 to this bit to ring the doorbell. When the host controller has evicted all appropriate cached schedule states, it sets the Interrupt on Async Advance status bit in the USBSTS register. If the Interrupt on Sync Advance Enable bit in the USBINTR register is one, then the host controller will assert an interrupt at the next interrupt threshold. Software should not write a one to this bit when the asynchronous schedule is inactive. Doing so will yield undefined results."]
-    SOFTWARE_MUST_WRITE_,
+    SOFTWARE_MUST_WRITE,
 }
 impl IAAW {
     #[allow(missing_docs)]
@@ -700,8 +700,8 @@ impl IAAW {
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            IAAW::THE_HOST_CONTROLLER_ => false,
-            IAAW::SOFTWARE_MUST_WRITE_ => true,
+            IAAW::THE_HOST_CONTROLLER => false,
+            IAAW::SOFTWARE_MUST_WRITE => true,
         }
     }
 }
@@ -719,13 +719,13 @@ impl<'a> _IAAW<'a> {
     }
     #[doc = "The host controller sets this bit to zero after it has set the Interrupt on Sync Advance status bit in the USBSTS register to one."]
     #[inline]
-    pub fn the_host_controller_(self) -> &'a mut W {
-        self.variant(IAAW::THE_HOST_CONTROLLER_)
+    pub fn the_host_controller(self) -> &'a mut W {
+        self.variant(IAAW::THE_HOST_CONTROLLER)
     }
     #[doc = "Software must write a 1 to this bit to ring the doorbell. When the host controller has evicted all appropriate cached schedule states, it sets the Interrupt on Async Advance status bit in the USBSTS register. If the Interrupt on Sync Advance Enable bit in the USBINTR register is one, then the host controller will assert an interrupt at the next interrupt threshold. Software should not write a one to this bit when the asynchronous schedule is inactive. Doing so will yield undefined results."]
     #[inline]
-    pub fn software_must_write_(self) -> &'a mut W {
-        self.variant(IAAW::SOFTWARE_MUST_WRITE_)
+    pub fn software_must_write(self) -> &'a mut W {
+        self.variant(IAAW::SOFTWARE_MUST_WRITE)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
