@@ -1,16 +1,26 @@
 [package]
 name = "lpc43xx"
 description = "Register definitions for the NXP LPC43xx microcontroller platform, generated through svd2rust"
-keywords = ["arm", "register", "peripheral"]
+keywords = ["arm", "cortex-m", "nxp", "lpc", "svd2rust"]
+categories = ["embedded", "hardware-support", "no-std"]
 version = "0.0.0"
 authors = ["Astro <astro@spaceboyz.net>"]
 license = "Apache-2.0"
 documentation = "https://docs.rs/lpc43xx"
 homepage = "https://github.com/astro/rust-lpc43xx"
-include = ["Cargo.toml", "**/*.rs"]
+include = ["Cargo.toml", "**/*.rs", "*.x"]
 
 [dependencies]
-volatile-register = "0.1.2"
+bare-metal = "0.2.0"
+cortex-m = "0.5.2"
+vcell = "0.1.0"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.5.1"
+
+[features]
+rt = ["cortex-m-rt"]
 
 [profile.release]
 lto = true
